@@ -5,3 +5,11 @@
   text-decoration: none;
   
 }
+
+/*By Nawaf To center buttons */
+.buttonContainer{
+  margin-top: 1rem;
+  text-align: center;
+  
+  
+}
