@@ -1,8 +1,8 @@
 #Logo{
     position: relative;
-    top: 5px;
     margin:auto;
     display:block;
+    width: 80px;
 }
 #LogoName{
     text-align: center;
@@ -10,4 +10,8 @@
     font-weight: bolder;
     font-size: larger;
     color: white;
+    position: relative;
+}
+#LogoMix{
+    padding: 50px;
 }
