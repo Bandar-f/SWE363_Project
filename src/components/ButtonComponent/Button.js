@@ -6,7 +6,7 @@ import './button.css'
 export default function Button() {
     return (
         
-        <button id="button">Log in</button>
+        <button class="button">Log in</button>
         
     )
 }
