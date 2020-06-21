@@ -1,15 +1,18 @@
 import React from 'react';
 import './App.css';
-import Form from './components/textFieldComponent/textField'
 import PersonWithRating from './components/PersonWithRatingComponent/PersonWithRating';
 import Form from './components/FormComponent/Form';
 import Button from './components/ButtonComponent/Button';
 import DropDownDate from './components/DropdownDateComponent/DropdownDate';
+import NavBar from './components/navBarComponent/navBar'
+import FloatingLogo from './components/floatingLogoComponent/floatingLogo';
 
 function App() {
   return (
     <div className="App">
-      
+
+      <NavBar/>
+      <FloatingLogo/>
       <Form/>
       <div className ="buttonContainer">
       <Button/>
