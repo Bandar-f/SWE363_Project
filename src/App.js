@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import './components/Form';
-import Form from './components/Form';
+import Form from './components/textFieldComponent/textField'
 
 function App() {
   return (
     <div className="App">
       <Form/>
-      
+       
     </div>
   );
 }
