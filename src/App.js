@@ -10,8 +10,7 @@ import FloatingLogo from './components/floatingLogoComponent/floatingLogo';
 function App() {
   return (
     <div className="App">
-
-      <NavBar/>
+      <NavBar header="Placeholder text"/>
       <FloatingLogo/>
       <Form/>
       <div className ="buttonContainer">
