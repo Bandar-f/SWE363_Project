@@ -7,6 +7,7 @@ import DropDownDate from './components/DropdownDateComponent/DropdownDate';
 import NavBar from './components/navBarComponent/navBar'
 import FloatingLogo from './components/floatingLogoComponent/floatingLogo';
 import RadioButton from './components/RadioButtonComponent/RadioButton';
+import DropDownAmount from './components/DropDownAmountComponent/DropDownAmount';
 import './welcomePage.css'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <DropDownDate/>
       </section>
        
+  <DropDownAmount/>
     </div>
   );
 }
