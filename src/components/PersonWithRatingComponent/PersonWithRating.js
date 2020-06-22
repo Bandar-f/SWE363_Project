@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import './PersonWithRating.css'
                         /*Profile picture with full name and rating*/
-function PersonWithRating(){
-        return (
-            <div id="Person">
-               <img id="profilePic" alt="Profile Pic"/>
-                <p id="nameNrating">
-                {/*Full Name*/}
-                <br/>
-                {/*Rating out of 5*/}
-                </p>
-            </div>
-        )
+function PersonWithRating(props){
+        
+            return (
+                <div className="main">
+                  <img width="50" height="50" className="image" src="https://www.logolynx.com/images/logolynx/s_0d/0d63ec3fb980f07166db66e9ba273baa.jpeg" alt="personal pic"/>
+                  <div className="text">
+                  <p>Bandar albalawi</p>
+                  <p>4.5/5</p>
+                  </div>
+                </div>
+              )
+        
     }export default PersonWithRating
