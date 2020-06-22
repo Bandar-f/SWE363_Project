@@ -5,14 +5,14 @@ import WideButton from './components/WideButtonComponent/WideButton';
 import DatePicker from './components/DatePickerComponent/DatePicker';
 import TimePicker from './components/TimePickerComponent/TimePicker';
 import PhoneNum from './components/phoneNumComponent/PhoneNum';
+import FloatingLogo from './components/floatingLogoComponent/FloatingLogo';
+import WelcomePage from './components/WelcomePage/WelcomePage';
 
 function App() {
    const titles=["History","Pickup Details", "Request ride"];
   return (
     <div  className="App">
-
-      <TimePicker/>
-      <PhoneNum/>
+      <WelcomePage/>
       
     </div>
   );
