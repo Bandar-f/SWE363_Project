@@ -1,0 +1,18 @@
+.picker-container{
+    margin-top: 2rem;
+    text-align: center;
+    height: 30px;
+}
+  #timePickerCustom{
+    background-color: inherit;
+    color: gainsboro;
+    border-style: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    margin: 2px;
+    border-bottom: 0.5px solid #eeeeee ;
+    
+}
+
