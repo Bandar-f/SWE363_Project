@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import './navBar.css';
 import { render } from '@testing-library/react';
 
-
-class navBar extends Component{
+                            /*----- TTK -----*/
+class NavBar extends Component{
     render() {
     return (
         <div id = "NavBar">
@@ -15,4 +15,4 @@ class navBar extends Component{
     }
 }
 
-export default navBar;
+export default NavBar;
