@@ -1,6 +1,6 @@
 import React from 'react'
 import './welcomePage.css'
-import FloatingLogo from '../floatingLogoComponent/FloatingLogo'
+import FloatingLogo from '../FloatingLogoComponent/FloatingLogo'
 import PhoneNum from '../phoneNumComponent/PhoneNum'
                             /*----- TTK -----*/
  function WelcomePage() {

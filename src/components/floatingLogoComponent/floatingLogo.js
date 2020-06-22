@@ -1,6 +1,11 @@
 import React from 'react'
+<<<<<<< HEAD
+import './floatingLogo.css'
+/*----- TTK -----*/
+=======
 import './FloatingLogo.css'
                             /*----- TTK -----*/
+>>>>>>> dcc7a240ea191b0c4af325251530b8cd41cc5c67
 function FloatingLogo() {
     return (
         <div id="LogoMix">
