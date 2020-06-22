@@ -4,7 +4,7 @@ import  './Sidemenu.css';
 
 const Sidemenu = (props) => {
             
-//the ueader is where the personal informtion are set
+//the header is where the personal informtion are set
 //for the option they are positioned as a ul list items
   const [isClicked,setState]=useState(false);
 
