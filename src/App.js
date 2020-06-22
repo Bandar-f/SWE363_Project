@@ -7,6 +7,7 @@ import TimePicker from './components/TimePickerComponent/TimePicker';
 import PhoneNum from './components/phoneNumComponent/PhoneNum';
 import FloatingLogo from './components/floatingLogoComponent/FloatingLogo';
 import WelcomePage from './components/WelcomePage/WelcomePage';
+import NavBar from './components/navBarComponent/NavBar';
 
 function App() {
    const titles=["History","Pickup Details", "Request ride"];

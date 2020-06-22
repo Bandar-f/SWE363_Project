@@ -7,7 +7,7 @@ import PhoneNum from '../phoneNumComponent/PhoneNum'
     return (
         <div>
             <FloatingLogo/>
-            <h3>Welcome to <strong>KBTYN</strong>, please enter your phone number</h3>
+            <h3>Welcome to <strong>KBTYN</strong>, <br/>please enter your phone number</h3>
             <PhoneNum/>
             <footer>
             <p>© 2020 Copyright Nawaf, Tariq, Yasser, Bandar & Co</p>

@@ -3,10 +3,18 @@
     color: white;
     border: transparent;
     margin-left: 20%;
+    font-size: 2.5vw;
 }
 option{
     background:#464646;
 }
+
+@media screen and (max-width: 500px) {
+    #phone, #countryCode {
+      font-size: 6vw;
+    }
+  }
+
 #phone{
     background-color: transparent;
     border-width: 2px;
@@ -15,7 +23,7 @@ option{
     width: 35%;
     margin-top: 10px;
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size: 2.5vw;
     font-weight: 400;
     line-height: .7;
     background-clip: padding-box;
