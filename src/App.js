@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import './components/Form';
-import Form from './components/Form';
 import Sidemenu from './components/Sidemenu/Sidemenu';
+import CarComponent from "./components/CarComponent/CarComponent"
 
 function App() {
    const titles=["History","Pickup Details", "Request ride"];
   return (
     <div className="App">
-      <Sidemenu titles={titles}/>
+      <CarComponent/>
+     
       
       
     </div>
