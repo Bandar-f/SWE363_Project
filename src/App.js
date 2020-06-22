@@ -8,7 +8,7 @@ function App() {
    const titles=["History","Pickup Details", "Request ride"];
   return (
     <div className="App">
-      <Sidemenu titles={titles} />
+      <Sidemenu titles={titles}/>
       
       
     </div>

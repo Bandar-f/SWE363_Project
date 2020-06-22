@@ -1,0 +1,13 @@
+p#nameNrating{
+    padding-top: 30px;
+    padding-left: 20px;
+    float: left;
+}
+img#profilePic{
+    float: left;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+}

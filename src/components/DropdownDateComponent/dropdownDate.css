@@ -1,0 +1,38 @@
+
+.App{
+    text-align: center;
+}
+.options-container{
+    margin-top: 2rem;
+    text-align: center;
+    height: 30px;
+ 
+
+}
+
+.options{
+    background-color: inherit;
+    color: gainsboro;
+    border-style: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    margin: 2px;
+
+    
+}
+#custom{
+    background-color: inherit;
+    color: gainsboro;
+    border-style: hidden;
+    text-indent: 1px;
+    text-overflow: '';
+    margin: 2px;}
+  
+    hr{
+        border-bottom: 1px solid #eee;
+        box-shadow: 0 1px 0 0 #eee;
+        width: 60px;
+        width:100px; margin: auto;
+    }
