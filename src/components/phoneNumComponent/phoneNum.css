@@ -9,11 +9,7 @@ option{
     background:#464646;
 }
 
-@media screen and (max-width: 500px) {
-    #phone, #countryCode {
-      font-size: 6vw;
-    }
-  }
+
 
 #phone{
     background-color: transparent;
@@ -33,3 +29,9 @@ option{
     border-left: transparent;
     margin-bottom: 50px;
 }
+
+@media screen and (max-width: 500px) {
+    #phone, #countryCode {
+      font-size: 6vw;
+    }
+  }
