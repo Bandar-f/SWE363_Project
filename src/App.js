@@ -9,12 +9,16 @@ import FloatingLogo from './components/floatingLogoComponent/FloatingLogo';
 import WelcomePage from './components/WelcomePage/WelcomePage';
 import NavBar from './components/navBarComponent/NavBar';
 import RadioImgBackground from './components/RadioImgBackgroundComponent/RadioImgBackground'
+import Cap from './components/CarAndPerson/Cap'
 
 function App() {
    const titles=["History","Pickup Details", "Request ride"];
   return (
     <div  className="App">
       <WelcomePage/>
+
+      <Cap/>
+      
     </div>
   );
 }

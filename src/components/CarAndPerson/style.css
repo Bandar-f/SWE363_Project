@@ -1,0 +1,20 @@
+
+
+.car-img{
+  height:50px;
+  width:50px;
+  position: relative;
+  left:140px;
+}
+
+.text-under{
+  position:relative;
+  bottom: 45px;
+  font-size:1rem;
+
+}
+
+.car-info{
+  font-size:.8rem;
+  line-height:0.9rem;
+}
