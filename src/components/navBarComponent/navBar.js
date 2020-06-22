@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './navBar.css';
+import './NavBar.css';
 import { render } from '@testing-library/react';
 
                             /*----- TTK -----*/
