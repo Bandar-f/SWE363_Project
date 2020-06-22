@@ -7,8 +7,9 @@ import TimePicker from './components/TimePickerComponent/TimePicker';
 import PhoneNum from './components/phoneNumComponent/PhoneNum';
 import FloatingLogo from './components/FloatingLogoComponent/FloatingLogo';
 import WelcomePage from './components/WelcomePage/WelcomePage';
-import NavBar from './components/navBarComponent/navBar';
+import NavBar from './components/navBarComponent/NavBar';
 import PackageTrack from './components/PackageTrackComponent/PackageTrack';
+import Cap from './components/CarAndPerson/Cap';
 
 //  
 function App() {
