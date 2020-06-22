@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './RadioImgBackground.css';
                             /*Two Image-Background Radio Buttons*/
-function RadioButton(){
+
+class RadioImgBackground extends Component {
     
 /* -------------------------------Economy car url:---------------------------------- 
 
@@ -18,8 +19,7 @@ Bentley-Flying_Spur-2020-1280-07.jpg?fit=1200%2C675&ssl=1*/
 
 /* -------------------------------Small package url:----------------------------------
 
-https://ae01.alicdn.com/kf/HTB1O9LVQVXXXXb8aXXXq6xXFXXXf/9-6-5-3cm-Ecofriendly-Small
--Brown-Kraft-Favor-Party-Gift-Craft-Paper-Packaging-Box-Handmade.jpg*/
+https://www.cheapestwaytoship.org/wp-content/gallery/package-shipping/small-package.jpg*/
 
 
 /* -------------------------------Large package url:----------------------------------
@@ -27,20 +27,22 @@ https://ae01.alicdn.com/kf/HTB1O9LVQVXXXXb8aXXXq6xXFXXXf/9-6-5-3cm-Ecofriendly-S
 https://images-na.ssl-images-amazon.com/images/I/81jGRJ%2BGmGL._AC_SL1500_.jpg*/
 
 
-    return (
+        render() {
+            return (
         <div className='TwoImagedRadios'>
             <input type="radio" id="First" name="ImageRad"/>
-            <label className="FirstImage" style={{background: `url(${this.props.url2})`}}
+            <label className="FirstImage" style={{backgroundImage: `url(${this.props.url1})`, backgroundSize: "cover"}}
              for="First">{/*Don't insert anything here*/}</label>
             
             <input type="radio" id="Second" name="ImageRad"/>
-            <label className="SecondImage" style={{backgroundImage: `url(${this.props.url2})`}} 
+            <label className="SecondImage" style={{backgroundImage: `url(${this.props.url2})`, backgroundSize: "cover"}}
             for="Second">{/*Don't insert anything here*/}</label>
 
             <div className='labels'>
-            <p className='FirstLabel'>{this.props.Firstlabel}</p>
-            <p className='SecondLabel'>{this.props.Secondlabel}</p>
+            <p className='FirstLabel'>{this.props.Label1}</p>
+            <p className='SecondLabel'>{this.props.Label2}</p>
             </div>
         </div>
-    )
-} export default RadioButton
+        )
+    }
+} export default RadioImgBackground

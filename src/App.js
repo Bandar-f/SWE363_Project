@@ -18,7 +18,6 @@ function App() {
       <WelcomePage/>
 
       <Cap/>
-      
     </div>
   );
 }

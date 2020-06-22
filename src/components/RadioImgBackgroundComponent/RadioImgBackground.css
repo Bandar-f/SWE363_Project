@@ -19,12 +19,6 @@
   .labels .SecondLabel{
     margin-left: 130px;
   }
-  .FirstImage {
-    background-size: cover;
-  }
-  .SecondImage{
-    background-size: cover;
-  }
   
   .TwoImagedRadios input[type="radio"] {
     display: none;
