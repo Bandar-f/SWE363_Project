@@ -5,6 +5,7 @@ import WideButton from './components/WideButtonComponent/WideButton';
 import DatePicker from './components/DatePickerComponent/DatePicker';
 import TimePicker from './components/TimePickerComponent/TimePicker';
 import PhoneNum from './components/phoneNumComponent/PhoneNum';
+import NavBar from './components/navBarComponent/'
 import FloatingLogo from './components/floatingLogoComponent/FloatingLogo';
 
 import WelcomePage from './components/WelcomePage/WelcomePage';
@@ -14,7 +15,7 @@ import Customer from './components/CustomerComponent/Customer'
 import PackageTrack from './components/PackageTrackComponent/PackageTrack';
 import Cap from './components/CarAndPerson/Cap';
 import Ut from './components/UpcomingTripsComponent/Ut'
-import NavBar from './components/NavBarComponent/NavBar';
+import NavBar from './components/navBarComponent/NavBar';
 
 //
 function App() {
@@ -22,8 +23,6 @@ function App() {
   return (
     <div  className="App">
             <Customer/>
-            <NavBar header="is it cap?"/>
-      <WelcomePage/>
 
 
 
