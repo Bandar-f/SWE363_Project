@@ -1,5 +1,5 @@
 import React from 'react'
-import './floatingLogo.css'
+import './FloatingLogo.css'
                             /*----- TTK -----*/
 function FloatingLogo() {
     return (

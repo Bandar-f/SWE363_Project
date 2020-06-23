@@ -7,7 +7,7 @@ import TimePicker from './components/TimePickerComponent/TimePicker';
 import PhoneNum from './components/phoneNumComponent/PhoneNum';
 import NavBar from './components/navBarComponent/NavBar'
 import FloatingLogo from './components/floatingLogoComponent/FloatingLogo';
-
+import RadioImgBackground from './components/RadioImgBackgroundComponent/RadioImgBackground';
 import CarComponent from './components/CarComponent/CarComponent';
 import Customer from './components/CustomerComponent/Customer'
 
@@ -22,6 +22,7 @@ function App() {
   return (
     <div  className="App">
             <Customer/>
+            
 
 
 

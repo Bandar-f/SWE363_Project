@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './RadioButton.css';
-                            /*Two circular blue Radio Button*/
+/*-------------------------Two circular blue Radio Button-----------------------------*/
+/*-------------------DON'T USE IT, USE RADIOBUTTONIMAGEDBACKGROUND-----------------------------*/
 function RadioButton(){
     return (
         <div className='TwoRadios'>
