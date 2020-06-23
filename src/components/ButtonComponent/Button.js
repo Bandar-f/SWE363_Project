@@ -3,10 +3,11 @@ import React from 'react';
 import './button.css'
 
 
-export default function Button() {
+export default function Button(props) {
+
     return (
-        
-        <button class="button">Log in</button>
+    
+    <button class="button">{props.text}</button>
         
     )
 }

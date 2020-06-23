@@ -1,7 +1,7 @@
 .formContainer{
     margin-top: 60px;
    text-align: center;
-   border: 1px solid #333;
+  
 }
 input[type="text"], [type="password"]{
     margin-bottom: 1em;
@@ -18,4 +18,9 @@ input[type="text"], [type="password"]{
 ::placeholder { 
     color: white;
     opacity: 1; /* Firefox */
+  }
+
+  .button-container{
+      display: block;
+      text-align: center;
   }
