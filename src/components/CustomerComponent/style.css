@@ -1,26 +1,28 @@
-
 .container{
-  display:inline-block;
+  display:block;
   margin-left:3px;
-  margin-bottom:10px;
 }
 
-.button{ 
+.button-small{ 
   display:inline-block;
-  width: 2rem;
+  width: 4rem;
   height: 1.3rem;
  background-color: #2b578a;
   border-radius: 3px;
   color: #eee;
   margin-top:10px;
-  margin-right: 0.3em;
-  margin-left:25px;
+  margin-left: 3rem;
   border-radius: 5px;
   border-style: hidden;
   
 }
 
+
 .customer-name{
-  display:inline-block;
+  display: inline-block;
+  margin-left: 0.5em;
+  text-align: left;
+  font-size: 30px;
+
   
 }
