@@ -1,4 +1,4 @@
-body{
+.welcome{
     background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://images.unsplash.com/photo-1498084393753-b411b2d26b34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80");
     background-repeat: no-repeat;
     background-position: center;
@@ -6,31 +6,25 @@ body{
     width: 100%;
     height: 100vh;
 }
-#message{
+.message{
     padding-top: 28vh;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    padding-left: 10%;
-    padding-right: 10%;
-    font-size: 2.5vw;
-    line-height: 1.25em;
 }
 #copyrights{
     text-align: center;
     font-size: 1vw;
     position: relative;
-    bottom: 0px;
 }
 strong{
     font-family: 'Bungee Hairline', cursive;
     position: relative;
     top: 1px;
+    font-size: 2.5vw;
+    line-height: 1.25em;
 }
 
 @media screen and (max-width: 500px) {
-    #message {
-      font-size: 6vw;
+    strong{
+        font-size: 6vw;
     }
     #copyrights{
         font-size: 3vw;
