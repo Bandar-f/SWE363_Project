@@ -6,7 +6,7 @@
     padding-bottom: 4px;
     padding-top: 2px;
     position: fixed;
-    z-index: 10;
+    z-index:1;
     width: 100%;
     text-transform: capitalize;
 }
