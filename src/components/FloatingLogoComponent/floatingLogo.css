@@ -12,6 +12,7 @@
     margin-top: -25px;
     color: rgb(211, 211, 211);
     position: relative;
+    margin-top: inherit;
 }
 #LogoMix{
     padding: 50px;
