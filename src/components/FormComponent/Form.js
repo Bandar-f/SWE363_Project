@@ -2,7 +2,7 @@
 import React from 'react';
 import './form.css';
 import Button from '../ButtonComponent/Button';
-import FloatingLogo from '../FloatingLogoComponent/FloatingLogo';
+import FloatingLogo from '../floatingLogoComponent/FloatingLogo';
 
 export default function Form() {
 	return (

@@ -12,6 +12,7 @@ import Ut from './components/UpcomingTripsComponent/Ut'
 import RequestRide from './Pages/RequestRidePage/RequestRide';
 import SelectService from './components/SelectServiceComponent/SelectService';
 import LoginPage from './Pages/LoginPage/LoginPage';
+import SelectServicePage from './Pages/SelectServicePage/SelectServicePage';
 
 
 //  
@@ -19,7 +20,7 @@ function App() {
    const titles=["History","Pickup Details", "Request ride"];
   return (
     <div  className="App">
-    <LoginPage/>
+    <SelectServicePage/>
     
      
     </div>
