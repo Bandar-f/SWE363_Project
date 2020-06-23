@@ -7,6 +7,7 @@ import TimePicker from './components/TimePickerComponent/TimePicker';
 import PhoneNum from './components/phoneNumComponent/PhoneNum';
 
 import WelcomePage from './components/WelcomePage/WelcomePage';
+import Customer from './components/CustomerComponent/Customer'
 
 import PackageTrack from './components/PackageTrackComponent/PackageTrack';
 import Cap from './components/CarAndPerson/Cap';
@@ -17,8 +18,11 @@ function App() {
    const titles=["History","Pickup Details", "Request ride"];
   return (
     <div  className="App">
+      <Customer/>
 
-      <Ut/>
+      
+
+      
 
       
       
