@@ -12,7 +12,8 @@ const Sidemenu = (props) => {
   return (
 
 
-    <div>  <button onClick={()=>{setState(true); console.log("hi")}} className="test">Click me</button>
+    <div> 
+       <button onClick={()=>{setState(true); console.log("hi")}} className="test">Click me</button>
     <div className={isClicked? "sidemenu": "hidden-sidemenu"}>
       <header >
           <Personal name="Bandar Albalawi" rating="4.5"/>

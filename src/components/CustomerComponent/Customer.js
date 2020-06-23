@@ -1,16 +1,25 @@
 import React from 'react'
 import './style.css'
 
-const Customer = () => {
+const Customer = (props) => {
+  const customers = ['Nawaf al sharqi','Bandar Al Balawy','Tariq Al Khamis','Yasser Jaber'];
   return (
     <div className="container">
-
-      <p className="customer-name">
-       Bandar Albalawi
-      </p>
-
-      <button className="button">Call</button>
-
+        <p className="customer-name">
+        {customers.map(customer=>
+          <>
+             <p className="customer-name">
+               {customer}
+             </p>
+             <button className='button-small'>Call</button>
+           
+             
+          </>
+          )}
+        </p>
+       
+         
+        
       
     </div>
   )

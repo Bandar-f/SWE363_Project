@@ -1,20 +1,28 @@
 
 
 .car-img{
-  height:50px;
-  width:50px;
-  position: relative;
-  left:140px;
+  width:270px;
+  position: absolute;
+  margin-top: -50px;
+  right:10%;
 }
 
 .text-under{
   position:relative;
-  bottom: 45px;
-  font-size:1rem;
-
+  text-align: left;
+    margin-top: -20px;
+  left: 10%;
 }
 
 .car-info{
   font-size:.8rem;
-  line-height:0.9rem;
+  line-height:1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@media screen and (max-width: 500px) {
+.car-img{
+  width:200px;
+}
 }

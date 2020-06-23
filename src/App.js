@@ -13,6 +13,7 @@ import RequestRide from './Pages/RequestRidePage/RequestRide';
 import SelectService from './components/SelectServiceComponent/SelectService';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import SelectServicePage from './Pages/SelectServicePage/SelectServicePage';
+import MoreDetailsPage from './Pages/MoreDetailsPage/MoreDetailsPage';
 
 
 //  
@@ -21,8 +22,6 @@ function App() {
   return (
     <div  className="App">
     <SelectServicePage/>
-    
-     
     </div>
   );
 }
