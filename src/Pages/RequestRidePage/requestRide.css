@@ -1,3 +1,9 @@
-.rise{
-    
+.middle{
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+.realign{
+    position: relative;
+    right: 5%;
 }
