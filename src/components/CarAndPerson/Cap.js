@@ -13,7 +13,7 @@ const cap = () => {
 
 
         <div className="text-under">
-        <p className="car-info">2013 volswagen beetle</p>
+        <p className="car-info">Lamborghini Aventador</p>
         <p className="car-info">05/20/2020</p>
         </div>
 
