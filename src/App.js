@@ -14,6 +14,9 @@ import PhoneNum from './components/phoneNumComponent/PhoneNum';
 import NavBar from './components/navBarComponent/NavBar'
 import FloatingLogo from './components/floatingLogoComponent/FloatingLogo';
 import RadioImgBackground from './components/RadioImgBackgroundComponent/RadioImgBackground';
+<<<<<<< HEAD
+>>>>>>> f02bd7ec7d17fb03329ab39760bcf03637576a18
+=======
 >>>>>>> f02bd7ec7d17fb03329ab39760bcf03637576a18
 import CarComponent from './components/CarComponent/CarComponent';
 import Customer from './components/CustomerComponent/Customer'
@@ -30,6 +33,10 @@ function App() {
     <div  className="App">
             <Customer/>
             
+<<<<<<< HEAD
+=======
+
+>>>>>>> f02bd7ec7d17fb03329ab39760bcf03637576a18
 
 
 
