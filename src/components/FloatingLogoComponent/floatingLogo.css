@@ -1,0 +1,18 @@
+#Logo{
+    position: relative;
+    margin:auto;
+    display:block;
+    width: 80px;
+}
+#LogoName{
+    text-align: center;
+    font-family: 'Bungee Hairline', cursive;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: -25px;
+    color: rgb(211, 211, 211);
+    position: relative;
+}
+#LogoMix{
+    padding: 50px;
+}
