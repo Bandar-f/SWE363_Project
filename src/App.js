@@ -15,13 +15,14 @@ import PackageTrack from './components/PackageTrackComponent/PackageTrack';
 import Cap from './components/CarAndPerson/Cap';
 import Ut from './components/UpcomingTripsComponent/Ut'
 import RequestRide from './Pages/RequestRidePage/RequestRide';
+import SelectService from './components/SelectServiceComponent/SelectService';
 
 //
 function App() {
    const titles=["History","Pickup Details", "Request ride"];
   return (
     <div  className="App">
-            <Customer/>
+            <SelectService/>
             
 
 
