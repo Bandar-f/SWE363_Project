@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import './App.css';
 import Sidemenu from './components/Sidemenu/Sidemenu';
-import NavBar from "./components/navBarComponent/NavBar";
+import NavBar from "./components/NavBarComponent/NavBar";
 import LoginPage from './Pages/LoginPage/LoginPage';
 import MoreDetailsPage from './Pages/MoreDetailsPage/MoreDetailsPage';
 import PackageTrackPage from './Pages/PackageTrackPage/PackageTrackPage'
+import RateDriverPage from './Pages/RateDriverPage/RateDriverPage';
+import StarRating from './components/StarRatingComponent/StarRating';
 
 function App() {
    const titles=["History","Pickup Details", "Request ride"];
@@ -18,7 +20,7 @@ function App() {
 
   return (
     <div  className="App">
-      <PackageTrackPage/>
+      <StarRating/>
    
      
   

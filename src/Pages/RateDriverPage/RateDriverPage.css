@@ -1,0 +1,13 @@
+.star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 13%;
+}
+.star input[type='radio']{
+    display:none;
+}
+.rate{
+    cursor: pointer;
+    
+}
