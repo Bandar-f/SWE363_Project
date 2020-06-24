@@ -4,6 +4,7 @@
   text-decoration: none;
   list-style:none;
   color:white;
+  z-index:2;
 }
 .sidemenu{
   position:fixed;
@@ -12,6 +13,7 @@
   height:100%;
   background-color:#364B64 ;
   transition: all .5s ease;
+  box-shadow:5px 5px 10px black ;
 }
 
 li{
@@ -26,7 +28,7 @@ li{
   position:relative;
   bottom:20px;
   margin-left:20px;
-  margin-top:150px;
+  margin-top:300px;
   font-size:2rem;
   
   

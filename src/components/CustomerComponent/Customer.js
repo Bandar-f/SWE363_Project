@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import './customer.css'
 
 const Customer = (props) => {
   const customers = ['Nawaf al sharqi','Bandar Al Balawy','Tariq Al Khamis','Yasser Jaber'];

@@ -6,15 +6,15 @@ const Sidemenu = (props) => {
             
 //the header is where the personal informtion are set
 //for the option they are positioned as a ul list items
-  const [isClicked,setState]=useState(false);
+  const [isClosed,setState]=useState(false);
 
     
   return (
 
 
     <div> 
-       <button onClick={()=>{setState(true); console.log("hi")}} className="test">Click me</button>
-    <div className={isClicked? "sidemenu": "hidden-sidemenu"}>
+      
+    <div className={props.isOpened? "sidemenu": "hidden-sidemenu"}>
       <header >
           <Personal name="Bandar Albalawi" rating="4.5"/>
         

@@ -4,12 +4,11 @@
 
 }
 
-.main{
+.main-b{
   background-color:rgb(26,26,26);
   display:inline-block;
   width:100%;
-
-
+  
 }
 
 .text{
@@ -27,7 +26,6 @@ p{
 .image{
   display:inline-block;
 
-  margin-left:2px;
   border-radius: 50%;
 
 }

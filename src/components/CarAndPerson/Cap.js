@@ -1,6 +1,6 @@
 import React from 'react'
 import PersonWithRating from '../PersonWithRatingComponent/PersonWithRating'
-import './style.css'
+import './cap.css'
 const cap = () => {
   return (
     <div>

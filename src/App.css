@@ -4,3 +4,10 @@ body{
 
 
 
+.content-b{
+    position:relative;
+    top:60px;
+    left:230px;
+    margin-left:200px;
+}
+
