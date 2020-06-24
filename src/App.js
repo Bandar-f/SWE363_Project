@@ -35,7 +35,6 @@ function App() {
 
   return (
     <div  className="App">
-<<<<<<< HEAD
 
       <NavBar header="test test" clicked={sidemenuClicked}/>
       <Sidemenu isOpened={isOpened} titles={titles}/>
@@ -44,9 +43,6 @@ function App() {
 
       </div>
     
-=======
-      <MoreDetailsPage/>
->>>>>>> 63e7c35a45132de55052aad87eef95c33c24168b
     </div>
   );
 }
