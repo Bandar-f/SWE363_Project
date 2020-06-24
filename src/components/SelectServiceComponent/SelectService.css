@@ -19,7 +19,7 @@ button.Travel {
 button.Deliver {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh);
     clip-path: polygon(0 0, 100% 0, 100% 100vh);
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('https://lh3.googleusercontent.com/proxy/QHRT21FHHjKTcdo7gYusQfMorcbbBdyJPIZ90ncn-qQXANWgOXXSTYkAHV5NeXjFwd3yllWufLtHPZ7P2s7Efan1hOUlQ5qdvQt4Fr1Jz5IAa8Nmz3Y');
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../../Images/Deliver.jpg');
     background-size: 600px 620px;
     opacity: 0.7;
 }
