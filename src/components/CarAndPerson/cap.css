@@ -1,4 +1,6 @@
-
+.cap-container{
+  margin-top: 70px;
+}
 
 .car-img{
   width:270px;
@@ -24,6 +26,17 @@
 
 @media screen and (max-width: 500px) {
 .car-img{
-  width:200px;
+  width:150px;
+}
+
+.text-under{
+  position:relative;
+  text-align: left;
+  margin-top: -20px;
+  margin-right: 20px;
+  left: 10%;
+}
+.person-info{
+  margin-right: 13rem;
 }
 }

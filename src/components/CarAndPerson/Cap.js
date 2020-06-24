@@ -3,9 +3,9 @@ import PersonWithRating from '../PersonWithRatingComponent/PersonWithRating'
 import './cap.css'
 const cap = () => {
   return (
-    <div>
+    <div className='cap-container'>
       
-      <div>
+      <div class="person-info">
       <PersonWithRating/>
       <br/>
       <div className="car">

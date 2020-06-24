@@ -7,15 +7,15 @@ export default class PackageTrack extends Component {
 	state = {
 		updates: [{
             id: uuid(),
-            details: 'your package is now left'
+            details: ' Update: your package is now left'
         },
         {
             id: uuid(),
-            details: 'your package is now out'
+            details: ' Update: your package is now out'
         },
         {
             id: uuid(),
-            details: 'your package is now received'
+            details: 'Update: your package is now received'
         }
 		],
 	};
@@ -24,7 +24,7 @@ export default class PackageTrack extends Component {
 		return (
 			<div className="update-container">
 				{this.state.updates.map((update) => (
-					<p key={update.id} >Delivery update : {update.details}</p>
+					<p className='text-holder' key={update.id} >Delivery update : {update.details}</p>
 				))}
 			</div>
 		);
