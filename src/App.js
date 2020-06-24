@@ -8,6 +8,8 @@ import PackageTrackPage from './Pages/PackageTrackPage/PackageTrackPage'
 import RateDriverPage from './Pages/RateDriverPage/RateDriverPage';
 import StarRating from './components/StarRatingComponent/StarRating';
 
+import PickUpDetail from './Pages/PickUpDetailsPage/PickUpDetailsPage';
+//  
 function App() {
    const titles=["History","Pickup Details", "Request ride"];
    const[isOpened,setIsOpened]=useState(false);
@@ -20,20 +22,14 @@ function App() {
 
   return (
     <div  className="App">
-      <StarRating/>
-   
-     
-  
-      
-      
-     
-    
+
+      <NavBar header="test test" clicked={sidemenuClicked}/>
+      <Sidemenu isOpened={isOpened} titles={titles}/>
+      <div className="content-b">
+      </div>
+      <PickUpDetail/>
     </div>
   );
 }
-
-
-// <NavBar header="test test" clicked={sidemenuClicked}/>
-//<Sidemenu isOpened={isOpened} titles={titles}/>
 
 export default App;

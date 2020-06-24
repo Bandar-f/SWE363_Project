@@ -1,6 +1,6 @@
 
 
-.container{
+.carComponent-container{
   text-align: center;
   background-color: black;
 }
@@ -8,15 +8,15 @@
 .img-container{
   text-align: center;
 }
-.text-container{
+.textCar-container{
   color:black;
   text-align: center;
 }
-img{
+.img-car-info{
   width:30%;
   height:15%;
 }
-p{
+.text-car-info{
   line-height:1.5rem;
 
 }
