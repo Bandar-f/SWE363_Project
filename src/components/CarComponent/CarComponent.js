@@ -3,15 +3,15 @@ import './car.css';
 
 const CarComponent = (props) => {
   return (
-    <div className="container">
+    <div className="carComponent-container">
 
       <div className="img-container">
-        <img  src="http://www.pngmart.com/files/4/Car-Transparent-PNG.png" alt=""/>
+      <img  className="img-car-info" src="http://www.pngmart.com/files/4/Car-Transparent-PNG.png" alt=""/>
       </div>
 
-      <div className="text-container">
-        <p>2017 Volkswagen Golf GTI</p>
-        <p>Tier:Economy</p>
+      <div className="textCar-container">
+        <p className="text-car-info">2017 Volkswagen Golf GTI</p>
+        <p className="text-car-info">Tier:Economy</p>
         
       </div>
       

@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
 import Sidemenu from './components/Sidemenu/Sidemenu';
-import NavBar from "./components/NavBarComponent/NavBar";
+import NavBar from "./components/navBarComponent/NavBar";
 
-
+import PickUpDetail from './Pages/PickUpDetailsPage/PickUpDetailsPage';
 //  
 function App() {
    const titles=["History","Pickup Details", "Request ride"];
@@ -21,10 +21,8 @@ function App() {
       <NavBar header="test test" clicked={sidemenuClicked}/>
       <Sidemenu isOpened={isOpened} titles={titles}/>
       <div className="content-b">
-        
-
       </div>
-    
+      <PickUpDetail/>
     </div>
   );
 }
