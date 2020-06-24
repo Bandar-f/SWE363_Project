@@ -1,7 +1,7 @@
 import React from 'react';
 import './login.css';
 import Form from '../../components/FormComponent/Form';
-import FloatingLogo from '../../components/floatingLogoComponent/FloatingLogo';
+import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
 
 
 

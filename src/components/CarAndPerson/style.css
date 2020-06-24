@@ -1,4 +1,14 @@
+*{
+  margin:0;
+  padding:0;
 
+}
+
+.main{
+  display:inline-block;
+
+
+}
 
 .car-img{
   width:270px;
