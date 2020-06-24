@@ -13,7 +13,7 @@ const StarRating = () => {
                            name="rating"
                            value={ratingValue}
                            onClick={()=>setRating(ratingValue)}/>
-                    <FaStar className='star' color={ratingValue <= rating ? "#ffc107" : "#e4e5e9"}
+                    <FaStar className='star' fill={ratingValue <= rating ? "#ffc107" : "#e4e5e9"}
                             size={25} />
                 </label>
                 );

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import Sidemenu from './components/Sidemenu/Sidemenu';
-import NavBar from "./components/NavBarComponent/NavBar";
+import NavBar from "./components/navBarComponent/NavBar";
 import LoginPage from './Pages/LoginPage/LoginPage';
 import MoreDetailsPage from './Pages/MoreDetailsPage/MoreDetailsPage';
 import PackageTrackPage from './Pages/PackageTrackPage/PackageTrackPage'
@@ -23,11 +23,7 @@ function App() {
   return (
     <div  className="App">
 
-      <NavBar header="test test" clicked={sidemenuClicked}/>
-      <Sidemenu isOpened={isOpened} titles={titles}/>
-      <div className="content-b">
-      </div>
-      <PickUpDetail/>
+      <StarRating/>
     </div>
   );
 }
