@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+<<<<<<< HEAD
 import Sidemenu from './components/Sidemenu/Sidemenu';
 import WideButton from './components/WideButtonComponent/WideButton';
 import DatePicker from './components/DatePickerComponent/DatePicker';
@@ -13,6 +14,10 @@ import RequestRide from './Pages/RequestRidePage/RequestRide';
 import SelectService from './components/SelectServiceComponent/SelectService';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import SelectServicePage from './Pages/SelectServicePage/SelectServicePage';
+=======
+import RequestRide from './Pages/RequestRidePage/RequestRide'
+import DateNDriver from './Pages/RequestRidePage/RequestRide';
+>>>>>>> 63e7c35a45132de55052aad87eef95c33c24168b
 import MoreDetailsPage from './Pages/MoreDetailsPage/MoreDetailsPage';
 import NavBar from "./components/NavBarComponent/NavBar";
 
@@ -30,6 +35,7 @@ function App() {
 
   return (
     <div  className="App">
+<<<<<<< HEAD
 
       <NavBar header="test test" clicked={sidemenuClicked}/>
       <Sidemenu isOpened={isOpened} titles={titles}/>
@@ -38,6 +44,9 @@ function App() {
 
       </div>
     
+=======
+      <MoreDetailsPage/>
+>>>>>>> 63e7c35a45132de55052aad87eef95c33c24168b
     </div>
   );
 }

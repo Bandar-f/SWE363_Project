@@ -10,11 +10,12 @@
 .text-under{
   position:relative;
   text-align: left;
-    margin-top: -20px;
+  margin-top: -20px;
   left: 10%;
 }
 
 .car-info{
+  color: white;
   font-size:.8rem;
   line-height:1.1rem;
   font-family: Arial, Helvetica, sans-serif;
