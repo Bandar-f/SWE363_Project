@@ -8,10 +8,12 @@ import Text from './../../components/TextComponent/Text'
     return (
         <div class='welcome'>
            <FloatingLogo/>
+            <div class="message">
             <Text text="Welcome to"/><strong>KBTYN</strong>
             <br/>
             <Text text= "Please enter your phone number"/>
             <PhoneNum/>
+            </div>
             <footer>
             <p id="copyrights">© 2020 Copyright Nawaf, Tariq, Yasser, Bandar & Co</p>
             </footer>
