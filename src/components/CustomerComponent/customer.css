@@ -1,28 +1,27 @@
-.container{
-  display:block;
-  margin-left:3px;
+.container {
+display: inline-block;
 }
 
-.button-small{ 
-  display:inline-block;
-  width: 4rem;
-  height: 1.3rem;
- background-color: #2b578a;
-  border-radius: 3px;
-  color: #eee;
-  margin-top:10px;
-  margin-left: 3rem;
-  border-radius: 5px;
-  border-style: hidden;
-  
+.button-small {
+	display: inline-block;
+	width: 4rem;
+	height: 1.3rem;
+	background-color: #2b578a;
+	border-radius: 3px;
+	color: #eee;
+	margin-top: 10px;
+	border-radius: 5px;
+	border-style: hidden;
+	position: relative;
+	left: 15%;
+}
+.small-button-container{
+  display: inline;
 }
 
-
-.customer-name{
-  display: inline-block;
-  margin-left: 0.5em;
-  text-align: left;
-  font-size: 30px;
-
-  
+.customer-name {
+	display: inline-block;
+	margin-left: 0.5em;
+	text-align: left;
+	font-size: 30px;
 }

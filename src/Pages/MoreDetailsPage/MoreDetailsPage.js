@@ -7,12 +7,15 @@ import './moreDetailsPage.css';
 import uuid from 'react-uuid';
 
 export default function MoreDetailsPage() {
+    const customers = ['Nawaf al sharqi','Bandar Al Balawy','Tariq Al Khamis','Yasser Jaber'];
 	return (
 		<div>
              <FloatingLogo/>
             <h1 className="tag-info">Customers</h1>
 			<div className="info-container">
-                <Customer/>
+            {customers.map(customer=>(
+         <Customer key={uuid()} customer={customer}/>
+            ))}
                <p className="wide-button-span">
                <WideButton/>
                 </p> 

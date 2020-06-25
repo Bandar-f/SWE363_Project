@@ -12,6 +12,7 @@ import MoreDetailsPage from './Pages/MoreDetailsPage/MoreDetailsPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import History from './Pages/History/History';
 import DateNDriver from './Pages/DateNDriverPage/DateNDriver';
+import Customer from './components/CustomerComponent/Customer'
 
 
 
@@ -32,7 +33,7 @@ function App() {
       <NavBar header="test test" clicked={sidemenuClicked}/>
       <Sidemenu isOpened={isOpened} titles={titles}/>
       <div className="content-b">
-      <RateDriverPage/>
+      <MoreDetailsPage/>
       </div>
     
     </div>
