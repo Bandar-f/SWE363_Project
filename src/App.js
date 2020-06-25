@@ -32,7 +32,7 @@ function App() {
       <NavBar header="test test" clicked={sidemenuClicked}/>
       <Sidemenu isOpened={isOpened} titles={titles}/>
       <div className="content-b">
-      <History/>
+      <RateDriverPage/>
       </div>
     
     </div>

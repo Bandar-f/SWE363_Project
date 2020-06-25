@@ -1,7 +1,5 @@
 .formContainer{
-    margin-top: 60px;
    text-align: center;
-  
 }
 input[type="text"], [type="password"]{
     margin-bottom: 1em;
