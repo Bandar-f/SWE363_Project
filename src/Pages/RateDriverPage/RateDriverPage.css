@@ -2,12 +2,99 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 13%;
+    padding-right: 4%;
+    padding-top: 1%;
 }
 .star input[type='radio']{
     display:none;
 }
 .rate{
     cursor: pointer;
+    transition: color 200ms;
+}
+p.sLabel{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    position: relative;
+    left:0%;
+    padding-right: 11%;
+    font-size: 2.5vw;
+    display: inline-block;
+}
+p.RatingText{
+    position: relative;
+    top: 10%;
+    padding-left: 33%;
+    padding-top: 10%;
     
+}
+textarea.Complain{
+    color: black;
+    position: relative;
+    left: 37%;
+    width: 30%;
+    margin-top: 2%;
+    height: 100px;
+    text-align: start;
+    resize: none;
+    overflow: auto;
+    font-size: 1.0em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #807b7b;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) inset;
+    border-width: medium 1px 1px medium;
+    border-color: white;
+    transition: background-color 0.2s ease 0s;
+}
+textarea:focus {
+    background: none repeat scroll 0 0;
+    background-color: #b4b2b2;;
+}
+textarea:hover{
+    background: none repeat scroll 0 0;
+    background-color: #b4b2b2;;
+}
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: black;
+    font-size: 1.5em;
+    text-decoration: black;
+    padding-left: 3%;
+    padding-top: 1%;
+    font-style: italic;
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: black;
+    font-size: 1.5em;
+    text-decoration: black;
+    padding-left: 3%;
+    padding-top: 1%;
+    font-style: italic;
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: black;
+    font-size: 1.5em;
+    text-decoration: black;
+    padding-left: 3%;
+    padding-top: 1%;
+    font-style: italic; 
+} 
+@media screen and (max-width: 500px) {
+    p.sLabel {
+          font-size: 6vw;
+        }
+        p.RatingText{
+            position: relative;
+            padding-top: 20%;
+            padding-left: 15%;
+    }
+    textarea.Complain{
+        width: 75%;
+        left: 14%;
+        margin-top: 9%;
+        height: 250px;
+    }
 }
