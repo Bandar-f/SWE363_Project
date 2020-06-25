@@ -12,12 +12,14 @@ import WideButton from '../../components/WideButtonComponent/WideButton'
             <div class="message">
             <Text text="Welcome to"/><strong>KBTYN</strong>
             <br/>
-            <Text text= "Please enter your phone number"/>
+            <Text text= "Please enter your phone number"/><br/>
             <PhoneNum/>
             </div>
+            <br/>
             <WideButton/>
             <footer>
             <p id="copyrights">© 2020 Copyright Nawaf, Tariq, Yasser, Bandar & Co</p>
+            <br/>
             </footer>
         </div>
     )

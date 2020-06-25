@@ -4,6 +4,15 @@ import Sidemenu from './components/Sidemenu/Sidemenu';
 import NavBar from "./components/NavBarComponent/NavBar";
 import SelectService from './Pages/SelectServicePage/SelectServicePage'
 import WelcomePage from './Pages/WelcomePage/WelcomePage';
+import RequestRide from './Pages/RequestRidePage/RequestRide';
+import RateDriverPage from './Pages/RateDriverPage/RateDriverPage';
+import PickUpDetails from './Pages/PickUpDetailsPage/PickUpDetailsPage';
+import PackageTrack from './Pages/PackageTrackPage/PackageTrackPage';
+import MoreDetailsPage from './Pages/MoreDetailsPage/MoreDetailsPage';
+import LoginPage from './Pages/LoginPage/LoginPage';
+import History from './Pages/History/History';
+import DateNDriver from './Pages/DateNDriverPage/DateNDriver';
+
 
 
 //  
@@ -23,7 +32,7 @@ function App() {
       <NavBar header="test test" clicked={sidemenuClicked}/>
       <Sidemenu isOpened={isOpened} titles={titles}/>
       <div className="content-b">
-      <SelectService/>
+      <History/>
       </div>
     
     </div>

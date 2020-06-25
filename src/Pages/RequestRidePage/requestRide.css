@@ -13,4 +13,5 @@
         color: white;
         border-color: transparent transparent white transparent;
         overflow-y: scroll;
+        margin-bottom: 20vh;
 }

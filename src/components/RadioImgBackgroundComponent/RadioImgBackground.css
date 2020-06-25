@@ -14,10 +14,10 @@
   }
   .labels p{
       display: inline-block;
-      margin-left: 65px;
   }
   .labels .SecondLabel{
-    margin-left: 130px;
+    margin-left: 100px;
+    margin-bottom: 50px;
   }
   
   .TwoImagedRadios input[type="radio"] {
