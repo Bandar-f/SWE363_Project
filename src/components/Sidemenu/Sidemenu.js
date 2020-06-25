@@ -24,7 +24,7 @@ const Sidemenu = (props) => {
         
 
               
-       {props.titles.map((titles,index)=>(<li>{titles}</li>))}
+       {props.titles.map((titles,index)=>(<li className="side-menu-items">{titles}</li>))}
       </ul>
       
 

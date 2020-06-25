@@ -15,6 +15,15 @@
   box-shadow:5px 5px 10px black ;
   z-index:3;
 }
+.side-menu-items:hover{
+
+    color:#2B578A;
+    height: 10%;
+    width: 91%;
+    height: 60px;
+    background:#eee;
+  }
+
 
 li{
   margin-right:20px;
