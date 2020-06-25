@@ -1,4 +1,4 @@
-button { 
+button.Travel, button.Deliver { 
     position: absolute;
     top: 0;
     left: 0;
@@ -52,14 +52,15 @@ p.DeliverLabel{
 
 @media screen and (min-width: 500px) {
     button.Travel {
-       background-size: 1200px 700px;
+       background-size: 100% 100%;
         background-position-x: 0px;
         background-position-y: 0px;
+        background-repeat: no-repeat;
     }
     button.Deliver {
-        background-size: 1280px 725px;
+        background-size: 100% 100%;
         background-position-x: 0px;
-        background-position-y: -120px;
+        background-position-y: 0px;
         background-repeat: no-repeat;
     }
     p.TravelLabel{
@@ -69,9 +70,9 @@ p.DeliverLabel{
     }
     p.DeliverLabel{
         position: absolute;
-        left: 500px;
+        left: 25%;
         top: 245px;
-        width: 63%;
+        width: 85%;
         height: 55px;
     }
   }

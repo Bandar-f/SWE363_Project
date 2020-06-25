@@ -4,7 +4,6 @@
   text-decoration: none;
   list-style:none;
   color:white;
-  z-index:2;
 }
 .sidemenu{
   position:fixed;
@@ -14,6 +13,7 @@
   background-color:#364B64 ;
   transition: all .5s ease;
   box-shadow:5px 5px 10px black ;
+  z-index:3;
 }
 
 li{
