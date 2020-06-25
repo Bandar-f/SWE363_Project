@@ -7,3 +7,10 @@
     position: relative;
     right: 5%;
 }
+
+#rideRoute{
+        background-color: transparent;
+        color: white;
+        border-color: transparent transparent white transparent;
+        overflow-y: scroll;
+}
