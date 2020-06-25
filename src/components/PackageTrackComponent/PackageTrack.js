@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import uuid from 'react-uuid'
-
 import './packageTrack.css';
 
 export default class PackageTrack extends Component {
