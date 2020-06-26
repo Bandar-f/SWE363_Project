@@ -1,6 +1,6 @@
 import React from 'react'
 import './welcomePage.css'
-import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo'
+import FloatingLogo from '../../components/floatingLogoComponent/FloatingLogo'
 import PhoneNum from '../../components/PhoneNumComponent/PhoneNum'
 import Text from './../../components/TextComponent/Text'
 import WideButton from '../../components/WideButtonComponent/WideButton'

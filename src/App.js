@@ -12,8 +12,9 @@ import MoreDetailsPage from './Pages/MoreDetailsPage/MoreDetailsPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import History from './Pages/History/History';
 import DateNDriver from './Pages/DateNDriverPage/DateNDriver';
-import Customer from './components/CustomerComponent/Customer'
-
+import Customer from './components/CustomerComponent/Customer';
+import Ut from './components/UpcomingTripsComponent/Ut';
+import UtPage from './Pages/UpcomingTripsPage/UtPage';
 
 
 //  
@@ -33,7 +34,7 @@ function App() {
       <NavBar header="test test" clicked={sidemenuClicked}/>
       <Sidemenu isOpened={isOpened} titles={titles}/>
       <div className="content-b">
-      <PickUpDetails updates={['arrived,yes']}/>
+        <UtPage/>
       </div>
       
     
