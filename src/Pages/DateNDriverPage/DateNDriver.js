@@ -3,13 +3,14 @@ import './dateNDriver.css'
 import '../RequestRidePage/requestRide.css'
 import NavBar from '../../components/NavBarComponent/NavBar'
 import Sidemenu from '../../components/Sidemenu/Sidemenu'
-import FloatingLogo from '../../components/floatingLogoComponent/FloatingLogo'
+import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo'
 import Text from '../../components/TextComponent/Text'
 import Button from '../../components/WideButtonComponent/WideButton'
 import DatePicker from '../../components/DatePickerComponent/DatePicker'
 import TimePicker from '../../components/TimePickerComponent/TimePicker'
 import CarAndPerson from '../../components/CarAndPerson/Cap'
 import WideButton from '../../components/WideButtonComponent/WideButton'
+import { Link } from 'react-router-dom'
 
 const titles=["History","Pickup Details", "Request ride"];
 
@@ -48,7 +49,13 @@ class DateNDriver extends Component {
                 <CarAndPerson/>
             </div>
             <section class="middle" >
-                <WideButton/>
+
+
+               <Link to="/PickupDetails"> <WideButton buttonTitle="Continue"/> </Link>
+
+
+
+                
                 <br/>
             </section>
             </div>

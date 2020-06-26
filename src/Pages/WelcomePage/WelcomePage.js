@@ -1,9 +1,10 @@
 import React from 'react'
 import './welcomePage.css'
-import FloatingLogo from '../../components/floatingLogoComponent/FloatingLogo'
+import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo'
 import PhoneNum from '../../components/PhoneNumComponent/PhoneNum'
 import Text from './../../components/TextComponent/Text'
 import WideButton from '../../components/WideButtonComponent/WideButton'
+import { Link } from 'react-router-dom'
                             /*----- TTK -----*/
  function WelcomePage() {
     return (
@@ -13,10 +14,12 @@ import WideButton from '../../components/WideButtonComponent/WideButton'
             <Text text="Welcome to"/><strong>KBTYN</strong>
             <br/>
             <Text text= "Please enter your phone number"/><br/>
-            <PhoneNum/>
+            <Link to="/Login">
+            <PhoneNum />
+            </Link>
             </div>
             <br/>
-            <WideButton/>
+            <WideButton buttonTitle="Continue"/>
             <footer>
             <p id="copyrights">© 2020 Copyright Nawaf, Tariq, Yasser, Bandar & Co</p>
             <br/>

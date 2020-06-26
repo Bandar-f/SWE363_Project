@@ -10,3 +10,14 @@ body{
 }
 
 
+@media screen and (max-width: 500px) {
+    
+
+    .content-b-sidemenu-open{
+        opacity:0.3;
+    }
+   
+  }
+
+
+

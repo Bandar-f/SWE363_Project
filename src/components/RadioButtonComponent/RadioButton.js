@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import './RadioButton.css';
 /*-------------------------Two circular blue Radio Button-----------------------------*/
 /*-------------------DON'T USE IT, USE RADIOBUTTONIMAGEDBACKGROUND-----------------------------*/
-function RadioButton(){
+function RadioButton(props){
     return (
         <div className='TwoRadios'>
-            <input type="radio" id="First" name="Rad"/>
-            <label for="First">{/*Label Name*/}</label>
+            <input onClick={()=>{props.UserOrWorker(false)}} type="radio" id="First" name="Rad"/>
+            <label for="First">Driver</label>
 
-            <input type="radio" id="Second" name="Rad"/>
-            <label for="Second">{/*Label Name*/}</label>
+            <input onClick={()=>{props.UserOrWorker(true)}} type="radio" id="Second" name="Rad"/>
+            <label for="Second">Customer</label>
         </div>
     )
 } export default RadioButton

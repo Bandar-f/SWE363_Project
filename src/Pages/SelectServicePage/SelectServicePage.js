@@ -2,10 +2,11 @@ import React , { Component } from 'react';
 import './SelectServicePage.css';
 import SelectService from '../../components/SelectServiceComponent/SelectService';
 
-function SelectServicePage() {
+function SelectServicePage(props) {
+    
     return (
         <div>
-           <SelectService/>
+           <SelectService deliverOrPool={props.deliverOrPool}/>
         </div>
     )
 }

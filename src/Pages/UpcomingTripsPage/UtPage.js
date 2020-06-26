@@ -1,8 +1,9 @@
 import React from 'react';
 import './UtPage.css';
 import Ut from '../../components/UpcomingTripsComponent/Ut';
-import FloatingLogo from '../../components/floatingLogoComponent/FloatingLogo';
+import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
 import WideButton from '../../components/WideButtonComponent/WideButton';
+import { Link } from 'react-router-dom';
 function UtPage() {
     return(
     <div>
@@ -12,13 +13,13 @@ function UtPage() {
         destination='Riyadh'
         time='15:20' 
         place='KFUPM Mall Parking'/>
-        <WideButton buttonTitle='More Details'/>
+        <Link to="/MoreDetails"><WideButton buttonTitle='More Details'/></Link>
         <hr/>
         <Ut date='06/29/2020'
         destination='Dammam'
         time='13:00' 
         place='KFUPM Mall Parking'/>
-        <WideButton buttonTitle='More Details'/>
+        <Link to="/MoreDetails"><WideButton buttonTitle='More Details'/></Link>
         </div>
     </div>
     )

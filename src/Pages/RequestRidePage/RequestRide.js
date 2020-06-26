@@ -1,12 +1,13 @@
 import React from 'react'
 import NavBar from '../../components/NavBarComponent/NavBar'
 import Sidemenu from '../../components/Sidemenu/Sidemenu'
-import FloatingLogo from '../../components/floatingLogoComponent/FloatingLogo'
+import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo'
 import WelcomePage from '../WelcomePage/WelcomePage'
 import Text from '../../components/TextComponent/Text'
 import './requestRide.css'
 import RadioImgBackground from '../../components/RadioImgBackgroundComponent/RadioImgBackground'
-import Button from '../../components/WideButtonComponent/WideButton'
+import WideButton from '../../components/WideButtonComponent/WideButton'
+import { Link } from 'react-router-dom'
 
 const titles=["History","Pickup Details", "Request ride"];
 function RequestRide() {
@@ -35,7 +36,7 @@ function RequestRide() {
                 url2="https://i2.wp.com/us.motorsactu.com/wp-content/uploads/2019/10/Bentley-Flying_Spur-2020-1280-07.jpg?fit=1200%2C675&ssl=1"
                 Label1="Economy Tier" Label2="Luxury Tier"/>
                 <br/>
-                <Button/>
+                <Link to="/dateAndTime"> <WideButton buttonTitle="Continue"/> </Link>
             </section>
         </div>
     )

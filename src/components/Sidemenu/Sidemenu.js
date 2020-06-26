@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Personal from '../personalinfo/Personal';
 import  './Sidemenu.css';
+import {Link} from 'react-router-dom'
 
 const Sidemenu = (props) => {
             
@@ -15,20 +16,16 @@ const Sidemenu = (props) => {
     <div> 
       
     <div className={props.isOpened? "sidemenu": "hidden-sidemenu"}>
-      <header >
+      <header>
           <Personal name="Bandar Albalawi" rating="4.5"/>
-        
       </header>
 
-      <ul>
-        
-
-              
-       {props.titles.map((titles,index)=>(<li className="side-menu-items">{titles}</li>))}
+      <ul>       
+       {props.titles.map((titles,index)=>(<Link to={`/${titles.replace(/\s+/g, '')}`}><li className="side-menu-items">{titles}</li></Link>))}
       </ul>
       
 
-      <p className="logout">Logout</p>
+     <Link to="/welcomePage"> <p className="logout">Logout</p></Link>
     </div>
     </div>
   )
