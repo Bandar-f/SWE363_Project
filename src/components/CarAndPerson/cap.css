@@ -26,6 +26,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.person-info{
+  padding-top: 30px
+}
+
 
 @media screen and (max-width: 500px) {
 .car-img{
