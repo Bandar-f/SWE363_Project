@@ -127,7 +127,7 @@ function App() {
               <DateNDriver/>
 
 
-            <History/>
+            
 
             </Route>
 
