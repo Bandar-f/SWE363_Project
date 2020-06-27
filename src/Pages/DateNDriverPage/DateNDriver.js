@@ -45,15 +45,6 @@ class DateNDriver extends Component {
             <div id='cnd'>
                 <CarAndPerson/>
             </div>
-            <div id='cnd'>
-                <CarAndPerson/>
-            </div>
-            <div id='cnd'>
-                <CarAndPerson/>
-            </div>
-            <div id='cnd'>
-                <CarAndPerson/>
-            </div>
             <section class="middle" >
 
 
