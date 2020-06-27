@@ -16,6 +16,7 @@ import Customer from './components/CustomerComponent/Customer';
 import UtPage from './Pages/UpcomingTripsPage/UtPage';
 import MobileNumber from './Pages/MobileNumber/MobileNumber';
 import ScheduleRide from './Pages/ScheduleRide/ScheduleRide';
+import RegisterPage from './Pages/RegisterPage/RegisterPage';
 
 
 
@@ -170,6 +171,11 @@ function App() {
             <Route exact path="/ScheduleRide">
             <ScheduleRide/>
 
+            </Route>
+
+
+            <Route exact path='/register'>
+            <RegisterPage/>
             </Route>
 
 
