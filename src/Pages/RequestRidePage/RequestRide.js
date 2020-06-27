@@ -8,11 +8,17 @@ import './requestRide.css'
 import RadioImgBackground from '../../components/RadioImgBackgroundComponent/RadioImgBackground'
 import WideButton from '../../components/WideButtonComponent/WideButton'
 import { Link } from 'react-router-dom'
+import {motion} from 'framer-motion';
+
 
 const titles=["History","Pickup Details", "Request ride"];
 function RequestRide() {
     return (
-        <div>
+        <motion.div initial={{opacity:0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        transition={{duration:2}}
+         >
             <FloatingLogo/>
             <section class="middle" >
                 <div class="realign">
@@ -38,7 +44,7 @@ function RequestRide() {
                 <br/>
                 <Link to="/dateAndTime"> <WideButton buttonTitle="Continue"/> </Link>
             </section>
-        </div>
+        </motion.div>
     )
 }
 

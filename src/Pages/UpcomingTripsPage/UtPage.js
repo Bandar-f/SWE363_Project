@@ -4,9 +4,15 @@ import Ut from '../../components/UpcomingTripsComponent/Ut';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
 import WideButton from '../../components/WideButtonComponent/WideButton';
 import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion';
+
 function UtPage() {
     return(
-    <div>
+        <motion.div initial={{opacity:0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        transition={{duration:2}}
+         >
         <FloatingLogo/>
         <div className='UTWB1'>
         <Ut date='Today'
@@ -21,6 +27,6 @@ function UtPage() {
         place='KFUPM Mall Parking'/>
         <Link to="/MoreDetails"><WideButton buttonTitle='More Details'/></Link>
         </div>
-    </div>
+    </motion.div>
     )
 } export default UtPage;

@@ -5,9 +5,16 @@ import PhoneNum from '../../components/PhoneNumComponent/PhoneNum'
 import Text from './../../components/TextComponent/Text'
 import WideButton from '../../components/WideButtonComponent/WideButton'
 import { Link } from 'react-router-dom'
+import {motion} from 'framer-motion';
+
                             /*----- TTK -----*/
  function WelcomePage() {
     return (
+        <motion.div initial={{opacity:0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        transition={{duration:2}}
+         >
         <div class='welcome'>
            <FloatingLogo/>
             <div class="message">
@@ -25,6 +32,7 @@ import { Link } from 'react-router-dom'
             <br/>
             </footer>
         </div>
+        </motion.div>
     )
 }
 

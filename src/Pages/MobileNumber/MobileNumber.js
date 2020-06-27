@@ -6,6 +6,7 @@ import "./MobileNumber.css"
 import PhoneNum from '../../components/PhoneNumComponent/PhoneNum'
 import WideButton from '../../components/WideButtonComponent/WideButton'
 import { Link } from 'react-router-dom'
+import {motion} from 'framer-motion';
 
 const MobileNumber = (props) => {
 
@@ -13,7 +14,11 @@ const MobileNumber = (props) => {
   
 
   return (
-    <div>
+    <motion.div initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    transition={{duration:2}}
+     >
       <FloatingLogo/>
       <RadioButton UserOrWorker={props.UserOrWorker} />
 
@@ -24,7 +29,7 @@ const MobileNumber = (props) => {
       <Link to="/secondLog">
       <WideButton buttonTitle="Continue"/>
       </Link>
-    </div>
+    </motion.div>
   )
 }
 

@@ -13,8 +13,11 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import History from './Pages/History/History';
 import DateNDriver from './Pages/DateNDriverPage/DateNDriver';
 import Customer from './components/CustomerComponent/Customer';
-import Ut from './components/UpcomingTripsComponent/Ut';
 import UtPage from './Pages/UpcomingTripsPage/UtPage';
+import MobileNumber from './Pages/MobileNumber/MobileNumber';
+import ScheduleRide from './Pages/ScheduleRide/ScheduleRide';
+
+
 
 //react router
 import {
@@ -24,8 +27,14 @@ import {
   Link,
   useParams
 } from "react-router-dom";
-import MobileNumber from './Pages/MobileNumber/MobileNumber';
-import ScheduleRide from './Pages/ScheduleRide/ScheduleRide';
+
+
+
+import {AnimatePresence,motion} from 'framer-motion';
+
+
+
+
 
 
 
@@ -88,12 +97,16 @@ function App() {
     <div  className="App">
 
       <NavBar header="test test" clicked={sidemenuClicked}/>
-      <Sidemenu isOpened={isOpened} titles={userType==="Customer" ? costumerTitles:workerTitles} />
-      <div className={isOpened ?"content-b content-b-sidemenu-open":"content-b "}>
 
+      <Sidemenu isOpened={isOpened} titles={userType==="Customer" ? costumerTitles:workerTitles} />
+
+      <div onClick={()=>{if(isOpened)setIsOpened(false);}} className={isOpened ?"content-b content-b-sidemenu-open":"content-b "}>
+      <AnimatePresence>
         <Switch>
 
         <Route exact path="/test">
+
+          
              
 
             </Route>
@@ -168,6 +181,8 @@ function App() {
            
 
           </Switch>
+          </AnimatePresence>
+
 
         
       </div>

@@ -1,13 +1,19 @@
 import React from 'react'
 import './scheduleRide.css'
+import {motion} from 'framer-motion';
+
 
 const ScheduleRide = () => {
   return (
-    <div>
+    <motion.div initial={{opacity:0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        transition={{duration:2}}
+         >
       
       <p className="testestt">Not done Yet</p>
       
-    </div>
+    </motion.div>
   )
 }
 

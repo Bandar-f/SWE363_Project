@@ -3,12 +3,18 @@ import './RateDriverPage.css';
 import Cap from '../../components/CarAndPerson/Cap';
 import { FaStar } from 'react-icons/fa';
 import Text from '../../components/TextComponent/Text';
+import {motion} from 'framer-motion';
+
 function RateDriverPage(){
     const starLabels = ['Terrible 😠', "Bad 😓", 'Good 😒', 'Excellent 😃', 'Spactacular 😎'];
     const [rating, setRating] = useState(null)
     const [hover, setHover] = useState(null);
     return(
-        <div>
+        <motion.div initial={{opacity:0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        transition={{duration:2}}
+         >
         <Cap/>
         <p className='RatingText'><Text text='Rating: '/>  <p className='sLabel'>{starLabels[rating-1]}</p></p>
             <div className='star'>
@@ -27,6 +33,6 @@ function RateDriverPage(){
                 })}
             </div>
             <textarea className='Complain' placeholder='Tell us about your ride ...'></textarea>
-        </div>
+        </motion.div>
     );
 } export default RateDriverPage;
