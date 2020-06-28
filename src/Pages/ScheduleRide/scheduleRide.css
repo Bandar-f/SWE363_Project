@@ -4,5 +4,25 @@
   position: relative;
  
   top:200px;
-
+}
+div.DD{
+  margin-left: 45%;
+  margin-top: 5%;
+}
+div.Date{
+  margin-top: -4%;
+}
+div.all{
+  margin-left: 15%;
+}
+div.Time{
+  margin-top: 7%;
+}
+div.Amnt{
+  margin-top: 7%;
+}
+@media screen and (min-width: 500px) {
+  div.DD{
+    margin-top: 3%;
+  }
 }

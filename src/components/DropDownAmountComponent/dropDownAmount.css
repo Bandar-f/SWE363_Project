@@ -1,10 +1,10 @@
 #custom_amount{
+    margin-left: 20%;
     background-color: inherit;
     color: gainsboro;
     border-style: hidden;
     text-indent: 1px;
     text-overflow: '';
-    margin: 2px;
 }
 h1{
     color: #eeee;
