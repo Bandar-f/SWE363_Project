@@ -9,3 +9,10 @@
     background-color: transparent;
     border: none;
 }
+
+.notification-element:hover{
+
+    color:#2B578A;
+    background:#eee;
+  }
+

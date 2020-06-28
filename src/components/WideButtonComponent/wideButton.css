@@ -4,7 +4,7 @@
 
 .wide-button{
     
-    width: 65%;
+    width: 50%;
     height: 2rem;
     background-color: #2b578a ;
     border-radius: 3px;
@@ -13,5 +13,6 @@
     margin-left: 0.3em;
     border-radius: 10px;
     border-style: hidden;
-    
+    font-size: 20px;
+    margin-left:1em; 
 }
