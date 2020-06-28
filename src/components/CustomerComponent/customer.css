@@ -4,6 +4,7 @@ display: inline-block;
 
 .button-small {
 	display: inline-block;
+	position: absolute;
 	width: 4rem;
 	height: 1.3rem;
 	background-color: #2b578a;
@@ -12,8 +13,7 @@ display: inline-block;
 	margin-top: 10px;
 	border-radius: 5px;
 	border-style: hidden;
-	position: relative;
-	left: 15%;
+	left: 60%;
 }
 .small-button-container{
   display: inline;
@@ -21,7 +21,58 @@ display: inline-block;
 
 .customer-name {
 	display: inline-block;
+	position: relative;
 	margin-left: 0.5em;
+	margin-bottom: 15px;
 	text-align: left;
 	font-size: 30px;
+	left: 870px;
+}
+
+
+
+@media screen and (max-width: 2400px) {
+	.customer-name{
+		position: relative;
+		left: 720px;
+	}
+}
+
+@media screen and (max-width: 2000px) {
+	.customer-name{
+		position: relative;
+		left: 520px;
+	}
+}
+
+@media screen and (max-width: 1700px) {
+	.customer-name{
+		position: relative;
+		left: 320px;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.customer-name{
+		position: relative;
+		left: 120px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.customer-name{
+		position: relative;
+		left: 20px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.button-small{
+		position: absolute;
+		left: 85%;
+	}
+	.customer-name{
+		position: relative;
+		left: 0;
+	}
 }

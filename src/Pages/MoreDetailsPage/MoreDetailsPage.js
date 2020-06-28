@@ -20,7 +20,7 @@ export default function MoreDetailsPage() {
             <h1 className="tag-info">Customers</h1>
 			<div className="info-container">
             {customers.map(customer=>(
-         <Customer key={uuid()} customer={customer}/>
+            <p><Customer key={uuid()} customer={customer}/></p>
             ))}
                <p className="wide-button-span">
                <WideButton/>
