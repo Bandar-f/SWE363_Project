@@ -17,6 +17,7 @@ import UtPage from './Pages/UpcomingTripsPage/UtPage';
 import MobileNumber from './Pages/MobileNumber/MobileNumber';
 import ScheduleRide from './Pages/ScheduleRide/ScheduleRide';
 import RegisterPage from './Pages/RegisterPage/RegisterPage';
+import AdminPage from './Pages/AdminPage/AdminPage';
 
 
 
@@ -200,6 +201,9 @@ function App() {
             <RegisterPage/>
             </Route>
 
+            <Route exact path='/admin'>
+            <AdminPage/>
+            </Route>
 
 
             

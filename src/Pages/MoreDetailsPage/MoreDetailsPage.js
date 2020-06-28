@@ -23,7 +23,7 @@ export default function MoreDetailsPage() {
             <p><Customer key={uuid()} customer={customer}/></p>
             ))}
                <p className="wide-button-span">
-               <WideButton/>
+               <WideButton buttonTitle="Cancel Ride"/>
                 </p> 
 			    </div>
 		</motion.div>

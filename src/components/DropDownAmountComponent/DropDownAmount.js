@@ -1,14 +1,14 @@
 /* ---- nawaf ---- */
 
-import React from 'react';
+import React, { Component } from 'react';
 import './dropDownAmount.css';
-
-export default function DropDownAmount() {
+import { render } from '@testing-library/react';
+class DropDownAmount extends Component {
+    render() {
     const amount = [1,2,3,4];
     return (
 
         <div>
-            <h1>Package Amount</h1>
            <select id='#custom_amount'>
     <option key={'inial'} value={null}>{'1-4'}</option>
                {amount.map((amount,index)=>(
@@ -19,3 +19,4 @@ export default function DropDownAmount() {
         </div>
     )
 }
+} export default DropDownAmount;

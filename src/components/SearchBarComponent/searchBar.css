@@ -1,0 +1,43 @@
+#admin-searchButton{
+    width: 100px;
+    height: 2rem;
+    background-color: #2b578a ;
+    border-radius: 3px;
+    color: #eee;
+    margin-left: 11em;
+    border-style: hidden;
+    border-radius: 10px;
+    
+}
+.admin-form{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.button-admin-container{
+margin-top: 30px;
+
+}
+.driver-admin{
+    margin-top: 10px;
+}
+.Result-container{
+    width: 22rem;
+    height: 20rem;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.result-header{
+    margin-bottom: 30px;
+
+}
+.band-button{
+    width: 25px;
+    height: 25px;
+    background-color: #2b578a ;
+    border-radius: 3px;
+    color: #eee;
+    margin-left: 1em;
+    border-style: hidden;
+    border-radius: 10px;
+}

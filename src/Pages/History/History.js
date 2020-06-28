@@ -14,9 +14,9 @@ const History = () => {
      
 
      <Link to="/rateDriver"><Cap/></Link>
-     <Cap/>
-     <Cap/>
-     <Cap/>
+     <Link to="/rateDriver"><Cap/></Link>
+     <Link to="/rateDriver"><Cap/></Link>
+     <Link to="/rateDriver"><Cap/></Link>
 
       
     </motion.div>
