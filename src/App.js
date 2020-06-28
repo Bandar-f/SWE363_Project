@@ -26,12 +26,15 @@ import {
   Switch,
   Route,
   Link,
-  useParams
+  useParams,
+  useLocation,
+  useHistory
 } from "react-router-dom";
 
 
 
 import {AnimatePresence,motion} from 'framer-motion';
+import BackButton from './components/BackButton/BackButton';
 
 
 
@@ -40,9 +43,14 @@ import {AnimatePresence,motion} from 'framer-motion';
 
 
 function App() {
-   
+
+   //Sidemenu choices
    const costumerTitles=["History","Pickup Details", "Request Ride"];
    const workerTitles=["History","Schedule Ride","Upcoming Trips"]
+
+   //to get the currentRoute
+   let currentRoute=useLocation().pathname;
+
 
 
    const[isOpened,setIsOpened]=useState(false);
@@ -58,6 +66,7 @@ function App() {
 
    const [deliverOrPool,setDeliverOrPool]=useState("");
 
+   //this is used to to set the type of app we are in. it will be passed to the first page of the app
   const getDeliverOrPool=(isDeliver)=>{
 
      if(isDeliver)
@@ -67,11 +76,11 @@ function App() {
      
    }
 
-
+    //is user customer or employer
    const [userType,setUserType]=useState("");
 
 
-
+  //this  will be passed to everycomponent that needs to update usertype state
    const getUserType=(isCustomer)=>{
 
      if(isCustomer)
@@ -99,16 +108,19 @@ function App() {
 
       <NavBar header="test test" clicked={sidemenuClicked}/>
 
+      <BackButton  />
+
       <Sidemenu isOpened={isOpened} titles={userType==="Customer" ? costumerTitles:workerTitles} />
 
-      <div onClick={()=>{if(isOpened)setIsOpened(false);}} className={isOpened ?"content-b content-b-sidemenu-open":"content-b "}>
+      <div onClick={()=>{if(isOpened)setIsOpened(false);}}
+       className={isOpened ?`content-b content-b-sidemenu-open ${currentRoute==="/"||currentRoute==="/welcomePage"||currentRoute==="Login"? "":"add-top"}`:`content-b ${currentRoute==="/"||currentRoute==="/welcomePage"||currentRoute==="Login"? "":"add-top"} `}>
       <AnimatePresence>
         <Switch>
 
         <Route exact path="/test">
 
           
-             
+            
 
             </Route>
 
@@ -123,6 +135,7 @@ function App() {
             <History/>
 
             </Route>
+
             <Route exact path="/dateAndTime">
 
               <DateNDriver/>
