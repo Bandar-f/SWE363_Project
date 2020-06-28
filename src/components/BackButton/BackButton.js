@@ -12,7 +12,7 @@ const BackButton = () => {
 
     <>
     
-    {currentRoute!="/"&&currentRoute!="/welcomePage"&&currentRoute!="/Login"?
+    {currentRoute!="/"&&currentRoute!="/welcomePage"&&currentRoute!="/Login"&& currentRoute!="/RequestRide"&& currentRoute!="/PickupDetails"&&currentRoute!="/ScheduleRide"&&currentRoute!="/UpcomingTrips"&&currentRoute!="/History"?
 
     <div  onClick={()=>{History.goBack()}} className="button-contain-b">
        
