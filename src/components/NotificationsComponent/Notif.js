@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const ContainEr = styled.div`
     background-color: #2B578A;
-    color: black;
+    color: white;
     padding: 16px;
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
@@ -15,7 +15,7 @@ const ContainEr = styled.div`
     height: 350px;
     top: ${props => props.top}px;
     right:0px;
-    z-index: 1;
+    z-index:1;
     transition: top 0.5s ease;
     overflow-y: scroll;
     border-radius: 5px;
@@ -42,7 +42,7 @@ class Notif extends Component {
     }
 
     showNotif = () => {
-        this.setState({top:40})
+        this.setState({top:43})
         this.isOpen=false
     }
 
@@ -51,7 +51,7 @@ class Notif extends Component {
         return (
             <div>
                 <React.Fragment>
-                <button id="btnPos" onClick={this.onShow}>Test</button>
+                <button id="btnPos" onClick={this.onShow}></button>
                 <ContainEr top={this.state.top}>
                 {notifications.map((notifications,index)=>(
                 <Link to={

@@ -11,11 +11,29 @@ body{
 
 .add-top{
     top:46px;
+    left: 228px;
+    margin-right: 228px;
 }
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  
+  * {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
 
 @media screen and (max-width: 500px) {
     
+    .content-b{
+        position: relative;
+        left: 0px;
+        margin-right: 0px;
+    }
 
     .content-b-sidemenu-open{
         opacity:0.3;
