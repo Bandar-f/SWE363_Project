@@ -19,6 +19,7 @@ const MobileNumber = (props) => {
     exit={{opacity:0}}
     transition={{duration:2}}
      >
+       <div className= "fixPos">
       <FloatingLogo/>
       <RadioButton UserOrWorker={props.UserOrWorker} />
 
@@ -29,6 +30,7 @@ const MobileNumber = (props) => {
       <Link to="/secondLog">
       <WideButton buttonTitle="Continue"/>
       </Link>
+      </div>
     </motion.div>
   )
 }

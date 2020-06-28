@@ -5,3 +5,21 @@
   text-align: center;
   font-size: 1.5rem;
 }
+@media screen and (min-width: 500px) {
+    
+  .fixPos{
+    position: relative;
+    left: -114px;
+  }
+ 
+}
+
+@media screen and (max-width: 500px) {
+    
+  .fixPos{
+    position: relative;
+    left: 0;
+  }
+ 
+}
+

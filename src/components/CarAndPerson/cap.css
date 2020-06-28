@@ -1,7 +1,7 @@
 .cap-container{
  /* margin-top: 70px;*/
   position: relative;
-  left: 5%;
+  left: 15%;
 
 }
 
@@ -40,7 +40,7 @@
   color: transparent;
   margin: auto;
   border-radius: 5px;
-  width: 50vw;
+  width: 46vw;
   top: 30px;
   left:10%;
   height: 90px;
@@ -51,9 +51,15 @@
 .car-img{
   width:150px;
   position: absolute;
-  left: 60%;
+  left: 56%;
   margin-top: -50px;
 }
+
+.cap-container{
+   position: relative;
+   left: 1%;
+ 
+ }
 
 .text-under{
   position:relative;
@@ -67,7 +73,7 @@
 }
 
 .invisiButton{
-  width: 85vw;
+  width: 90vw;
   position: absolute;
   left: 5%;
 }
