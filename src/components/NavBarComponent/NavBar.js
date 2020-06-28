@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component,useState,useEffect} from 'react';
 import './navBar.css';
 import { render } from '@testing-library/react';
 import Notif from '../NotificationsComponent/Notif';
@@ -9,6 +9,33 @@ const NavBar =(props)=>{
 
 
     let currentRoute=useLocation().pathname;
+    
+
+
+    const [header,setHeader]=useState("initial");
+
+   const getTitle=()=>{
+    let char='';
+  
+   for(let i=1;i<=currentRoute.length;i++){
+       char=currentRoute.charAt(i);
+       
+       if(char===char.toUpperCase()){
+           setHeader(currentRoute.substring(1,i)+" "+currentRoute.substring(i,currentRoute.length));
+           
+           break;
+
+       }
+   }
+
+}
+useEffect(getTitle,[currentRoute]);
+
+
+
+    
+
+
 
 
 
@@ -19,7 +46,7 @@ const NavBar =(props)=>{
         <div id = "NavBar">
             <img onClick={props.clicked} id="SideMenu" src="https://www.hotel-igelheim.eu/img/mobile_nav_icon.png" alt="Side Menu"/>
             <Notif/>
-            <h1>{props.header}</h1> {/* allows for a variable page navigation information title, apply by initiating <NavBar header="Any Page Title"> */}
+            <h1>{header}</h1> {/* allows for a variable page navigation information title, apply by initiating <NavBar header="Any Page Title"> */}
             <img id="Notif" src="https://www.iconsdb.com/icons/preview/white/bell-2-xxl.png" alt="Notifications"/>
         </div>:""}
         </>

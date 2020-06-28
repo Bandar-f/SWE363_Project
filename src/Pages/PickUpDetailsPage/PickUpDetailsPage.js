@@ -24,7 +24,7 @@ export default function PickUpDetailsPage(props) {
            
           
             <div className='updates-container'>
-              <PackageTrack/>
+              <PackageTrack deliverOrPool={props.deliverOrPool}/>
             </div>
         </div>
         </motion.div>

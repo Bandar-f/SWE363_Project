@@ -6,24 +6,26 @@ export default class PackageTrack extends Component {
 	state = {
 		updates: [{
             id: uuid(),
-            details: ' Update: your package is now left'
+            details: 'test test 3'
         },
         {
             id: uuid(),
-            details: ' Update: your package is now out'
+            details: 'test test 2'
         },
         {
             id: uuid(),
-            details: 'Update: your package is now received'
+            details: 'test test'
         }
 		],
 	};
+	
+	
 
 	render() {
 		return (
 			<div className="update-container">
 				{this.state.updates.map((update) => (
-					<p className='text-holder' key={update.id} >Delivery update : {update.details}</p>
+					<p className='text-holder' key={update.id} >{this.props.deliverOrPool==="Pool"?"Delivery update :":"Trip update " }{update.details}</p>
 				))}
 			</div>
 		);

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import './App.css';
 import Sidemenu from './components/Sidemenu/Sidemenu';
 import NavBar from "./components/NavBarComponent/NavBar";
@@ -68,11 +68,13 @@ function App() {
 
    //this is used to to set the type of app we are in. it will be passed to the first page of the app
   const getDeliverOrPool=(isDeliver)=>{
-
+    
      if(isDeliver)
      setDeliverOrPool("Deliver");
      else
      setDeliverOrPool("Pool");
+
+
      
    }
 
@@ -92,6 +94,12 @@ function App() {
 
 
 
+   //to update nav bar header
+
+   
+
+
+
 
 
 
@@ -106,7 +114,7 @@ function App() {
   return (
     <div  className="App">
 
-      <NavBar header="test test" clicked={sidemenuClicked}/>
+      <NavBar   clicked={sidemenuClicked}/>
 
       <BackButton  />
 
@@ -147,12 +155,12 @@ function App() {
             </Route>
 
             <Route exact path="/PickupDetails">
-            <PickUpDetails/>
+            <PickUpDetails deliverOrPool={deliverOrPool}/>
 
             </Route>
 
             <Route exact path="/RequestRide">
-            <RequestRide/>
+            <RequestRide deliverOrPool={deliverOrPool}/>
 
             </Route>
 
