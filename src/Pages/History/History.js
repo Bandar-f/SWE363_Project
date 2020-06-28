@@ -1,6 +1,7 @@
 import React from 'react'
 import Cap from '../../components/CarAndPerson/Cap'
 import {motion} from 'framer-motion';
+import {Link,useLocation} from 'react-router-dom'
 
 
 const History = () => {
@@ -12,7 +13,7 @@ const History = () => {
      >
      
 
-     <Cap/>
+     <Link to="/rateDriver"><Cap/></Link>
      <Cap/>
      <Cap/>
      <Cap/>

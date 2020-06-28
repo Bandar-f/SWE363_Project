@@ -6,6 +6,10 @@ body{
 
 .content-b{
     position:relative;
+    
+}
+
+.add-top{
     top:46px;
     left: 228px;
     margin-right: 228px;
