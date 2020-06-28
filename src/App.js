@@ -117,7 +117,8 @@ function App() {
       <AnimatePresence>
         <Switch>
 
-        <Route exact path="/test">
+        <Route exact path="/rateDriver">
+          <RateDriverPage/>
 
           
             
