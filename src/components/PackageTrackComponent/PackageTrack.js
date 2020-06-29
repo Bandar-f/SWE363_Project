@@ -25,7 +25,7 @@ export default class PackageTrack extends Component {
 		return (
 			<div className="update-container">
 				{this.state.updates.map((update) => (
-					<p className='text-holder' key={update.id} >{this.props.deliverOrPool==="Pool"?"\fDelivery update: ":"Trip update: " }{update.details}</p>
+					<p className='text-holder' key={update.id} >{this.props.deliverOrPool==="Pool"?"Delivery update: ":"Trip update: " }{update.details}</p>
 				))}
 			</div>
 		);
