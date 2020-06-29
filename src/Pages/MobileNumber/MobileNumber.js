@@ -25,10 +25,13 @@ const MobileNumber = (props) => {
       <div id="tariqFixedDis">
       <RadioButton UserOrWorker={props.UserOrWorker} />
       </div>
-      <div className="realign">
+      <div className="middle">
+        <div className='realign'>
       <Text text="Please enter your mobile number"/>
-
+      <div className='realign'>
       <PhoneNum/>
+      </div>
+      </div>
       </div>
       <Link to="/secondLog">
       <WideButton buttonTitle="Continue"/>
