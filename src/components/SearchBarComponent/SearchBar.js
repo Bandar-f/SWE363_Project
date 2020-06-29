@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './searchBar.css';
-
 export default class searchBar extends Component {
 state ={
     users:["nawaf8820","yaser2020","bandar2020","tariq2020"]

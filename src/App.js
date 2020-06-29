@@ -20,6 +20,13 @@ import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import AdminPage from './Pages/AdminPage/AdminPage';
 
 
+//seclude ride should be in the package system ---> shipment track
+// upComing trips should be removed from the package service
+//history should contains the package information 
+/* in the notification if the user clicks on any notification then
+it should redirect the user to the shipment track page
+*/ 
+
 
 //react router
 import {
