@@ -10,6 +10,13 @@ input[type="text"], [type="password"]{
     position: relative;
     bottom: 10px;
 }
+
+.leftAlign{
+  text-align: left;
+  position: relative;
+  left: 11%;
+}
+
 /* Chrome, Firefox, Opera, Safari 10.1+ */
 ::placeholder { 
     color: gainsboro;
@@ -25,5 +32,9 @@ input[type="text"], [type="password"]{
 @media screen and (max-width:500px){
   input[type="text"], [type="password"]{
     font-size: 5vw;
+  }
+  .leftAlign{
+    position: relative;
+    left: 5%;
   }
 }
