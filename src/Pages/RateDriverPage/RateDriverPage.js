@@ -4,6 +4,7 @@ import Cap from '../../components/CarAndPerson/Cap';
 import { FaStar } from 'react-icons/fa';
 import Text from '../../components/TextComponent/Text';
 import {motion} from 'framer-motion';
+import WideButton from '../../components/WideButtonComponent/WideButton';
 
 function RateDriverPage(){
     const starLabels = ['Terrible 😠', "Bad 😓", 'Good 😒', 'Excellent 😃', 'Spactacular 😎'];
@@ -16,6 +17,8 @@ function RateDriverPage(){
         transition={{duration:2}}
          >
         <Cap/>
+        <div className='middle'>
+
         <p className='RatingText'><Text text='Rating: '/>  <p className='sLabel'>{starLabels[rating-1]}</p></p>
             <div className='star'>
              {[...Array(5)].map((star, i) =>{
@@ -33,6 +36,10 @@ function RateDriverPage(){
                 })}
             </div>
             <textarea className='Complain' placeholder='Tell us about your ride ...'></textarea>
+            <br/>
+            <WideButton buttonTitle= "Submit"/>
+            <br/>
+            </div>
         </motion.div>
     );
 } export default RateDriverPage;

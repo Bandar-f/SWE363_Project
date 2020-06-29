@@ -24,6 +24,7 @@ img#SideMenu {
 img#Notif{
     width: 35px;
     height: 35px;
+    z-index: 3;
     padding: 2px;
     position: absolute;
     right: 4px;

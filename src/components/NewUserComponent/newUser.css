@@ -24,8 +24,8 @@
  }
  /* Chrome, Firefox, Opera, Safari 10.1+ */
  ::placeholder { 
-     color: white;
-     opacity: 1; /* Firefox */
+     color: gainsboro;
+     opacity: 0.7; /* Firefox */
    }
  
  .NewUser-Links{

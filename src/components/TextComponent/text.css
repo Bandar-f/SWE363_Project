@@ -4,13 +4,13 @@
     font-weight: lighter;
     position: relative;
     margin-left:10%;
-    font-size: 2.5vw;
+    font-size: 2rem;
     line-height: 1.25em;
     display: inline-block;
 }
 
 @media screen and (max-width: 500px) {
 .textStyling {
-      font-size: 6vw;
+      font-size: 1.8rem;
     }
 }

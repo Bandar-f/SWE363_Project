@@ -2,19 +2,27 @@
 
 .carComponent-container{
   text-align: center;
-  background-color: black;
 }
 
 .img-container{
   text-align: center;
 }
+hr.textCar-container{
+  position: relative;
+  left: auto;
+}
 .textCar-container{
-  color:black;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  font-size: larger;
+  padding-bottom: 10px;
+  position: relative;
+  font-weight: lighter;
+  top: -15px;
 }
 .img-car-info{
-  width:30%;
-  height:15%;
+  width:200px;
 }
 .text-car-info{
   line-height:1.5rem;

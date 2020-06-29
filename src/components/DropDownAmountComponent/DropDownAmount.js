@@ -10,7 +10,7 @@ class DropDownAmount extends Component {
 
         <div>
            <select id='#custom_amount'>
-    <option key={'inial'} value={null}>{'1-4'}</option>
+    <option key={'initial'} value={null}>{'1-4'}</option>
                {amount.map((amount,index)=>(
                 
                <option key={index} value={amount}>{amount}</option>

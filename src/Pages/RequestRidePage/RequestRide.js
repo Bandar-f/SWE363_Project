@@ -23,7 +23,7 @@ function RequestRide(props) {
             <FloatingLogo/>
             <section class="middle" >
                 <div class="realign">
-                <Text text={props.deliverOrPool==="Deliver"?"Where to...":"Whete to ship..."}/>
+                <Text text={props.deliverOrPool==="Deliver"?"Where to...":"Where to ship..."}/>
                 </div>
                 <div>
                 <select name="select destination" id="rideRoute">
@@ -39,7 +39,9 @@ function RequestRide(props) {
                 <option value="bqq">Albaqiq</option>
                 </select>
                 </div>
-
+                <div class="realign2">
+                <Text text={props.deliverOrPool==="Deliver"?"Select your tier":"Select package size"}/>
+                </div>
                 <div className='RRIB'>
                 {props.deliverOrPool==="Deliver"?<RadioImgBackground url1="https://audimediacenter-a.akamaihd.net/system/production/media/91178/images/1f201fd6f5fcbd78b452dd0ff4907b1cc4dc0a8c/A202506_blog.jpg?1587377988"
                 url2="https://i2.wp.com/us.motorsactu.com/wp-content/uploads/2019/10/Bentley-Flying_Spur-2020-1280-07.jpg?fit=1200%2C675&ssl=1"

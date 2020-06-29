@@ -26,6 +26,7 @@ function UtPage() {
         time='13:00' 
         place='KFUPM Mall Parking'/>
         <Link to="/MoreDetails"><WideButton buttonTitle='More Details'/></Link>
+        <br/>
         </div>
     </motion.div>
     )

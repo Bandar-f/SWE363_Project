@@ -4,23 +4,33 @@ import PersonWithRating from '../../components/PersonWithRatingComponent/PersonW
 import PackageTrack from  '../../components/PackageTrackComponent/PackageTrack';
 import './pickUpDetailsPage.css'
 import {motion} from 'framer-motion';
+import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
+import Button from '../../components/ButtonComponent/Button';
 
 
 
 export default function PickUpDetailsPage(props) {
+    function CallingD(){
+		window.location.href='tel:0581131070';
+	}
     return (
-
         <motion.div initial={{opacity:0}}
         animate={{opacity:1}}
         exit={{opacity:0}}
         transition={{duration:2}}
          >
         <div className='pickup-container'>
-            <CarComponent/>
-            <div className='personal-withRating-wrappe'>
+            
+        <FloatingLogo/>
+            <div className='personal-withRating-wrapper'>
             <PersonWithRating name={'nawaf al sharqi'} rating={5}/>
             </div>
-           
+            <CarComponent/>
+            <div className='middle'>
+            <button className="buttonT">Cancel</button>
+            <button className="buttonT" onClick={CallingD}>Call</button>
+            </div>
+           <hr/>
            
           
             <div className='updates-container'>

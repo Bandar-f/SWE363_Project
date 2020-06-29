@@ -1,5 +1,6 @@
 body{
     background-color: #222222;
+    color: white;
 }
 
 
@@ -24,6 +25,13 @@ body{
   * {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+  }
+
+  select{
+      background-color: transparent;
+      border-color: transparent transparent white transparent;
+      font-size: larger;
+      color: gainsboro;
   }
 
 

@@ -20,13 +20,17 @@ const ScheduleRide = () => {
     <div className='pickupAlign'>
     <Text text='Select pickup date'/>
     </div>
+    <div class="goUPPP">
     <DatePicker/>
+    </div>
     </div>
     <div className='Time'>
     <div className='timeAlign'>
     <Text text='Select pickup time'/>
     </div>
+    <div class="goUPPP">
     <TimePicker/>
+    </div>
     </div>
     <div className='Amnt'>
     <Text text='Passenger amount'/>

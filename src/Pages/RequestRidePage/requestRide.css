@@ -6,25 +6,31 @@
 .realign{
     position: relative;
     right: 5%;
+    top: -20px;
 }
-
+.realign2{
+    position: relative;
+    right: 5%;
+    top: -100px;
+}
 #rideRoute{
         background-color: transparent;
         color: white;
         border-color: transparent transparent white transparent;
         overflow-y: scroll;
         margin-bottom: 20vh;
+        font-size: 2rem;
+        width:60%;
+        text-align: center;
 }
 div.RRIB{
     position: relative;
-    bottom: 8vw;
+    bottom: 6rem;
     
 }
 @media screen and (max-width: 500px){
-    div.RRIB{
-        position: absolute;
-        top: 45%;
-        left: 0%;
-        width: auto;
-}
+
+    #rideRoute{
+        font-size: 5vw;
+    }
 }

@@ -10,6 +10,11 @@
     border: none;
 }
 
+.notification-element{
+    color: white;
+    z-index: 1;
+}
+
 .notification-element:hover{
 
     color:#2B578A;

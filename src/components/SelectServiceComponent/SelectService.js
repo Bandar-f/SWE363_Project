@@ -10,7 +10,7 @@ function SelectService(props){
                 Travel With Our Experienced <br/> Drivers</p></button>
             
             <button onClick={()=>{props.deliverOrPool(false)}} className='Deliver'><p className='DeliverLabel'>
-                Send Packages Immediately To Your <br/>Loved ones</p></button>
+                Send Packages To Your <br/>Loved ones</p></button>
 
                 </Link>
         </div>

@@ -10,18 +10,21 @@ button.Travel, button.Deliver {
 button.Travel {
     -webkit-clip-path: polygon(0 0, 0 100vh, 100% 100vh);
     clip-path: polygon(0 0, 0 100vh, 100% 100vh);
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('https://images3.alphacoders.com/945/thumb-1920-945331.jpg');
-    background-size: 600px 790px;
-    background-position-x: 470px;
-    background-position-y: 30px;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)), url('https://images3.alphacoders.com/945/thumb-1920-945331.jpg');
     opacity: 0.7;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 button.Deliver {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh);
     clip-path: polygon(0 0, 100% 0, 100% 100vh);
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../../Images/Deliver.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url('../../Images/Deliver.jpg');
     background-size: 600px 620px;
     opacity: 0.7;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 button.Travel:hover{
     transition: ease-in-out 0.3s;
@@ -33,21 +36,25 @@ button.Deliver:hover{
 }
 
 p.TravelLabel{
+    color: white;
     position: absolute;
-    left: 0px;
-    width: 205px;
-    background-color: rgba(0, 0, 0, .5);
+    width: 80%;
+    padding-right: 4px;
+    top:75%;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    line-height: 40px;
 }
 p.DeliverLabel{
+    color: white;
     position: absolute;
-    left:33%;
-    top: 37%;
-    width: 263px;
+    left:18%;
+    top: 12%;
+    width: 80%;
     height: 50px;
-    text-indent: 4%;
-    background-color: rgba(0, 0, 0, .5);
     font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    line-height: 40px;
 }
 
 @media screen and (min-width: 500px) {
@@ -65,8 +72,8 @@ p.DeliverLabel{
     }
     p.TravelLabel{
         position: absolute;
-        padding: 10px 30px;
         width: 57%;
+        left: 0%;
     }
     p.DeliverLabel{
         position: absolute;

@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const ContainEr = styled.div`
     background-color: #2B578A;
-    color: white;
+    color: #ffffff;
     padding: 16px;
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;

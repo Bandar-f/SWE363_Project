@@ -7,9 +7,12 @@
 div.DD{
   text-align: center;
   margin-top: 5%;
+  color: gainsboro;
   margin-bottom: 30px;
   background-color: transparent;
   border-color: transparent transparent white transparent;
+  position: relative;
+  top: -10px;
 }
 
 .pickupAlign{
@@ -39,6 +42,10 @@ div.Amnt{
   text-align: center;
   position: relative;
   left: -5%;
+}
+.goUPPP{
+  position: relative;
+  top: -20px;
 }
 @media screen and (min-width: 500px) {
   div.DD{
