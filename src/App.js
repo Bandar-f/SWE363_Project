@@ -119,7 +119,7 @@ function App() {
 
       <BackButton  />
 
-      <Sidemenu isOpened={isOpened} titles={userType==="Customer" ? costumerTitles:workerTitles} />
+      <Sidemenu isOpened={isOpened} sidemenuItemClicked={()=>{setIsOpened(false)}} titles={userType==="Customer" ? costumerTitles:workerTitles} />
 
       <div onClick={()=>{if(isOpened)setIsOpened(false);}}
        className={isOpened ?`content-b content-b-sidemenu-open ${currentRoute==="/"||currentRoute==="/welcomePage"||currentRoute==="Login"? "":"add-top"}`:`content-b ${currentRoute==="/"||currentRoute==="/welcomePage"||currentRoute==="Login"? "":"add-top"} `}>

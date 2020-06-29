@@ -22,7 +22,7 @@ let currentRoute=useLocation().pathname;
       </header>
 
       <ul>       
-       {props.titles.map((titles,index)=>(<Link to={`/${titles.replace(/\s+/g, '')}`}><li className="side-menu-items">{titles}</li></Link>))}
+       {props.titles.map((titles,index)=>(<Link to={`/${titles.replace(/\s+/g, '')}`}><li onClick={()=>{props.sidemenuItemClicked()}} className="side-menu-items">{titles}</li></Link>))}
       </ul>
       
 
