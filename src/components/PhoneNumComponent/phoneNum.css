@@ -4,22 +4,43 @@
     border: transparent;
     margin-left: 20%;
     font-size: 2rem;
+    position: relative;
+    left: 5%;
 }
 option{
     background:#464646;
 }
 
+#nxtbtn{
+    width:40px;
+    height: 3rem;
+    background-color: #2b578a ;
+    border-radius: 0px 10px 10px 0px;
+    color: #eee;
+    margin-right: 0.3em;
+    margin-left: 0.3em;
+    border-style: hidden;
+    transition: all 0.5s ease;
+    position: relative;
+    bottom: 4.5px;
+    left: 4.5%;
+}
 
+#nxtbtn:hover{
+    background-color: #eee;
+    color: #2b578a;
+    transition: all 0.5s ease;
+}
 
 #phone{
     background-color: transparent;
     border-width: 2px;
     background-clip: border-box;
     color: white;
-    width: 35%;
-    margin-top: 10px;
+    width: 30%;
+    margin-top: 30px;
     padding: .375rem .75rem;
-    font-size: 5vw;
+    font-size: 2rem;
     font-weight: 400;
     line-height: .7;
     background-clip: padding-box;
@@ -28,10 +49,18 @@ option{
     border-right: transparent;
     border-left: transparent;
     margin-bottom: 50px;
+    position: relative;
+    left: 5%;
 }
 
 @media screen and (max-width: 500px) {
     #phone, #countryCode {
-      font-size: 6vw;
+      font-size: 1.8rem;
+      position: relative;
+      right: 5%;
+    }
+    #nxtbtn{
+        position: relative;
+        right: 6%;
     }
   }

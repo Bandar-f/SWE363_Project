@@ -26,7 +26,6 @@ import {motion} from 'framer-motion';
             </Link>
             </div>
             <br/>
-
             <footer>
             <p id="copyrights">© 2020 Copyright Nawaf, Tariq, Yasser, Bandar & Co</p>
             <br/>

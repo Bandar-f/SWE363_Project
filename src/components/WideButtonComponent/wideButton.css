@@ -13,13 +13,19 @@
     margin-left: 0.3em;
     border-radius: 10px;
     border-style: hidden;
-    font-size: 2.5vw;
-    padding-bottom: 3vw;
+    font-size: 2rem;
+    padding-bottom: 2.5rem;
+}
+
+.wide-button:hover{
+    background-color: #eee;
+    color: #2b578a;
+    transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 500px) {
     .wide-button {
-          font-size: 6vw;
-          padding-bottom: 7vw;
+          font-size: 1.5rem;
+          padding-bottom: 0rem;
         }
     }

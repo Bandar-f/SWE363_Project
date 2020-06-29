@@ -62,7 +62,7 @@ class DateNDriver extends Component {
             <section class="middle" >
 
 
-               <Link to="/PickupDetails"> <WideButton buttonTitle="Continue"/> </Link>
+               <Link to="/PickupDetails"> <WideButton buttonTitle="Next"/> </Link>
 
 
 

@@ -29,13 +29,13 @@ const MobileNumber = (props) => {
         <div className='realign'>
       <Text text="Please enter your mobile number"/>
       <div className='realign'>
+      <div className='realign'>
+      <br/>
       <PhoneNum/>
       </div>
       </div>
       </div>
-      <Link to="/secondLog">
-      <WideButton buttonTitle="Continue"/>
-      </Link>
+      </div>
       </div>
     </motion.div>
   )

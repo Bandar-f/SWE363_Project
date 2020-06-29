@@ -26,7 +26,7 @@ let currentRoute=useLocation().pathname;
       </ul>
       
 
-     <Link to="/welcomePage"> <p className="logout">Logout</p></Link>
+     <Link to="/welcomePage"> <p className="logout">Logout <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/OOjs_UI_icon_logOut-ltr-invert.svg/1200px-OOjs_UI_icon_logOut-ltr-invert.svg.png" width="30" height="20" alt="logout icon"></img></p></Link>
     </div>
 
       :""}

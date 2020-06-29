@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './phoneNum.css'
                             /*----- TTK -----*/
 function PhoneNum() {
@@ -11,6 +12,9 @@ function PhoneNum() {
          <option value="+971">+971</option>
         </select>
         <input type="tel" id="phone" name="phone" pattern="[0-9]{9}"></input>
+         <Link to="/secondLog">
+        <button id="nxtbtn"><i class='fas fa-arrow-right'></i></button>
+        </Link>
         </div>
     )
 }

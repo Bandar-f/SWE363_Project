@@ -5,7 +5,10 @@
   list-style:none;
 }
 .side-menu-items{
-
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
   
 }
 .sidemenu{
@@ -19,14 +22,16 @@
   transition: all .5s ease;
   box-shadow:5px 0px 10px black ;
   z-index:3;
+  
 }
 .side-menu-items:hover{
-
     color:#2B578A;
     height: 10%;
-    width: 91%;
-    height: 60px;
+    width: 100%;
     background:#eee;
+    position: relative;
+    left: -20px;
+    transition: all 0.5s ease;
   }
 
 
@@ -35,7 +40,6 @@ li{
   color:white;
   margin-right:20px;
   margin-left:20px;
-  margin-top:70px;
   font-size:2rem;
 
 }
@@ -43,13 +47,23 @@ li{
 .logout{
   font-family: Arial, Helvetica, sans-serif;
   color:white;
-  position:relative;
-  bottom:20px;
+  position:absolute;
+  bottom: 0;
+  left: 20px;
   margin-left:20px;
   margin-top:150px;
   font-size:2rem;
-  
-  
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.logout:hover{
+  background-color: red;
+  width: 100%;
+  transition: all 0.5s ease;
+  position: absolute;
+  padding-right: 50px;
+  left: -70px;
 }
 .test{
 

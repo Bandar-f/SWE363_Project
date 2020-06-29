@@ -10,6 +10,12 @@
     position: relative;
     bottom: 40px;
 }
+
+.toInline{
+  display: inline-block;
+}
+
+
 @media screen and (min-width: 500px) {
     
   .fixPos{

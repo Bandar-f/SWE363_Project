@@ -1,9 +1,9 @@
 .welcome{
     background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://images.unsplash.com/photo-1498084393753-b411b2d26b34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     background-size: auto;
-    height: 100vh;
+    height: 100%;
 }
 .message{
     padding-top: 28vh;
@@ -18,9 +18,9 @@
 strong{
     font-family: 'Bungee Hairline', cursive;
     position: relative;
-    left: 1vw;
+    left: 0.5rem;
     font-size: 2rem;
-    line-height: 1.25em;
+    line-height:0.75em;
 }
 
 @media screen and (max-width: 500px) {
@@ -29,5 +29,11 @@ strong{
     }
     #copyrights{
         font-size: 2vw;
+    }
+    .message{
+        position: relative;
+        right: 5%;
+        padding-right: 0;
+        margin-right: 0;
     }
   }

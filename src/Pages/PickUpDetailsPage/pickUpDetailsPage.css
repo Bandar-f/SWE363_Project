@@ -22,3 +22,9 @@
     border-style: hidden;
     border-radius: 10px;
 }
+
+.buttonT:hover{
+    background-color: #eee;
+    color: #2b578a;
+    transition: all 0.5s ease;
+}

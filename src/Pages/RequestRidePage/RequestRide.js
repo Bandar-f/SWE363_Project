@@ -50,7 +50,7 @@ function RequestRide(props) {
                 url2="https://images-na.ssl-images-amazon.com/images/I/81jGRJ%2BGmGL._AC_SL1500_.jpg"
                 Label1="Small package" Label2="Large package"/>}
                 <br/>
-                <Link to="/dateAndTime"> <WideButton buttonTitle="Continue"/> </Link>
+                <Link to="/dateAndTime"> <WideButton buttonTitle="Next"/> </Link>
                 </div>
             </section>
             
