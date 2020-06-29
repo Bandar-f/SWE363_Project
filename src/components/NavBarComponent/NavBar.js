@@ -47,7 +47,7 @@ useEffect(getTitle,[currentRoute]);
             <img onClick={props.clicked} id="SideMenu" src="https://www.hotel-igelheim.eu/img/mobile_nav_icon.png" alt="Side Menu"/>
             <Notif/>
             <h1>{header}</h1> {/* allows for a variable page navigation information title, apply by initiating <NavBar header="Any Page Title"> */}
-            <img id="Notif" src="https://www.iconsdb.com/icons/preview/white/bell-2-xxl.png" alt="Notifications"/>
+            <img id="Notif" src="https://i.ya-webdesign.com/images/notification-bell-white-icon-png-18.png" alt="Notifications"/>
         </div>:""}
         </>
     )
