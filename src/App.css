@@ -30,8 +30,9 @@ body {
 .rect1{
 	display: inline-block;
 	border: none;
-	height: 15px;
-	width: 50px;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
 	background-color: #2b578a;
 	position: relative;
 	bottom:35px;
@@ -44,8 +45,9 @@ body {
 .rect2{
 	display: inline-block;
 	border: none;
-	height: 15px;
-	width: 50px;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
 	background-color: grey;
 	position: relative;
 	bottom:35px;

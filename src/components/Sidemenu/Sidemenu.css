@@ -6,8 +6,10 @@
 }
 .side-menu-items {
 	text-align: center;
-	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	position: relative;
+	bottom: 70px;
 }
 .sidemenu {
 	color: white;
@@ -83,11 +85,5 @@ li {
 		height: 100%;
 		background-color: #364b64;
 		transition: all 0.5s ease;
-	}
-	.side-menu-items {
-		padding-top: 50px;
-		padding-bottom: 50px;
-		position: relative;
-		bottom: 70px;
 	}
 }

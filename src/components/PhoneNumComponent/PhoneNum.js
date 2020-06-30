@@ -11,7 +11,7 @@ function PhoneNum() {
 				<option value="+973">+973</option>
 				<option value="+971">+971</option>
 			</select>
-			<input type="tel" id="phone" name="phone" pattern="[0-9]{9}"></input>
+			<input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" pattern="[0-9]{9}"></input>
 			<Link to="/secondLog">
 				<button id="nxtbtn">
 					<i className="fas fa-arrow-right"></i>
