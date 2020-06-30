@@ -95,12 +95,12 @@ function App() {
 				className={
 					isOpened
 						? `content-b content-b-sidemenu-open ${
-								currentRoute === '/' || currentRoute === '/welcomePage' || currentRoute === 'Login'
+								currentRoute === '/secondLog' || currentRoute === '/' || currentRoute === '/Login'
 									? ''
 									: 'add-top'
 						  }`
 						: `content-b ${
-								currentRoute === '/' || currentRoute === '/welcomePage' || currentRoute === 'Login'
+								currentRoute === '/secondLog' || currentRoute === '/' || currentRoute === '/Login'
 									? ''
 									: 'add-top'
 						  } `

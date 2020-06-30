@@ -14,22 +14,44 @@ const MobileNumber = (props) => {
 			exit={{ opacity: 0 }}
 			transition={{ duration: 2 }}
 		>
-			<div className="fixPos">
-				<FloatingLogo />
-				<div id="tariqFixedDis">
-					<RadioButton UserOrWorker={props.UserOrWorker} />
+			<div className="welcome">
+				<div className="pushDownT">
+					<FloatingLogo />
 				</div>
 				<div className="middle">
 					<div className="realign">
-						<Text text="Please enter your mobile number" />
+						<Text text="Welcome to" />
+						<strong>KBTYN</strong>
+					</div>
+				</div>
+				<div className="homePageT">
+					<div className="middle">
+					<button className="rect1"></button>
+					<button className="rect2"></button>
 						<div className="realign">
+							<Text text="Login as..."/>
+						</div>
+					</div>
+					<div id="tariqFixedDis">
+						<RadioButton UserOrWorker={props.UserOrWorker} />
+					</div>
+					<div className="middle">
+						<div className="realign">
+							<Text text="Please enter your phone number" />
 							<div className="realign">
-								<br />
-								<PhoneNum />
+								<div className="realign">
+									<br />
+									<PhoneNum />
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<footer className="footer-container-names">
+					<p id="copyrights">© 2020 Copyright Nawaf, Tariq, Yasser, Bandar & Co</p>
+					<br />
+				</footer>
+				<br/>
 			</div>
 		</motion.div>
 	);

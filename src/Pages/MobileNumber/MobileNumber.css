@@ -6,23 +6,77 @@
 
 #tariqFixedDis {
 	position: relative;
-	bottom: 40px;
+	bottom:25px;
 }
 
 .toInline {
 	display: inline-block;
 }
 
-@media screen and (min-width: 500px) {
-	.fixPos {
-		position: relative;
-		left: -114px;
+.pushDownT {
+	margin-bottom: 20px;
+}
+
+.homePageT {
+	background-color: #222222;
+	border-radius: 10px;
+	text-align: center;
+	width: 60%;
+	margin: auto;
+	margin-bottom: 200px;
+	padding-top: 100px;
+}
+
+.welcome {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+	url('https://images.unsplash.com/photo-1498084393753-b411b2d26b34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80');
+	background-repeat: repeat;
+	background-position: center;
+	background-size: auto;
+	height: 100%;
+}
+
+#copyrights {
+	text-align: center;
+	font-size: 0.5rem;
+	margin-top: 20px;
+	margin-bottom: 50px;
+    position: relative;
+    font-size: 17px;
+}
+strong {
+	font-family: 'Bungee Hairline', cursive;
+	position: relative;
+	left: 0.5rem;
+	font-size: 2rem;
+	line-height: 0.75em;
+}
+
+@media screen and (max-width: 800px) {
+	.homePageT {
+		width: 80%;
 	}
 }
 
+
 @media screen and (max-width: 500px) {
-	.fixPos {
+	.welcome {
 		position: relative;
 		left: 0;
+	}
+	.homePageT {
+		width: 95%;
+	}
+	strong {
+		font-size: 1.8rem;
+	}
+	#copyrights {
+		font-size: 0.8rem;
+	}
+}
+
+@media screen and (max-width: 355px) {
+	.homePageT {
+		width: 100%;
 	}
 }

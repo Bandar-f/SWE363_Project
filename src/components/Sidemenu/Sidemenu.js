@@ -29,7 +29,7 @@ const Sidemenu = (props) => {
 						))}
 					</ul>
 
-					<Link to="/welcomePage">
+					<Link to="/Login">
 						{' '}
 						<p className="logout">
 							Logout{' '}

@@ -33,7 +33,7 @@ input[type='text'],
 @media screen and (max-width: 500px) {
 	input[type='text'],
 	[type='password'] {
-		font-size: 5vw;
+		font-size: 1.8rem;
 	}
 	.leftAlign {
 		position: relative;

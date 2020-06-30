@@ -16,6 +16,10 @@ export default function LoginPage(props) {
 		>
 			<div className="Login-container">
 				<FloatingLogo />
+				<div className="middle">
+				<Link to="/Login"><button className="rect1"></button></Link>
+				<button className="rect1"></button>
+				</div>
 				<div className="from-container-login">
 					<Form userType={props.userType} />
 				</div>
@@ -27,6 +31,7 @@ export default function LoginPage(props) {
 						</span>
 					</Link>
 				</div>
+				<br/>
 			</div>
 		</motion.div>
 	);

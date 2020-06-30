@@ -1,9 +1,9 @@
 .TwoRadios label {
 	display: inline-block;
-	background-color: #4b9cd3;
+	background-color: #2b578a;
 	width: 90px;
 	height: 90px;
-	border-radius: 50%;
+	border-radius: 10px;
 	padding: 10px;
 	margin: 20px;
 	border: solid 2px none;
@@ -11,7 +11,13 @@
 	text-align: center;
 	line-height: 90px;
 	color: white;
+	font-weight: bold;
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TwoRadios label:hover {
+	background-color: #eee;
+	color: #2b578a;
 }
 
 .TwoRadios input[type='radio'] {
