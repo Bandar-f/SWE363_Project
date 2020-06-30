@@ -28,7 +28,7 @@ const NavBar = (props) => {
 
 	return (
 		<>
-			{currentRoute !== '/' && currentRoute !== '/welcomePage' && currentRoute !== '/Login' ? (
+			{currentRoute !== '/' &&currentRoute !== '/secondLog'&& currentRoute !== '/welcomePage' && currentRoute !== '/Login' ? (
 				<div id="NavBar">
 					<img
 						onClick={props.clicked}

@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
 body {
 	background-color: #222222;
 	color: white;
@@ -18,8 +21,10 @@ body {
 }
 
 * {
+	font-family:'Roboto', sans-serif;
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
+
 }
 
 .rect1{

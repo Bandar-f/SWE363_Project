@@ -5,10 +5,10 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Sidemenu = (props) => {
 	let currentRoute = useLocation().pathname;
-
+	
 	return (
 		<div>
-			{currentRoute !== '/' && currentRoute !== '/welcomePage' && currentRoute !== '/Login' ? (
+			{currentRoute !== '/' &&currentRoute !== '/secondLog' && currentRoute !== '/welcomePage' && currentRoute !== '/Login' ? (
 				<div className={props.isOpened ? 'sidemenu' : 'hidden-sidemenu'}>
 					<header>
 						<Personal name="Bandar Albalawi" rating="4.5" />
