@@ -17,12 +17,11 @@ import ScheduleRide from './Pages/ScheduleRide/ScheduleRide';
 import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import AdminPage from './Pages/AdminPage/AdminPage';
 
-//seclude ride should be in the package system ---> shipment track
-// upComing trips should be removed from the package service
+
+
 //history should contains the package information
-/* in the notification if the user clicks on any notification then
-it should redirect the user to the shipment track page
-*/
+
+
 
 //react router
 /*
@@ -40,11 +39,13 @@ import {
 
 import { AnimatePresence, motion } from 'framer-motion';
 import BackButton from './components/BackButton/BackButton';
+import PackageTrackPage from './Pages/PackageTrackPage/PackageTrackPage';
 
 function App() {
 	//Sidemenu choices
 	const costumerTitles = ['History', 'Pickup Details', 'Request Ride'];
 	const workerTitles = ['History', 'Schedule Ride', 'Upcoming Trips'];
+	const workerPackageTitles=["History","Shipment Track"]
 
 	//to get the currentRoute
 	let currentRoute = useLocation().pathname;
@@ -76,17 +77,29 @@ function App() {
 
 	return (
 		<div className="App">
-			<NavBar clicked={sidemenuClicked} />
+			<NavBar deliverOrPool={deliverOrPool} userType={userType}  clicked={sidemenuClicked} />
 
 			<BackButton />
-
+       
+				 {deliverOrPool==="Deliver"?
 			<Sidemenu
 				isOpened={isOpened}
 				sidemenuItemClicked={() => {
 					setIsOpened(false);
 				}}
 				titles={userType === 'Customer' ? costumerTitles : workerTitles}
-			/>
+			/>:	<Sidemenu
+			isOpened={isOpened}
+			sidemenuItemClicked={() => {
+				setIsOpened(false);
+			}}
+			titles={userType === 'Customer' ? costumerTitles : workerPackageTitles}
+		/>
+
+
+
+			}
+			
 
 			<div
 				onClick={() => {
@@ -154,6 +167,10 @@ function App() {
 
 						<Route exact path="/ScheduleRide">
 							<ScheduleRide />
+						</Route>
+
+						<Route exact path="/ShipmentTrack">
+							<PackageTrackPage deliverOrPool={deliverOrPool}/>
 						</Route>
 
 						<Route exact path="/register">

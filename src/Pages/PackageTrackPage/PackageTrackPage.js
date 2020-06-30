@@ -4,7 +4,7 @@ import Cap from '../../components/CarAndPerson/Cap';
 import PackageTrack from '../../components/PackageTrackComponent/PackageTrack';
 import { motion } from 'framer-motion';
 
-export default function PackageTrackPage() {
+export default function PackageTrackPage(props) {
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -15,7 +15,7 @@ export default function PackageTrackPage() {
 			<div className="">
 				<Cap />
 				<div className="track-container">
-					<PackageTrack />
+					<PackageTrack deliverOrPool={props.deliverOrPool} />
 				</div>
 			</div>
 		</motion.div>

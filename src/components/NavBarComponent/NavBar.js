@@ -36,7 +36,7 @@ const NavBar = (props) => {
 						src="https://www.hotel-igelheim.eu/img/mobile_nav_icon.png"
 						alt="Side Menu"
 					/>
-					<Notif />
+					<Notif deliverOrPool={props.deliverOrPool} userType={props.userType} />
 					<h1>{header}</h1>{' '}
 					{/* allows for a variable page navigation information title, apply by initiating <NavBar header="Any Page Title"> */}
 					<img

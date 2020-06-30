@@ -63,12 +63,9 @@ class Notif extends Component {
 						{notifications.map((notifications, index) => (
 							<Link
 								key={uuid()}
-								to={
-									/* here we need to check or we pass the type of the service
-                    if package delivery redirect the user to package track page
-                    else redirect the user to # no where for know I will let it #
-                     */
-									'#'
+								to={this.props.deliverOrPool==="Pool"? "/ShipmentTrack":"/PickupDetails"
+									
+									
 								}
 							>
 								<p key={index} className="notification-element">
