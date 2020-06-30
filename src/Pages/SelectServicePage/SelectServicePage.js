@@ -11,6 +11,9 @@ function SelectServicePage(props) {
 			exit={{ opacity: 0 }}
 			transition={{ duration: 2 }}
 		>
+			<header>
+				<h2 className="SSHeader">Select your service</h2>
+			</header>
 			<SelectService deliverOrPool={props.deliverOrPool} />
 		</motion.div>
 	);

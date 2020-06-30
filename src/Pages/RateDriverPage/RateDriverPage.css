@@ -46,11 +46,11 @@ textarea.Complain {
 }
 textarea:focus {
 	background: none repeat scroll 0 0;
-	background-color: #b4b2b2;
+	background-color: #888;
 }
 textarea:hover {
 	background: none repeat scroll 0 0;
-	background-color: #b4b2b2;
+	background-color: #888;
 }
 ::placeholder {
 	/* Firefox, Chrome, Opera */

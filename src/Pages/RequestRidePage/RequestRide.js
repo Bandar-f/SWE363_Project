@@ -28,6 +28,7 @@ function RequestRide(props) {
 				</div>
 				<div>
 					<select name="select destination" id="rideRoute">
+						<option value="" disabled selected>Select Destination</option>
 						<option value="dhr">Dhahran</option>
 						<option value="kbr">Khobar</option>
 						<option value="dmm">Dammam</option>

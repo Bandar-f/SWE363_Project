@@ -9,6 +9,10 @@
 	bottom:25px;
 }
 
+#spacePlz {
+	margin: 10px;
+}
+
 .toInline {
 	display: inline-block;
 }
@@ -24,7 +28,7 @@
 	width: 60%;
 	margin: auto;
 	margin-bottom: 200px;
-	padding-top: 100px;
+	padding-top: 50px;
 }
 
 .welcome {
@@ -36,7 +40,7 @@
 	height: 100%;
 }
 
-#copyrights {
+.copyrights {
 	text-align: center;
 	font-size: 0.5rem;
 	margin-top: 20px;
@@ -70,7 +74,7 @@ strong {
 	strong {
 		font-size: 1.8rem;
 	}
-	#copyrights {
+	.copyrights {
 		font-size: 0.8rem;
 	}
 }

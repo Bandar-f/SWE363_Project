@@ -48,7 +48,14 @@ const MobileNumber = (props) => {
 					</div>
 				</div>
 				<footer className="footer-container-names">
-					<p id="copyrights">© 2020 Copyright Nawaf, Tariq, Yasser, Bandar & Co</p>
+					<p className="copyrights">
+						<a id="spacePlz" href="https://twitter.com/" target="_blank"><img src="https://cdn.iconscout.com/icon/free/png-512/twitter-circle-1868970-1583134.png" width="50" target="_blank" alt="Twtter Link"/></a> 
+						<a id="spacePlz" href="https://www.linkedin.com/" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" width="50" alt="Linkedin Link"/></a> 
+						<a id="spacePlz" href="https://www.facebook.com/" target="_blank"><img src="https://cdn.iconscout.com/icon/free/png-512/facebook-circle-1868984-1583148.png" width="50" alt="Facebook Link"/></a>
+						<a id="spacePlz" href="https://www.instagram.com/" target="_blank"><img src="https://www.montessoriivyleague.com/wp-content/uploads/2018/10/instagram-logo-circle.png" width="50" alt="Instagram Link"/></a>
+						<a id="spacePlz" href="https://www.youtube.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/YouTube_social_red_circle_%282017%29.svg/1200px-YouTube_social_red_circle_%282017%29.svg.png" width="50" alt="Youtube Link"/></a> 
+						</p>
+					<p className="copyrights">© 2020 Copyright Nawaf, Tariq, Yasser, Bandar & Co</p>
 					<br />
 				</footer>
 				<br/>
