@@ -22,9 +22,6 @@ export default function PickUpDetailsPage(props) {
 			<div className="pickup-container">
 				<FloatingLogo />
                 <div className="middle">
-			    <Link to="/RequestRide"><button className="rect1"></button></Link>
-			    <Link to="/dateAndTime"><button className="rect1"></button></Link>
-			    <button className="rect1"></button>
 			    </div>
 				<div className="personal-withRating-wrapper">
 					<PersonWithRating name={'nawaf al sharqi'} rating={5} />

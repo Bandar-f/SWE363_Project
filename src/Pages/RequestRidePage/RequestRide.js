@@ -20,7 +20,6 @@ function RequestRide(props) {
 			<div className="middle">
 			<button className="rect1"></button>
 			<button className="rect2"></button>
-			<button className="rect2"></button>
 			</div>
 			<section class="middle">
 				<div class="realign">
