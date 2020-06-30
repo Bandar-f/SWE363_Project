@@ -1,53 +1,42 @@
-body{
-    background-color: #222222;
-    color: white;
+body {
+	background-color: #222222;
+	color: white;
 }
 
-
-
-.content-b{
-    position:relative;
-    
+.content-b {
+	position: relative;
 }
 
-.add-top{
-    top:46px;
-    left: 228px;
-    margin-right: 228px;
+.add-top {
+	top: 46px;
+	left: 228px;
+	margin-right: 228px;
 }
 
 ::-webkit-scrollbar {
-    display: none;
-  }
-  
+	display: none;
+}
 
-  
-  * {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+* {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
 
-  select{
-      background-color: transparent;
-      border-color: transparent transparent white transparent;
-      font-size: larger;
-      color: gainsboro;
-  }
-
+select {
+	background-color: transparent;
+	border-color: transparent transparent white transparent;
+	font-size: larger;
+	color: gainsboro;
+}
 
 @media screen and (max-width: 500px) {
-    
-    .content-b{
-        position: relative;
-        left: 0px;
-        margin-right: 0px;
-    }
+	.content-b {
+		position: relative;
+		left: 0px;
+		margin-right: 0px;
+	}
 
-    .content-b-sidemenu-open{
-        opacity:0.3;
-    }
-   
-  }
-
-
-
+	.content-b-sidemenu-open {
+		opacity: 0.3;
+	}
+}

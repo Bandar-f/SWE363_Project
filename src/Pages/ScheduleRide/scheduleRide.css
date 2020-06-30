@@ -1,54 +1,54 @@
-.testestt{
-  text-align: center;
-  font-size: 2rem;
-  position: relative;
-  top:200px;
+.testestt {
+	text-align: center;
+	font-size: 2rem;
+	position: relative;
+	top: 200px;
 }
-div.DD{
-  text-align: center;
-  margin-top: 5%;
-  color: gainsboro;
-  margin-bottom: 30px;
-  background-color: transparent;
-  border-color: transparent transparent white transparent;
-  position: relative;
-  top: -10px;
-}
-
-.pickupAlign{
-  margin-top: 20px;
-  position: relative;
-  left: -5%;
+div.DD {
+	text-align: center;
+	margin-top: 5%;
+	color: gainsboro;
+	margin-bottom: 30px;
+	background-color: transparent;
+	border-color: transparent transparent white transparent;
+	position: relative;
+	top: -10px;
 }
 
-.timeAlign{
-  position: relative;
-  margin-top: 20px;
-  left: -5%;
+.pickupAlign {
+	margin-top: 20px;
+	position: relative;
+	left: -5%;
 }
 
-div.Date{
-  margin-top: -4%;
-  text-align: center;
+.timeAlign {
+	position: relative;
+	margin-top: 20px;
+	left: -5%;
 }
-div.all{
-  text-align: center;
+
+div.Date {
+	margin-top: -4%;
+	text-align: center;
 }
-div.Time{
-  text-align: center;
+div.all {
+	text-align: center;
 }
-div.Amnt{
-  margin-top: 20px;
-  text-align: center;
-  position: relative;
-  left: -5%;
+div.Time {
+	text-align: center;
 }
-.goUPPP{
-  position: relative;
-  top: -20px;
+div.Amnt {
+	margin-top: 20px;
+	text-align: center;
+	position: relative;
+	left: -5%;
+}
+.goUPPP {
+	position: relative;
+	top: -20px;
 }
 @media screen and (min-width: 500px) {
-  div.DD{
-    margin-top: 3%;
-  }
+	div.DD {
+		margin-top: 3%;
+	}
 }

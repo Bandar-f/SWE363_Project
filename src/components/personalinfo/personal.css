@@ -1,32 +1,29 @@
-*{
-  margin:0;
-  padding:0;
-
+* {
+	margin: 0;
+	padding: 0;
 }
 
-.main-b{
-  background-color:rgb(26,26,26);
-  display:inline-block;
-  width:100%;
-  margin-bottom: 70px;
-  
+.main-b {
+	background-color: rgb(26, 26, 26);
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 70px;
 }
 
-.text{
-  color:white;
-  display:inline-block;
-  margin-left:5px;
-  position:relative;
-  bottom:6px;
-  margin-right:4px;
+.text {
+	color: white;
+	display: inline-block;
+	margin-left: 5px;
+	position: relative;
+	bottom: 6px;
+	margin-right: 4px;
 }
-p{
-  line-height: 1.5rem;
+p {
+	line-height: 1.5rem;
 }
 
-.image{
-  display:inline-block;
+.image {
+	display: inline-block;
 
-  border-radius: 50%;
-
+	border-radius: 50%;
 }

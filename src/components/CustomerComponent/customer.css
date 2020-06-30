@@ -1,5 +1,5 @@
 .container {
-display: inline-block;
+	display: inline-block;
 }
 
 .button-small {
@@ -16,14 +16,14 @@ display: inline-block;
 	left: 60%;
 }
 
-.button-small:hover{
-    background-color: #eee;
-    color: #2b578a;
-    transition: all 0.5s ease;
+.button-small:hover {
+	background-color: #eee;
+	color: #2b578a;
+	transition: all 0.5s ease;
 }
 
-.small-button-container{
-  display: inline;
+.small-button-container {
+	display: inline;
 }
 
 .customer-name {
@@ -37,49 +37,47 @@ display: inline-block;
 	left: 870px;
 }
 
-
-
 @media screen and (max-width: 2400px) {
-	.customer-name{
+	.customer-name {
 		position: relative;
 		left: 720px;
 	}
 }
 
 @media screen and (max-width: 2000px) {
-	.customer-name{
+	.customer-name {
 		position: relative;
 		left: 520px;
 	}
 }
 
 @media screen and (max-width: 1700px) {
-	.customer-name{
+	.customer-name {
 		position: relative;
 		left: 320px;
 	}
 }
 
 @media screen and (max-width: 1300px) {
-	.customer-name{
+	.customer-name {
 		position: relative;
 		left: 120px;
 	}
 }
 
 @media screen and (max-width: 900px) {
-	.customer-name{
+	.customer-name {
 		position: relative;
 		left: 20px;
 	}
 }
 
 @media screen and (max-width: 500px) {
-	.button-small{
+	.button-small {
 		position: absolute;
 		left: 85%;
 	}
-	.customer-name{
+	.customer-name {
 		position: relative;
 		left: 0;
 	}

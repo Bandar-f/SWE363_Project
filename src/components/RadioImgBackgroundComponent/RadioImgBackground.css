@@ -1,31 +1,30 @@
 .TwoImagedRadios label {
-    text-align: end;
-    display: inline-block;
-    border-radius: 10%;
-    width: 125px;
-    height: 65px;
-    padding: 10px;
-    margin: 20px 20px 0px 20px;
-    border: solid 2px none;
-    transition: all 0.3s;
-    text-align: center;
-    line-height: 80px;
-    color: white;
-  }
-  .labels p{
-      display: inline-block;
-  }
-  .labels .SecondLabel{
-    margin-left: 100px;
-    margin-bottom: 50px;
-  }
-  
-  .TwoImagedRadios input[type="radio"] {
-    display: none;
-    padding: 50px;
-  }
-  
-  .TwoImagedRadios input[type="radio"]:checked + label {
-    border: solid 2px white;
-  }
- 
+	text-align: end;
+	display: inline-block;
+	border-radius: 10%;
+	width: 125px;
+	height: 65px;
+	padding: 10px;
+	margin: 20px 20px 0px 20px;
+	border: solid 2px none;
+	transition: all 0.3s;
+	text-align: center;
+	line-height: 80px;
+	color: white;
+}
+.labels p {
+	display: inline-block;
+}
+.labels .SecondLabel {
+	margin-left: 100px;
+	margin-bottom: 50px;
+}
+
+.TwoImagedRadios input[type='radio'] {
+	display: none;
+	padding: 50px;
+}
+
+.TwoImagedRadios input[type='radio']:checked + label {
+	border: solid 2px white;
+}

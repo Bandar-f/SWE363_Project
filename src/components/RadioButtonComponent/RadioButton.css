@@ -1,28 +1,28 @@
 .TwoRadios label {
-    display: inline-block;
-    background-color: #4B9CD3;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 20px;
-    border: solid 2px none;
-    transition: all 0.3s;
-    text-align: center;
-    line-height: 90px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .TwoRadios input[type="radio"] {
-    display: none;
-    padding: 50px;
-  }
-  
-  .TwoRadios input[type="radio"]:checked + label {
-    border: solid 2px white;
-  }
- 
-  .TwoRadios{
-    text-align: center;
-  }
+	display: inline-block;
+	background-color: #4b9cd3;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	padding: 10px;
+	margin: 20px;
+	border: solid 2px none;
+	transition: all 0.3s;
+	text-align: center;
+	line-height: 90px;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TwoRadios input[type='radio'] {
+	display: none;
+	padding: 50px;
+}
+
+.TwoRadios input[type='radio']:checked + label {
+	border: solid 2px white;
+}
+
+.TwoRadios {
+	text-align: center;
+}

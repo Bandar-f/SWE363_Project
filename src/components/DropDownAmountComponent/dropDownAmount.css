@@ -1,10 +1,9 @@
-#custom_amount{
-    margin-left: 20%;
-    background-color: transparent;
-    color: gainsboro !important;
-    border-style: hidden;
-    text-indent: 1px;
-    font-size: larger;
-    text-overflow: '';
+#custom_amount {
+	margin-left: 20%;
+	background-color: transparent;
+	color: gainsboro !important;
+	border-style: hidden;
+	text-indent: 1px;
+	font-size: larger;
+	text-overflow: '';
 }
-

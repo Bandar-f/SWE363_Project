@@ -1,16 +1,16 @@
-.textStyling{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    position: relative;
-    margin-left:10%;
-    font-size: 2rem;
-    line-height: 1.25em;
-    display: inline-block;
+.textStyling {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: lighter;
+	position: relative;
+	margin-left: 10%;
+	font-size: 2rem;
+	line-height: 1.25em;
+	display: inline-block;
 }
 
 @media screen and (max-width: 500px) {
-.textStyling {
-      font-size: 1.8rem;
-    }
+	.textStyling {
+		font-size: 1.8rem;
+	}
 }

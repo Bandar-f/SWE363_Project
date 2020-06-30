@@ -1,36 +1,34 @@
-.middle{
-    text-align: center;
-    margin: auto;
-    position: relative;
+.middle {
+	text-align: center;
+	margin: auto;
+	position: relative;
 }
-.realign{
-    position: relative;
-    right: 5%;
-    top: -20px;
+.realign {
+	position: relative;
+	right: 5%;
+	top: -20px;
 }
-.realign2{
-    position: relative;
-    right: 5%;
-    top: -100px;
+.realign2 {
+	position: relative;
+	right: 5%;
+	top: -100px;
 }
-#rideRoute{
-        background-color: transparent;
-        color: white;
-        border-color: transparent transparent white transparent;
-        overflow-y: scroll;
-        margin-bottom: 20vh;
-        font-size: 2rem;
-        width:60%;
-        text-align: center;
+#rideRoute {
+	background-color: transparent;
+	color: white;
+	border-color: transparent transparent white transparent;
+	overflow-y: scroll;
+	margin-bottom: 20vh;
+	font-size: 2rem;
+	width: 60%;
+	text-align: center;
 }
-div.RRIB{
-    position: relative;
-    bottom: 6rem;
-    
+div.RRIB {
+	position: relative;
+	bottom: 6rem;
 }
-@media screen and (max-width: 500px){
-
-    #rideRoute{
-        font-size: 5vw;
-    }
+@media screen and (max-width: 500px) {
+	#rideRoute {
+		font-size: 5vw;
+	}
 }

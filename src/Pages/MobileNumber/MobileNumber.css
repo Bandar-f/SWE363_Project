@@ -1,36 +1,28 @@
-
-
-.login-text{
-  margin-top:20px;
-  text-align: center;
-  font-size: 1.5rem;
+.login-text {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 1.5rem;
 }
 
-#tariqFixedDis{
-    position: relative;
-    bottom: 40px;
+#tariqFixedDis {
+	position: relative;
+	bottom: 40px;
 }
 
-.toInline{
-  display: inline-block;
+.toInline {
+	display: inline-block;
 }
-
 
 @media screen and (min-width: 500px) {
-    
-  .fixPos{
-    position: relative;
-    left: -114px;
-  }
- 
+	.fixPos {
+		position: relative;
+		left: -114px;
+	}
 }
 
 @media screen and (max-width: 500px) {
-    
-  .fixPos{
-    position: relative;
-    left: 0;
-  }
- 
+	.fixPos {
+		position: relative;
+		left: 0;
+	}
 }
-

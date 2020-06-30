@@ -1,89 +1,82 @@
-.cap-container{
- /* margin-top: 70px;*/
-  position: relative;
-  left: 15%;
-
+.cap-container {
+	/* margin-top: 70px;*/
+	position: relative;
+	left: 15%;
 }
 
-.car-img{
-  display: inline-block;
-  width:190px;
-  position: absolute;
-  margin-top: -75px;
-  left: 50%;
+.car-img {
+	display: inline-block;
+	width: 190px;
+	position: absolute;
+	margin-top: -75px;
+	left: 50%;
 }
 
-.text-under{
-  position:relative;
-  text-align: left;
-  margin-top: -20px;
-  left: 10%;
+.text-under {
+	position: relative;
+	text-align: left;
+	margin-top: -20px;
+	left: 10%;
 }
 
-.car-info{
-  color: white;
-  font-size:.8rem;
-  line-height:1.1rem;
-  font-family: Arial, Helvetica, sans-serif;
+.car-info {
+	color: white;
+	font-size: 0.8rem;
+	line-height: 1.1rem;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-.person-info{
-  padding-top: 30px;
-
+.person-info {
+	padding-top: 30px;
 }
 
-.invisiButton{
-  background-color: transparent;
-  position: absolute;
-  border: none;
-  z-index: 2;
-  color: transparent;
-  margin: auto;
-  border-radius: 5px;
-  width: 46vw;
-  top: 30px;
-  left:10%;
-  height: 90px;
+.invisiButton {
+	background-color: transparent;
+	position: absolute;
+	border: none;
+	z-index: 2;
+	color: transparent;
+	margin: auto;
+	border-radius: 5px;
+	width: 46vw;
+	top: 30px;
+	left: 10%;
+	height: 90px;
 }
 
-.invisiButton:hover{
-  border-color: transparent transparent white transparent;
-  border-style: solid;
-  transition: all 0.5s ease;
+.invisiButton:hover {
+	border-color: transparent transparent white transparent;
+	border-style: solid;
+	transition: all 0.5s ease;
 }
-
 
 @media screen and (max-width: 500px) {
-.car-img{
-  width:150px;
-  position: absolute;
-  left: 56%;
-  margin-top: -50px;
+	.car-img {
+		width: 150px;
+		position: absolute;
+		left: 56%;
+		margin-top: -50px;
+	}
+
+	.cap-container {
+		position: relative;
+		left: 1%;
+	}
+
+	.text-under {
+		position: relative;
+		text-align: left;
+		margin-top: -20px;
+		margin-right: 20px;
+	}
+	.person-info {
+		margin-right: 13rem;
+		padding-top: 30px;
+	}
+
+	.invisiButton {
+		width: 90vw;
+		position: absolute;
+		left: 5%;
+	}
 }
-
-.cap-container{
-   position: relative;
-   left: 1%;
- 
- }
-
-.text-under{
-  position:relative;
-  text-align: left;
-  margin-top: -20px;
-  margin-right: 20px;
-}
-.person-info{
-  margin-right: 13rem;
-  padding-top: 30px;
-}
-
-.invisiButton{
-  width: 90vw;
-  position: absolute;
-  left: 5%;
-}
-}
-
-
-

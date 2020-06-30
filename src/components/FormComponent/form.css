@@ -1,40 +1,42 @@
-.formContainer{
-   text-align: center;
+.formContainer {
+	text-align: center;
 }
-input[type="text"], [type="password"]{
-    margin-bottom: 1em;
-    border-color:transparent transparent white transparent;
-    font-size:2rem;
-    width: 60%;
-    color: white;
-    position: relative;
-    bottom: 10px;
+input[type='text'],
+[type='password'] {
+	margin-bottom: 1em;
+	border-color: transparent transparent white transparent;
+	font-size: 2rem;
+	width: 60%;
+	color: white;
+	position: relative;
+	bottom: 10px;
 }
 
-.leftAlign{
-  text-align: left;
-  position: relative;
-  left: 11%;
+.leftAlign {
+	text-align: left;
+	position: relative;
+	left: 11%;
 }
 
 /* Chrome, Firefox, Opera, Safari 10.1+ */
-::placeholder { 
-    color: gainsboro;
-    font-size: smaller;
-    opacity: 0.7; /* Firefox */
-  }
-
-  .button-container{
-    display: block;
-    text-align: center;
+::placeholder {
+	color: gainsboro;
+	font-size: smaller;
+	opacity: 0.7; /* Firefox */
 }
 
-@media screen and (max-width:500px){
-  input[type="text"], [type="password"]{
-    font-size: 5vw;
-  }
-  .leftAlign{
-    position: relative;
-    left: 5%;
-  }
+.button-container {
+	display: block;
+	text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+	input[type='text'],
+	[type='password'] {
+		font-size: 5vw;
+	}
+	.leftAlign {
+		position: relative;
+		left: 5%;
+	}
 }

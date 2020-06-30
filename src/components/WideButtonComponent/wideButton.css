@@ -1,31 +1,30 @@
-.button-container{
-    text-align: center;
+.button-container {
+	text-align: center;
 }
 
-.wide-button{
-    
-    width: 50%;
-    height: 2rem;
-    background-color: #2b578a ;
-    border-radius: 3px;
-    color: #eee;
-    margin-right: 0.3em;
-    margin-left: 0.3em;
-    border-radius: 10px;
-    border-style: hidden;
-    font-size: 2rem;
-    padding-bottom: 2.5rem;
+.wide-button {
+	width: 50%;
+	height: 2rem;
+	background-color: #2b578a;
+	border-radius: 3px;
+	color: #eee;
+	margin-right: 0.3em;
+	margin-left: 0.3em;
+	border-radius: 10px;
+	border-style: hidden;
+	font-size: 2rem;
+	padding-bottom: 2.5rem;
 }
 
-.wide-button:hover{
-    background-color: #eee;
-    color: #2b578a;
-    transition: all 0.5s ease;
+.wide-button:hover {
+	background-color: #eee;
+	color: #2b578a;
+	transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 500px) {
-    .wide-button {
-          font-size: 1.5rem;
-          padding-bottom: 0rem;
-        }
-    }
+	.wide-button {
+		font-size: 1.5rem;
+		padding-bottom: 0rem;
+	}
+}

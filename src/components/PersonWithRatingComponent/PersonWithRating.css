@@ -1,24 +1,19 @@
+.text {
+	color: white;
+	font-size: larger;
+	font-weight: lighter;
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+	left: 10%;
+	text-align: left;
+	top: -5px;
+}
 
-  .text{
-    color:white;
-    font-size: larger;
-    font-weight: lighter;
-    font-family: Arial, Helvetica, sans-serif;
-    position:relative;
-    left: 10%;
-    text-align: left;
-    top: -5px;
-  }
-
-  
-  .image{
-    display:inline-block;
-    border-radius: 50%;
-    position: relative;
-    left: 10%;
-    width: 50px;
-    height: auto;
-  }
-
-
-  
+.image {
+	display: inline-block;
+	border-radius: 50%;
+	position: relative;
+	left: 10%;
+	width: 50px;
+	height: auto;
+}

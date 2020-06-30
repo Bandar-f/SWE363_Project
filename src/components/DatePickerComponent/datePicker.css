@@ -1,18 +1,18 @@
-.picker-container{
-    margin-top: 2rem;
-    text-align: center;
-    height: 30px;
+.picker-container {
+	margin-top: 2rem;
+	text-align: center;
+	height: 30px;
 }
-  input#datePickerCustom{
-    background-color: transparent;
-    color: gainsboro;
-    border-style: hidden;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-    margin: 2px;
-    border-bottom: 0.5px solid white ;
-    width: 40%;
-    font-size: x-large;
+input#datePickerCustom {
+	background-color: transparent;
+	color: gainsboro;
+	border-style: hidden;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 1px;
+	text-overflow: '';
+	margin: 2px;
+	border-bottom: 0.5px solid white;
+	width: 40%;
+	font-size: x-large;
 }

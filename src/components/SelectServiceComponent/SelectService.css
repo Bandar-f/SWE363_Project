@@ -1,85 +1,88 @@
-button.Travel, button.Deliver { 
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    display: block;
+button.Travel,
+button.Deliver {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	display: block;
 }
 
 button.Travel {
-    -webkit-clip-path: polygon(0 0, 0 100vh, 100% 100vh);
-    clip-path: polygon(0 0, 0 100vh, 100% 100vh);
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)), url('https://images3.alphacoders.com/945/thumb-1920-945331.jpg');
-    opacity: 0.7;
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+	-webkit-clip-path: polygon(0 0, 0 100vh, 100% 100vh);
+	clip-path: polygon(0 0, 0 100vh, 100% 100vh);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+		url('https://images3.alphacoders.com/945/thumb-1920-945331.jpg');
+	opacity: 0.7;
+	background-size: 200% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 button.Deliver {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh);
-    clip-path: polygon(0 0, 100% 0, 100% 100vh);
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url('../../Images/Deliver.jpg');
-    background-size: 600px 620px;
-    opacity: 0.7;
-    background-size: 200% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh);
+	clip-path: polygon(0 0, 100% 0, 100% 100vh);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+		url('../../Images/Deliver.jpg');
+	background-size: 600px 620px;
+	opacity: 0.7;
+	background-size: 200% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 }
-button.Travel:hover{
-    transition: ease-in-out 0.3s;
-    opacity: 1;
+button.Travel:hover {
+	transition: ease-in-out 0.3s;
+	opacity: 1;
 }
-button.Deliver:hover{
-    transition: ease-in-out 0.3s;
-    opacity: 1;
+button.Deliver:hover {
+	transition: ease-in-out 0.3s;
+	opacity: 1;
 }
 
-p.TravelLabel{
-    color: white;
-    position: absolute;
-    width: 80%;
-    padding-right: 4px;
-    top:75%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
-    line-height: 40px;
+p.TravelLabel {
+	color: white;
+	position: absolute;
+	width: 80%;
+	padding-right: 4px;
+	top: 75%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	line-height: 40px;
 }
-p.DeliverLabel{
-    color: white;
-    position: absolute;
-    left:18%;
-    top: 12%;
-    width: 80%;
-    height: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
-    line-height: 40px;
+p.DeliverLabel {
+	color: white;
+	position: absolute;
+	left: 18%;
+	top: 12%;
+	width: 80%;
+	height: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	line-height: 40px;
 }
 
 @media screen and (min-width: 500px) {
-    button.Travel {
-       background-size: 100% 100%;
-        background-position-x: 0px;
-        background-position-y: 0px;
-        background-repeat: no-repeat;
-    }
-    button.Deliver {
-        background-size: 100% 100%;
-        background-position-x: 0px;
-        background-position-y: 0px;
-        background-repeat: no-repeat;
-    }
-    p.TravelLabel{
-        position: absolute;
-        width: 57%;
-        left: 0%;
-    }
-    p.DeliverLabel{
-        position: absolute;
-        left: 25%;
-        top: 245px;
-        width: 85%;
-        height: 55px;
-    }
-  }
+	button.Travel {
+		background-size: 100% 100%;
+		background-position-x: 0px;
+		background-position-y: 0px;
+		background-repeat: no-repeat;
+	}
+	button.Deliver {
+		background-size: 100% 100%;
+		background-position-x: 0px;
+		background-position-y: 0px;
+		background-repeat: no-repeat;
+	}
+	p.TravelLabel {
+		position: absolute;
+		width: 57%;
+		left: 0%;
+	}
+	p.DeliverLabel {
+		position: absolute;
+		left: 25%;
+		top: 245px;
+		width: 85%;
+		height: 55px;
+	}
+}

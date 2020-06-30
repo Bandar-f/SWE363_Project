@@ -1,13 +1,10 @@
-.update-container{
-    text-align: center;
-    color: white;
-    font-size: x-large;
-    font-family: Arial, Helvetica, sans-serif;
-
+.update-container {
+	text-align: center;
+	color: white;
+	font-size: x-large;
+	font-family: Arial, Helvetica, sans-serif;
 }
-.update-text{
-    font-size:5rem;
-    margin-bottom: 3%;
+.update-text {
+	font-size: 5rem;
+	margin-bottom: 3%;
 }
-
-
