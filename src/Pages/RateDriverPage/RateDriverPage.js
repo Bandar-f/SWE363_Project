@@ -20,7 +20,9 @@ function RateDriverPage() {
 			<Cap />
 			<div className="middle">
 				<p className="RatingText">
-					<Text text="Rating: " /> <p className="sLabel">{starLabels[rating - 1]}</p>
+					<div className="realign">
+						<Text text="Rating: " /> <p className="sLabel">{starLabels[rating - 1]}</p>
+					</div>
 				</p>
 				<div className="star">
 					{[...Array(5)].map((star, i) => {
