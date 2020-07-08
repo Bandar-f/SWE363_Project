@@ -21,7 +21,7 @@ export default function LoginPage(props) {
 				<button className="rect1"></button>
 				</div>
 				<div className="from-container-login">
-					<Form userType={props.userType} />
+					<Form userType={props.userType} userAcc={props.userAcc}/>
 				</div>
 
 				<div className="button-container">

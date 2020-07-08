@@ -3,7 +3,7 @@ import Cap from '../../components/CarAndPerson/Cap';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const History = () => {
+const History = (props) => {
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -12,16 +12,16 @@ const History = () => {
 			transition={{ duration: 2 }}
 		>
 			<Link to="/rateDriver">
-				<Cap />
+				<Cap userType={props.userType}/>
 			</Link>
 			<Link to="/rateDriver">
-				<Cap />
+				<Cap userType={props.userType}/>
 			</Link>
 			<Link to="/rateDriver">
-				<Cap />
+				<Cap userType={props.userType}/>
 			</Link>
 			<Link to="/rateDriver">
-				<Cap />
+				<Cap userType={props.userType}/>
 			</Link>
 		</motion.div>
 	);

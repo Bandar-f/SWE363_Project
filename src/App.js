@@ -64,13 +64,22 @@ function App() {
 		else setDeliverOrPool('Pool');
 	};
 
-	//is user customer or employer
+	//is user customer or employee
 	const [userType, setUserType] = useState('');
 
-	//this  will be passed to everycomponent that needs to update usertype state
+	//Does user already have account or not
+	const [userAcc, setUserAcc] = useState('');
+
+	//this  will be passed to every component that needs to update usertype state
 	const getUserType = (isCustomer) => {
 		if (isCustomer) setUserType('Customer');
 		else setUserType('Worker');
+	};
+
+	//this  will be passed to determine if the user already has an account or not
+	const getUserAcc = (hasAccount) => {
+		if (hasAccount) setUserAcc('Existing');
+		else setUserAcc('New');
 	};
 
 	//to update nav bar header
@@ -130,11 +139,11 @@ function App() {
 						</Route>
 
 						<Route exact path="/History">
-							<History />
+							<History userType={userType} />
 						</Route>
 
 						<Route exact path="/dateAndTime">
-							<DateNDriver />
+							<DateNDriver/>
 						</Route>
 
 						<Route exact path="/PickupDetails">
@@ -150,11 +159,11 @@ function App() {
 						</Route>
 
 						<Route exact path="/Login">
-							<MobileNumber UserOrWorker={getUserType} />
+							<MobileNumber UserOrWorker={getUserType} userAcc={getUserAcc}/>
 						</Route>
 
 						<Route exact path="/secondLog">
-							<LoginPage userType={userType} />
+							<LoginPage userType={userType} userAcc={userAcc}/>
 						</Route>
 
 						<Route exact path="/UpcomingTrips">

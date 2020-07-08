@@ -10,6 +10,7 @@ function PhoneNum() {
 				<option value="+965">+965</option>
 				<option value="+973">+973</option>
 				<option value="+971">+971</option>
+				<option value="+974">+974</option>
 			</select>
 			<input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" pattern="[0-9]{9}"></input>
 			<Link to="/secondLog">

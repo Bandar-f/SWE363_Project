@@ -6,7 +6,15 @@
 
 .car-img {
 	display: inline-block;
-	width: 190px;
+	width: 150px;
+	position: absolute;
+	margin-top: -95px;
+	left: 50%;
+}
+
+.pers-img {
+	display: inline-block;
+	width: 70px;
 	position: absolute;
 	margin-top: -75px;
 	left: 50%;
@@ -52,7 +60,14 @@
 
 @media screen and (max-width: 500px) {
 	.car-img {
-		width: 150px;
+		width: 130px;
+		position: absolute;
+		left: 56%;
+		margin-top: -80px;
+	}
+
+	.pers-img {
+		width: 50px;
 		position: absolute;
 		left: 56%;
 		margin-top: -50px;

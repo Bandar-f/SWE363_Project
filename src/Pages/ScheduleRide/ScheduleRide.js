@@ -18,6 +18,24 @@ const ScheduleRide = () => {
 		>
 			<FloatingLogo />
 			<div className="all">
+				<div className="realign">
+			<Text text="Select destination" />
+			</div>
+				<div>
+					<select name="destination" id="rideRoute2">
+						<option value="" disabled selected>Select Destination</option>
+						<option value="dhr">Dhahran</option>
+						<option value="kbr">Khobar</option>
+						<option value="dmm">Dammam</option>
+						<option value="qtf">Qatif</option>
+						<option value="jbl">Jubail</option>
+						<option value="hsa">Alahasaa</option>
+						<option value="ryd">Riyadh</option>
+						<option value="qsm">Qasseem</option>
+						<option value="hff">Hafoof</option>
+						<option value="bqq">Albaqiq</option>
+					</select>
+				</div>
 				<div className="Date">
 					<div className="pickupAlign">
 						<Text text="Select pickup date" />

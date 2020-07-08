@@ -1,7 +1,7 @@
 import React from 'react';
 import PersonWithRating from '../PersonWithRatingComponent/PersonWithRating';
 import './cap.css';
-const cap = () => {
+const cap = (props) => {
 	return (
 		<div className="cap-container">
 			<button className="invisiButton"></button>
@@ -9,11 +9,18 @@ const cap = () => {
 				<PersonWithRating />
 				<br />
 				<div className="car">
-					<img
+					{props.userType !== 'Worker' ?						
+						<img
 						className="car-img"
-						src="https://groupeparkavenue.com/sites/default/files/styles/scale_1200/https/images.swift.fuseinteractive.ca/chrome/media/ChromeImageGallery/ColorMatched_01/Transparent/1280/cc_2019HOC17_01_1280/cc_2019HOC170002_01_1280_NH0.png?itok=-SijIKWe"
+						src="https://pngwebicons.com/uploads/car/ico/car_icon4927.ico"
 						alt="car"
-					/>
+						/>:<img
+						className="pers-img"
+						src="https://www.pinclipart.com/picdir/big/185-1850464_person-icon-question-mark-clipart.png"
+						alt="car"
+						/> 
+						
+					}
 
 					<div className="text-under">
 						<p className="car-info">Honda Civic Type R</p>

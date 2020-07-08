@@ -15,6 +15,17 @@ div.DD {
 	top: -10px;
 }
 
+#rideRoute2{
+	background-color: transparent;
+	color: #eee;
+	border-color: transparent transparent white transparent;
+	overflow-y: scroll;
+	margin-bottom: 5vh;
+	font-size: 2rem;
+	width: 40%;
+	text-align: center;
+}
+
 .pickupAlign {
 	margin-top: 20px;
 	position: relative;

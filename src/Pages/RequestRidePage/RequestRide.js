@@ -26,7 +26,7 @@ function RequestRide(props) {
 					<Text text={props.deliverOrPool === 'Deliver' ? 'Where to...' : 'Where to ship...'} />
 				</div>
 				<div>
-					<select name="select destination" id="rideRoute">
+					<select name="destination" id="rideRoute">
 						<option value="" disabled selected>Select Destination</option>
 						<option value="dhr">Dhahran</option>
 						<option value="kbr">Khobar</option>

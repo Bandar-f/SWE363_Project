@@ -15,7 +15,7 @@ function SelectService(props) {
 					className="Travel"
 				>
 					<p className="TravelLabel">
-						Travel With Our Experienced <br /> Drivers
+						CarPool Service
 					</p>
 				</button>
 
@@ -26,8 +26,7 @@ function SelectService(props) {
 					className="Deliver"
 				>
 					<p className="DeliverLabel">
-						Send Packages To Your <br />
-						Loved ones
+						Package Handling Service
 					</p>
 				</button>
 			</Link>

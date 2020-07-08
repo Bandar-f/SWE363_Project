@@ -7,6 +7,18 @@ import Text from '../../components/TextComponent/Text';
 import { motion } from 'framer-motion';
 
 const MobileNumber = (props) => {
+
+	const checkAcc = () => {
+		const checkBox = document.getElementById("testt");
+		if(checkBox.checked===true){
+		props.userAcc(true);
+		}
+	
+		else{
+		props.userAcc(false);
+		}
+	}
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -42,6 +54,10 @@ const MobileNumber = (props) => {
 								<div className="realign">
 									<br />
 									<PhoneNum />
+									<form>
+									<input name="testt" id="testt" type="checkbox" onClick={checkAcc}/>
+									<label for="testt">hasAcc Test</label>
+									</form>
 								</div>
 							</div>
 						</div>
