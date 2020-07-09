@@ -13,7 +13,15 @@ export default function LoginPage(props) {
 			const response = await axios.post('http://demo0725191.mockable.io/post_data', {
 				phoneNumber: userNumber,
 			});
+
 			console.log('👉 Returned data:', response);
+			// checking the status of the response 
+			if(response.status == 200){
+				return true; 
+			}else {
+				return false ; 
+			}
+
 		} catch (e) {
 			console.log(`😱 Axios request failed: ${e}`);
 		}
