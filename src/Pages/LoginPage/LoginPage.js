@@ -5,8 +5,25 @@ import Button from '../../components/ButtonComponent/Button';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
 export default function LoginPage(props) {
+	const checkUserExisting = async (userNumber) => {
+		try {
+			const response = await axios.post('http://demo0725191.mockable.io/post_data', {
+				phoneNumber: userNumber,
+			});
+			console.log('👉 Returned data:', response);
+		} catch (e) {
+			console.log(`😱 Axios request failed: ${e}`);
+		}
+	};
+	const defaultProps = {
+		error: null,
+		userObj: {},
+		loginUser: () => null,
+		toggleLogin: () => null,
+	};
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -17,11 +34,13 @@ export default function LoginPage(props) {
 			<div className="Login-container">
 				<FloatingLogo />
 				<div className="middle">
-				<Link to="/Login"><button className="rect1"></button></Link>
-				<button className="rect1"></button>
+					<Link to="/Login">
+						<button className="rect1"></button>
+					</Link>
+					<button className="rect1"></button>
 				</div>
 				<div className="from-container-login">
-					<Form userType={props.userType} userAcc={props.userAcc}/>
+					<Form userType={props.userType} userAcc={props.userAcc} />
 				</div>
 
 				<div className="button-container">
@@ -31,7 +50,7 @@ export default function LoginPage(props) {
 						</span>
 					</Link>
 				</div>
-				<br/>
+				<br />
 			</div>
 		</motion.div>
 	);

@@ -159,7 +159,7 @@ function App() {
 						</Route>
 
 						<Route exact path="/Login">
-							<MobileNumber UserOrWorker={getUserType} userAcc={getUserAcc}/>
+							<MobileNumber UserOrWorker={getUserType} userAcc={getUserAcc} />
 						</Route>
 
 						<Route exact path="/secondLog">
