@@ -15,7 +15,9 @@ export default function LoginPage(props) {
 			});
 
 			console.log('👉 Returned data:', response);
-			// checking the status of the response 
+			// checking the status of the response
+			// true if the user exists 
+			//false if the user not exists  
 			if(response.status == 200){
 				return true; 
 			}else {
