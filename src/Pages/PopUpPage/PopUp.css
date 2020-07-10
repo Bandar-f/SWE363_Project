@@ -1,0 +1,94 @@
+
+
+  
+  .modalCover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transform: translateZ(0);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modalArea {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    padding: 2.5em 1.5em 1.5em 1.5em;
+    background-color: #222;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  @media screen and (min-width: 501px) {
+    /* Center the Modal! */
+    .modalArea {
+      left: 50%;
+      top: 50%;
+      border-radius: 10px;
+      height: auto;
+      transform: translate(-50%, -50%);
+      max-width: 30em;
+   
+    }
+  }
+  
+  .close {
+    position: absolute;
+    font-size: 30px;
+    top: 0;
+    right: 0;
+    padding: 0.1em 0.3em;
+    border-radius: 0px 0px 0px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1;
+    background: silver;
+    border: 0;
+    box-shadow: 0;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+
+  .close:hover{
+      background-color: red;
+      color: white;
+  }
+  
+  .modalBody {
+    padding-top: 0.25em;
+  }
+
+  .modalButton {
+    position: relative;
+    left: 35px;
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    color: #eee;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .centerBtn {
+      text-align: center;
+  }
+
+  .submitBtn {
+    background-color: #2b578a;
+    border: none;
+    border-radius: 5px;
+    padding:5px;
+    color: #eee;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .submitBtn:hover {
+    background-color: #eee;
+    color: #2b578a;
+    cursor: pointer;
+  }

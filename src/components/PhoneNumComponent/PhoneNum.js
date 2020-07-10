@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './phoneNum.css';
 /*----- TTK -----*/
-function PhoneNum() {
+const PhoneNum = ({ onSubmit }) => {
 	return (
 		<div>
 			<select name="+966" id="countryCode">
@@ -12,9 +12,9 @@ function PhoneNum() {
 				<option value="+971">+971</option>
 				<option value="+974">+974</option>
 			</select>
-			<input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" pattern="[0-9]{9}"></input>
+			<input type="tel" id="phone" name="phone" placeholder="5XXXXXXXX" pattern="[0-9]{9}"></input>
 			<Link to="/secondLog">
-				<button id="nxtbtn">
+				<button id="nxtbtn" type="submit">
 					<i className="fas fa-arrow-right"></i>
 				</button>
 			</Link>
