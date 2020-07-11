@@ -10,7 +10,7 @@ import axios from 'axios';
 export default function LoginPage(props) {
 	const checkUserExisting = async (userNumber) => {
 		try {
-			const response = await axios.post('http://demo0725191.mockable.io/post_data', {
+			const response = await axios.post(' http://127.0.0.1:8000/users/getUserByPhone', {
 				phoneNumber: userNumber,
 			});
 
@@ -18,7 +18,7 @@ export default function LoginPage(props) {
 			// checking the status of the response
 			// true if the user exists 
 			//false if the user not exists  
-			if(response.status == 200){
+			if(response.status === 200){
 				return true; 
 			}else {
 				return false ; 
