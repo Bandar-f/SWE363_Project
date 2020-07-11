@@ -1,3 +1,5 @@
+//credits for modal tutorial: K. Kaewsanmuang (2019) retrieved from https://blog.bitsrc.io/build-a-full-featured-modal-dialog-form-with-react-651dcef6c571
+
 import React, { Component } from 'react';
 import './PopUp.css';
 import { Modal } from '../PopUpPage/Modal';
@@ -23,7 +25,7 @@ export class Container extends Component {
         <TriggerButton
           showModal={this.showModal}
           buttonRef={(n) => (this.TriggerButton = n)}
-          triggerText={this.props.triggerText}
+          tT={this.props.tT}
         />
         {this.state.isShown ? (
           <Modal

@@ -2,7 +2,7 @@
 	text-align: center;
 }
 input[type='text'],
-[type='password'] {
+[type='password'], [type='email'] {
 	margin-bottom: 1em;
 	border-color: transparent transparent white transparent;
 	font-size: 2rem;
@@ -25,6 +25,10 @@ input[type='text'],
 	opacity: 0.7; /* Firefox */
 }
 
+input[type='email']::placeholder {
+	font-size: 1.5rem;
+}
+
 .button-container {
 	display: block;
 	text-align: center;
@@ -35,6 +39,9 @@ input[type='text'],
 	[type='password'] {
 		font-size: 1.8rem;
 	}
+	input[type='email']::placeholder {
+		font-size: 1rem;
+	}	
 	.leftAlign {
 		position: relative;
 		left: 5%;

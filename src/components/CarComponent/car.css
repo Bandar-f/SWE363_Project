@@ -4,6 +4,8 @@
 
 .img-container {
 	text-align: center;
+	position: relative;
+	bottom: 25px;
 }
 hr.textCar-container {
 	position: relative;

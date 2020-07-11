@@ -1,3 +1,4 @@
+//credits for modal tutorial: K. Kaewsanmuang (2019) retrieved from https://blog.bitsrc.io/build-a-full-featured-modal-dialog-form-with-react-651dcef6c571
 
 import React from 'react';
 import './PopUp.css';
@@ -6,7 +7,6 @@ import { PhoneForm } from './PhoneForm';
 import FocusTrap from 'focus-trap-react';
 export const Modal = ({
   onClickOutside,
-  onKeyDown,
   modalRef,
   buttonRef,
   closeModal,

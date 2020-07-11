@@ -7,7 +7,7 @@ const CarComponent = (props) => {
 			<div className="img-container">
 				<img
 					className="img-car-info"
-					src="https://groupeparkavenue.com/sites/default/files/styles/scale_1200/https/images.swift.fuseinteractive.ca/chrome/media/ChromeImageGallery/ColorMatched_01/Transparent/1280/cc_2019HOC17_01_1280/cc_2019HOC170002_01_1280_NH0.png?itok=-SijIKWe"
+					src="https://pngwebicons.com/uploads/car/ico/car_icon4927.ico"
 					alt="car"
 				/>
 			</div>

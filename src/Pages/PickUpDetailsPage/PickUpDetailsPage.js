@@ -42,9 +42,6 @@ export default function PickUpDetailsPage(props) {
                         </div>
                     </div>
 					<PackageTrack deliverOrPool={props.deliverOrPool} />
-                        <div className="mapStyle">
-                            <iframe className="mapStyle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.6000576845477!2d50.14370511515177!3d26.3070623833922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e65bb5c211d9%3A0x5258806f7443ff7d!2z2KzYp9mF2LnYqSDYp9mE2YXZhNmDINmB2YfYryDZhNmE2KjYqtix2YjZhCDZiNin2YTZhdi52KfYr9mG!5e0!3m2!1sen!2ssa!4v1593513943873!5m2!1sen!2ssa" width="90%" height="500" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-				        </div>
                 </div>
 			</div>
 		</motion.div>

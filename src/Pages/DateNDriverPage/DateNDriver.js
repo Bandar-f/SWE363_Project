@@ -26,35 +26,26 @@ class DateNDriver extends Component {
 			<Link to="/RequestRide"><button className="rect1"></button></Link>
 			<button className="rect1"></button>
 			</div>
-				<section class="middle">
-					<div class="realign">
+				<section className="middle">
+					<div className="realign">
 						<Text text="Select pickup date" />
 					</div>
 					<div className="goUPP">
 						<DatePicker />
 					</div>
 					<br />
-					<div class="realign">
+					<div className="realign">
 						<Text text="Select pickup time" />
 					</div>
 					<div className="goUPP">
 						<TimePicker />
 					</div>
 					<br />
-					<div class="realign">
+					<div className="realign" id="sdr">
 						<Text text="Select driver" />
 					</div>
 				</section>
-				<div class="goUPP">
-					<div id="cnd">
-						<CarAndPerson />
-					</div>
-					<div id="cnd">
-						<CarAndPerson />
-					</div>
-					<div id="cnd">
-						<CarAndPerson />
-					</div>
+				<div className="goUPP">
 					<div id="cnd">
 						<CarAndPerson />
 					</div>

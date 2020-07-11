@@ -130,8 +130,8 @@ function App() {
 			>
 				<AnimatePresence>
 					<Switch>
-						<Route exact path="/rateDriver">
-							<RateDriverPage />
+						<Route exact path="/Rating">
+							<RateDriverPage userType={userType} />
 						</Route>
 
 						<Route exact path="/">

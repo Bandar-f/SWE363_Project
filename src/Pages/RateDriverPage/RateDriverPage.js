@@ -6,7 +6,7 @@ import Text from '../../components/TextComponent/Text';
 import { motion } from 'framer-motion';
 import WideButton from '../../components/WideButtonComponent/WideButton';
 
-function RateDriverPage() {
+function RateDriverPage(props) {
 	const starLabels = ['Terrible 😠', 'Bad 😓', 'Good 😒', 'Excellent 😃', 'Spactacular 😎'];
 	const [rating, setRating] = useState(null);
 	const [hover, setHover] = useState(null);
@@ -17,7 +17,7 @@ function RateDriverPage() {
 			exit={{ opacity: 0 }}
 			transition={{ duration: 2 }}
 		>
-			<Cap />
+			<Cap userType={props.userType}/>
 			<div className="middle">
 				<p className="RatingText">
 					<div className="realign">

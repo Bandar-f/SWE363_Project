@@ -6,11 +6,14 @@ import '../../Pages/PopUpPage/PopUp.css';
 import { Container } from '../../Pages/PopUpPage/Container';
 
 export default function Form(props) {
-	const triggerText = 'Forgot my password';
+	const tT = 'Forgot my password';
+
+	//________________Email reset link here_____________Tariq____________
 	const onSubmit = (event) => {
 	  event.preventDefault(event);
-	  console.log(event.target.value);
+	  alert("Reset link has been sent to "+event.target.phone.value);
 	};
+
 	return (
 		<div className="formContainer">
 			<form>
@@ -29,7 +32,7 @@ export default function Form(props) {
 				</div>
 				<input type="password" placeholder="Password" />
 			</form>
-			{ props.userAcc === 'New' ? '' : <Container triggerText={triggerText} onSubmit={onSubmit} />}
+			{ props.userAcc === 'New' ? '' : <Container tT={tT} onSubmit={onSubmit} />}
 		</div>
 	);
 }

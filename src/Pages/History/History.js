@@ -11,16 +11,16 @@ const History = (props) => {
 			exit={{ opacity: 0 }}
 			transition={{ duration: 2 }}
 		>
-			<Link to="/rateDriver">
+			<Link to="/rating">
 				<Cap userType={props.userType}/>
 			</Link>
-			<Link to="/rateDriver">
+			<Link to="/rating">
 				<Cap userType={props.userType}/>
 			</Link>
-			<Link to="/rateDriver">
+			<Link to="/rating">
 				<Cap userType={props.userType}/>
 			</Link>
-			<Link to="/rateDriver">
+			<Link to="/rating">
 				<Cap userType={props.userType}/>
 			</Link>
 		</motion.div>

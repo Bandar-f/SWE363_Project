@@ -10,6 +10,7 @@
 	transition: all 0.3s;
 	text-align: center;
 	line-height: 80px;
+	cursor: pointer;
 	color: white;
 }
 .labels p {

@@ -9,6 +9,7 @@
 	border: solid 2px none;
 	transition: all 0.3s;
 	text-align: center;
+	cursor: pointer;
 	line-height: 90px;
 	color: white;
 	font-weight: bold;
