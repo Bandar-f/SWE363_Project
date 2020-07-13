@@ -7,6 +7,15 @@ import uuid from 'react-uuid';
 import { motion } from 'framer-motion';
 
 export default function MoreDetailsPage() {
+
+	const deleteTrip = async (trId) => {
+		try {
+			//delete trip row
+		} catch (e) {
+			console.log(`😱 Axios request failed: ${e}`);
+		}
+	};
+
 	const customers = ['Nawaf al sharqi', 'Bandar Al Balawy', 'Tariq Al Khamis', 'Yasser Jaber'];
 	return (
 		<motion.div

@@ -14,15 +14,6 @@ const History = (props) => {
 			<Link to="/rating">
 				<Cap userType={props.userType}/>
 			</Link>
-			<Link to="/rating">
-				<Cap userType={props.userType}/>
-			</Link>
-			<Link to="/rating">
-				<Cap userType={props.userType}/>
-			</Link>
-			<Link to="/rating">
-				<Cap userType={props.userType}/>
-			</Link>
 		</motion.div>
 	);
 };
