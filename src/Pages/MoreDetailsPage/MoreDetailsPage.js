@@ -5,15 +5,30 @@ import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
 import './moreDetailsPage.css';
 import uuid from 'react-uuid';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
 export default function MoreDetailsPage() {
 
-	const deleteTrip = async (trId) => {
+	const deleteTrip = async (id) => {
 		try {
-			//delete trip row
+			// this.deleteTrip = this.deleteTrip.bind(this)
+
+			// this.state = {trips: []};
+
+			axios.get(' http://127.0.0.1:8000/trips/deleteTrip')
+			.then(response => {
+				this.setState({ trips: response.data })
+			})
 		} catch (e) {
 			console.log(`😱 Axios request failed: ${e}`);
 		}
+		axios.delete('http://127.0.0.1:8000/trips/'+id)
+		.then(res => console.log(res.data));
+		alert("Trip has been cancelled")
+		
+		this.setState({
+			trips: this.state.trips.filter(el => el._id !== id)
+		})
 	};
 
 	const customers = ['Nawaf al sharqi', 'Bandar Al Balawy', 'Tariq Al Khamis', 'Yasser Jaber'];
@@ -33,7 +48,9 @@ export default function MoreDetailsPage() {
 					</p>
 				))}
 				<p className="wide-button-span">
+					<div onClick={deleteTrip(trips._id)}>
 					<WideButton buttonTitle="Cancel Ride" />
+					</div>
 				</p>
 			</div>
 		</motion.div>
