@@ -1,4 +1,3 @@
-/*-------- Nawaf --------*/
 import React from 'react';
 import Text from '../TextComponent/Text';
 import './form.css';
