@@ -19,7 +19,7 @@ export default function LoginPage(props) {
 		//response
 		try {
 			const response = await axios.post('https://kptyn.herokuapp.com/login', {
-				username: 'nawafBader',
+				username: props.UN,
 				password: password,
 			});
 			const data = response.data;
