@@ -91,7 +91,7 @@ const MobileNumber = (props) => {
 										isRadioClicked={isRadioClicked}
 									/>
 									<form>
-										{/* <input name="testt" id="testt" type="checkbox" onClick={checkAcc} /> */}
+										<input name="testt" id="testt" type="checkbox" onClick={checkAcc} />
 										<label for="testt">hasAcc Test</label>
 									</form>
 								</div>

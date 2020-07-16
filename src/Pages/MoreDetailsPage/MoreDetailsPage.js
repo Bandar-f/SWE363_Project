@@ -9,29 +9,21 @@ import axios from 'axios';
 
 export default function MoreDetailsPage() {
 
-	// delete request using axios axios.delete(URL);
-	// const deleteTrip = async (id) => {
-	// 	try {
-	// 		// this.deleteTrip = this.deleteTrip.bind(this)
-
-	// 		// this.state = {trips: []};
-
+	// // delete request using axios axios.delete(URL);
+	//  const deleteTrip = async () => {
+	//  	try {
 	// 		axios.get(' http://127.0.0.1:8000/trips/deleteTrip')
 	// 		.then(response => {
 	// 			this.setState({ trips: response.data })
-	// 		})
+	//  		})
 	// 	} catch (e) {
-	// 		console.log(`😱 Axios request failed: ${e}`);
+	//  		console.log(`😱 Axios request failed: ${e}`);
 	// 	}
-	// 	axios.delete('http://127.0.0.1:8000/trips/'+id)
+	// 	axios.delete('http://127.0.0.1:8000/trips/')
 	// 	.then(res => console.log(res.data));
-	// 	alert("Trip has been cancelled")
-		
-	// 	this.setState({
-	// 		trips: this.state.trips.filter(el => el._id !== id)
-	// 	})
-	//onClick={deleteTrip(trips._id)} for the div
-	// };
+	//  	alert("Trip has been cancelled")
+	// //onClick={deleteTrip(trips._id)} for the div
+	// 	};
 
 	const customers = ['Nawaf al sharqi', 'Bandar Al Balawy', 'Tariq Al Khamis', 'Yasser Jaber'];
 	return (
@@ -50,7 +42,7 @@ export default function MoreDetailsPage() {
 					</p>
 				))}
 				<p className="wide-button-span">
-				<div /*onClick={deleteTrip(trips._id)}*/>
+				<div /*onClick={deleteTrip()}*/>
 					<WideButton buttonTitle="Cancel Ride" />
 					</div>
 				</p>
