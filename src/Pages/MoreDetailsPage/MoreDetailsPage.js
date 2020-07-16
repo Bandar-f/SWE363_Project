@@ -50,7 +50,7 @@ export default function MoreDetailsPage() {
 					</p>
 				))}
 				<p className="wide-button-span">
-					<div>
+				<div /*onClick={deleteTrip(trips._id)}*/>
 					<WideButton buttonTitle="Cancel Ride" />
 					</div>
 				</p>

@@ -15,7 +15,7 @@ export const PhoneForm = ({ onSubmit }) => {
             type="tel"
             name="phone"
             className="phone"      
-            placeholder="009XX5XXXXXXXX"
+            placeholder="(009/+9)XXXXXXXXX"
           />
           <button type="submit" className="btnSend">
           Send Password Reset Request
