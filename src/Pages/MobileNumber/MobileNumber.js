@@ -17,31 +17,27 @@ const MobileNumber = (props) => {
 		setPhoneNumber((phoneNumber) => updatedPhone);
 	};
 	const checkUserExisting = async (userNumber) => {
-		try {
-			const response = await axios.post('https://kptyn.herokuapp.com/users/getUserByPhone', {
-				phoneNumber: userNumber,
-			});
-			console.log('response data:', response);
-			// checking the status of the response
-			// true if the user exists
-			//false if the user not exists
-			if (response.status === 200) {
-				if (response.data.message === "user was found") {
+		// is not empty do request 
+			try {
+				const response = await axios.post('https://kptyn.herokuapp.com/users/getUserByPhone', {
+					phoneNumber: userNumber,
+				});
+				console.log('response data:', response);
+				// checking the status of the response
+				// true if the user exists
+				//false if the user not exists
+				if (response.data.status != 200) {
+					props.userAcc(false);
+					return true;
+				} else {
 					props.userAcc(true);
-					const un = response.data.username
+					const un = response.data.username;
 					props.UN(un);
 				}
-
-				else
-				props.userAcc(false);
-				return true;
-			} else {
-				props.userAcc(false);
-				return false;
+			} catch (e) {
+				console.log(`Axios request failed: ${e}`);
 			}
-		} catch (e) {
-			console.log(`Axios request failed: ${e}`);
-		}
+		
 	};
 
 	const checkAcc = () => {
