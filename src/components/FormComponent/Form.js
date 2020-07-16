@@ -9,8 +9,12 @@ export default function Form(props) {
 
 	//________________Email reset link here_____________Tariq____________
 	const onSubmit = (event) => {
-	  event.preventDefault(event);
-	  alert("Reset link has been sent to "+event.target.phone.value);
+		event.preventDefault(event);
+		alert('Reset link has been sent to ' + event.target.phone.value);
+	};
+
+	const formHandel = (e) => {
+		props.stateHandel(e);
 	};
 
 	return (
@@ -22,16 +26,24 @@ export default function Form(props) {
 				{props.userAcc === 'New' ? <input type="text" placeholder="Ex.: John Doe" /> : ''}
 				<br></br>
 				<div className="leftAlign">
-					{props.userType !== 'Customer' && props.userAcc === 'New' ? <Text text="Please enter your car model name:" /> : ''}
+					{props.userType !== 'Customer' && props.userAcc === 'New' ? (
+						<Text text="Please enter your car model name:" />
+					) : (
+						''
+					)}
 				</div>
-				{props.userType !== 'Customer' && props.userAcc === 'New' ? <input type="text" placeholder="Ex.: 2018 Ford Focus" /> : ''}
+				{props.userType !== 'Customer' && props.userAcc === 'New' ? (
+					<input type="text" placeholder="Ex.: 2018 Ford Focus" />
+				) : (
+					''
+				)}
 				<br></br>
 				<div className="leftAlign">
 					<Text text="Please enter your password:" />
 				</div>
-				<input type="password" placeholder="Password" />
+				<input onChange={(e) => formHandel(e)} type="password" placeholder="Password" />
 			</form>
-			{ props.userAcc === 'New' ? '' : <Container tT={tT} onSubmit={onSubmit} />}
+			{props.userAcc === 'New' ? '' : <Container tT={tT} onSubmit={onSubmit} />}
 		</div>
 	);
 }
