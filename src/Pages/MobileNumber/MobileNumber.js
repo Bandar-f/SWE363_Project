@@ -26,8 +26,12 @@ const MobileNumber = (props) => {
 			// true if the user exists
 			//false if the user not exists
 			if (response.status === 200) {
-				if (response.data.message === "user was found")
-				props.userAcc(true);
+				if (response.data.message === "user was found") {
+					props.userAcc(true);
+					const un = response.data.username
+					props.UN(un);
+				}
+
 				else
 				props.userAcc(false);
 				return true;

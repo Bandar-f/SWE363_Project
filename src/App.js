@@ -82,6 +82,12 @@ function App() {
 		else setUserAcc('New');
 	};
 
+	const [UN, setUN] = useState('');
+
+	const getUN = (Username) => {
+		setUN(Username);
+	};
+
 	//to update nav bar header
 
 
@@ -176,11 +182,11 @@ function App() {
 						</Route>
 
 						<Route exact path="/Login">
-							<MobileNumber UserOrWorker={getUserType} userAcc={getUserAcc} />
+							<MobileNumber UserOrWorker={getUserType} userAcc={getUserAcc} UN={getUN} />
 						</Route>
 
 						<Route exact path="/secondLog">
-							<LoginPage userType={userType} userAcc={userAcc}/>
+							<LoginPage userType={userType} userAcc={userAcc} UN={UN}/>
 						</Route>
 
 						<Route exact path="/UpcomingTrips">
