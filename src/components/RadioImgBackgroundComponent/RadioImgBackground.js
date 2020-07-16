@@ -39,7 +39,7 @@ https://cdn.mos.cms.futurecdn.net/6Uq8f3QkaaWACBkGCRp2jk.jpg
 	render() {
 		return (
 			<div className="TwoImagedRadios">
-				<input type="radio" id="First" name="ImageRad" />
+				<input onClick={()=>{this.props.isSelected()}} type="radio" id="First" name="ImageRad" />
 				<label
 					className="FirstImage"
 					style={{ backgroundImage: `url(${this.props.url1})`, backgroundSize: 'cover' }}
@@ -48,7 +48,7 @@ https://cdn.mos.cms.futurecdn.net/6Uq8f3QkaaWACBkGCRp2jk.jpg
 					{/*Don't insert anything here*/}
 				</label>
 
-				<input type="radio" id="Second" name="ImageRad" />
+				<input onClick={()=>{this.props.isSelected()}} type="radio" id="Second" name="ImageRad" />
 				<label
 					className="SecondImage"
 					style={{ backgroundImage: `url(${this.props.url2})`, backgroundSize: 'cover' }}

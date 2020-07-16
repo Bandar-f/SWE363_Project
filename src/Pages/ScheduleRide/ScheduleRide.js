@@ -22,7 +22,7 @@ const ScheduleRide = () => {
 			<Text text="Select destination" />
 			</div>
 				<div>
-					<select name="destination" id="rideRoute2">
+					<select  name="destination" id="rideRoute2">
 						<option value="" disabled selected>Select Destination</option>
 						<option value="dhr">Dhahran</option>
 						<option value="kbr">Khobar</option>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
 import Text from '../../components/TextComponent/Text';
 import './requestRide.css';
@@ -8,7 +8,11 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 function RequestRide(props) {
-	console.log(props.deliverOrPool);
+  //check if the city option is selected
+	const [Selected,setSelected]=useState(false);
+	//check if the tier button is choosen
+	const[radioClicked,setRadio]=useState(false);
+	
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -26,7 +30,7 @@ function RequestRide(props) {
 					<Text text={props.deliverOrPool === 'Deliver' ? 'Where to...' : 'Where to ship...'} />
 				</div>
 				<div>
-					<select name="destination" id="rideRoute">
+					<select onInput={()=>{setSelected(true)}} name="destination" id="rideRoute">
 						<option value="" disabled selected>Select Destination</option>
 						<option value="dhr">Dhahran</option>
 						<option value="kbr">Khobar</option>
@@ -47,7 +51,7 @@ function RequestRide(props) {
 				</div>
 				<div className="RRIB">
 					{props.deliverOrPool === 'Deliver' ? (
-						<RadioImgBackground
+						<RadioImgBackground   isSelected={()=>{setRadio(true)}}
 							url1="https://audimediacenter-a.akamaihd.net/system/production/media/91178/images/1f201fd6f5fcbd78b452dd0ff4907b1cc4dc0a8c/A202506_blog.jpg?1587377988"
 							url2="https://i2.wp.com/us.motorsactu.com/wp-content/uploads/2019/10/Bentley-Flying_Spur-2020-1280-07.jpg?fit=1200%2C675&ssl=1"
 							Label1="Economy Tier"
@@ -55,6 +59,7 @@ function RequestRide(props) {
 						/>
 					) : (
 						<RadioImgBackground
+						   isSelected={()=>{setRadio(true)}}
 							url1="https://www.cheapestwaytoship.org/wp-content/gallery/package-shipping/small-package.jpg
                 "
 							url2="https://images-na.ssl-images-amazon.com/images/I/81jGRJ%2BGmGL._AC_SL1500_.jpg"
@@ -63,7 +68,7 @@ function RequestRide(props) {
 						/>
 					)}
 					<br />
-					<Link to="/dateAndTime">
+					<Link to={Selected&&radioClicked?"/dateAndTime":"/RequestRide"}>
 						{' '}
 						<WideButton buttonTitle="Next" />{' '}
 					</Link>

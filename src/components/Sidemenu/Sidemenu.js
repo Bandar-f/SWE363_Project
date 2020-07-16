@@ -27,6 +27,11 @@ const Sidemenu = (props) => {
 								</li>
 							</Link>
 						))}
+						
+						{props.isAdmin? <Link to="/admin"><li onClick={() => {
+										props.sidemenuItemClicked();
+									}}
+									className="side-menu-items">Admin</li></Link>:""}
 					</ul>
 
 					<Link to="/Login">

@@ -8,20 +8,24 @@ function RadioButton(props) {
 			<input
 				onClick={() => {
 					props.UserOrWorker(false);
+					props.isRadioClicked();
 				}}
 				type="radio"
 				id="First"
 				name="Rad"
+			
 			/>
 			<label for="First">Driver</label>
 
 			<input
 				onClick={() => {
 					props.UserOrWorker(true);
+					props.isRadioClicked();
 				}}
 				type="radio"
 				id="Second"
 				name="Rad"
+
 			/>
 			<label for="Second">Customer</label>
 		</div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
 import RadioButton from '../../components/RadioButtonComponent/RadioButton';
 import './MobileNumber.css';
@@ -7,6 +7,10 @@ import Text from '../../components/TextComponent/Text';
 import { motion } from 'framer-motion';
 
 const MobileNumber = (props) => {
+
+
+
+	const [isRadioClicked,setRadioClick]=useState(false);
 
 	const checkAcc = () => {
 		const checkBox = document.getElementById("testt");
@@ -45,7 +49,7 @@ const MobileNumber = (props) => {
 						</div>
 					</div>
 					<div id="tariqFixedDis">
-						<RadioButton UserOrWorker={props.UserOrWorker} />
+						<RadioButton UserOrWorker={props.UserOrWorker} isRadioClicked={()=>{setRadioClick(true);}}/>
 					</div>
 					<div className="middle">
 						<div className="realign">
@@ -53,7 +57,7 @@ const MobileNumber = (props) => {
 							<div className="realign">
 								<div className="realign">
 									<br />
-									<PhoneNum />
+									<PhoneNum isRadioClicked={isRadioClicked} />
 									<form>
 									<input name="testt" id="testt" type="checkbox" onClick={checkAcc}/>
 									<label for="testt">hasAcc Test</label>

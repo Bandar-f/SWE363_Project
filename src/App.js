@@ -84,6 +84,21 @@ function App() {
 
 	//to update nav bar header
 
+
+
+
+
+
+
+
+
+
+
+
+
+	 //to know if the user is admin
+	 const [isAdmin,setAdmin]=useState(false);
+
 	return (
 		<div className="App">
 			<NavBar deliverOrPool={deliverOrPool} userType={userType}  clicked={sidemenuClicked} />
@@ -92,12 +107,14 @@ function App() {
        
 				 {deliverOrPool==="Deliver"?
 			<Sidemenu
+			isAdmin={isAdmin}
 				isOpened={isOpened}
 				sidemenuItemClicked={() => {
 					setIsOpened(false);
 				}}
 				titles={userType === 'Customer' ? costumerTitles : workerTitles}
 			/>:	<Sidemenu
+			isAdmin={isAdmin}
 			isOpened={isOpened}
 			sidemenuItemClicked={() => {
 				setIsOpened(false);
