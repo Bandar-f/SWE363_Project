@@ -10,11 +10,10 @@ import axios from 'axios';
 export default function LoginPage(props) {
 	const checkUserExisting = async (userNumber) => {
 		try {
-			const response = await axios.post(' http://127.0.0.1:8000/users/getUserByPhone', {
+			const response = await axios.post('https://kptyn.herokuapp.com/users/getUserByPhone', {
 				phoneNumber: userNumber,
 			});
-
-			console.log('👉 Returned data:', response);
+			console.log('response data:', response);
 			// checking the status of the response
 			// true if the user exists 
 			//false if the user not exists  
@@ -25,7 +24,7 @@ export default function LoginPage(props) {
 			}
 
 		} catch (e) {
-			console.log(`😱 Axios request failed: ${e}`);
+			console.log(`Axios request failed: ${e}`);
 		}
 	};
 	const defaultProps = {
