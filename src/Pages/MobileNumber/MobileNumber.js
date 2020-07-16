@@ -26,8 +26,10 @@ const MobileNumber = (props) => {
 			// true if the user exists
 			//false if the user not exists
 			if (response.status === 200) {
+				props.userAcc(true);
 				return true;
 			} else {
+				props.userAcc(false);
 				return false;
 			}
 		} catch (e) {
@@ -89,7 +91,7 @@ const MobileNumber = (props) => {
 										isRadioClicked={isRadioClicked}
 									/>
 									<form>
-										<input name="testt" id="testt" type="checkbox" onClick={checkAcc} />
+										{/* <input name="testt" id="testt" type="checkbox" onClick={checkAcc} /> */}
 										<label for="testt">hasAcc Test</label>
 									</form>
 								</div>

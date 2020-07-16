@@ -27,6 +27,17 @@ option {
 	left: 4.5%;
 }
 
+#nxtbtn:disabled:hover {
+	cursor: default;
+	color: #eee;
+	background-color: grey;
+}
+
+#nxtbtn:disabled {
+	cursor: default;
+	background-color: grey;
+}
+
 #nxtbtn:hover {
 	background-color: #eee;
 	color: #2b578a;
@@ -53,6 +64,10 @@ option {
 	position: relative;
 	left: 5%;
 	outline: none;
+}
+
+#phone:disabled {
+	border-color: gray;
 }
 
 @media screen and (max-width: 500px) {
