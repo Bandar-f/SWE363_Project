@@ -13,7 +13,7 @@ export default function MoreDetailsPage() {
 	//  const deleteTrip = async (id) => {
 	//  	try {
 	// 		.then(response => {
-	// 			axios.delete('https://kptyn.herokuapp.com/trips')
+	// 			axios.delete('https://kptyn.herokuapp.com/trips/'.id)
 	// 			.then(res => console.log(res.data));
 	//  		alert("Trip has been cancelled")
 	//  		})
@@ -39,7 +39,7 @@ export default function MoreDetailsPage() {
 					</p>
 				))}
 				<p className="wide-button-span">
-				<div /*onClick={deleteTrip()}*/>
+				<div /*onClick={deleteTrip(props.id)}*/>
 					<WideButton buttonTitle="Cancel Ride" />
 					</div>
 				</p>
