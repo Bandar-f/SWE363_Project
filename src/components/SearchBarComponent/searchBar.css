@@ -1,12 +1,22 @@
 #admin-searchButton {
-	width: 100px;
+	width: 80px;
 	height: 2rem;
 	background-color: #2b578a;
 	border-radius: 3px;
 	color: #eee;
-	margin-left: 11em;
 	border-style: hidden;
-	border-radius: 10px;
+	border-radius: 0 10px 10px 0;
+	position: relative;
+	bottom:23px;
+	right: 40px;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1rem;
+}
+#admin-searchButton:hover {
+	background-color: #eee;
+	color: #2b578a;
 }
 .admin-form {
 	margin-top: 10px;
@@ -21,20 +31,81 @@
 .Result-container {
 	width: 22rem;
 	height: 20rem;
-	text-align: center;
-	margin-left: 10px;
+	position: fixed;
+	left: 30%;
 }
 
 .result-header {
 	margin-bottom: 30px;
 }
 .band-button {
-	width: 25px;
+	width: 50px;
+	position: fixed;
+	right: 30%;
 	height: 25px;
 	background-color: #2b578a;
 	border-radius: 3px;
 	color: #eee;
 	margin-left: 1em;
 	border-style: hidden;
+	transition: all 0.5s ease;
 	border-radius: 10px;
+	font-size: large;
+	cursor: pointer;
 }
+
+.band-button:hover {
+	background-color: red;
+	color: #eee;
+} 
+
+@media screen and (max-width: 2400px) {
+	.Result-container {
+		position: relative;
+		left: 720px;
+	}
+}
+
+@media screen and (max-width: 2000px) {
+	.Result-container {
+		position: relative;
+		left: 520px;
+	}
+}
+
+@media screen and (max-width: 1700px) {
+	.Result-container {
+		position: relative;
+		left: 320px;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.Result-container {
+		position: relative;
+		left: 120px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.band-button {
+		position: absolute;
+		left: 85%;
+	}
+	.Result-container {
+		position: relative;
+		left: -40px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.band-button {
+		position: absolute;
+		left: 85%;
+	}
+	.Result-container {
+		position: relative;
+		left: 0;
+	}
+}
+

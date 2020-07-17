@@ -10,19 +10,16 @@ import axios from 'axios';
 export default function MoreDetailsPage() {
 
 	// // delete request using axios axios.delete(URL);
-	//  const deleteTrip = async () => {
+	//  const deleteTrip = async (id) => {
 	//  	try {
-	// 		axios.get(' http://127.0.0.1:8000/trips/deleteTrip')
 	// 		.then(response => {
-	// 			this.setState({ trips: response.data })
+	// 			axios.delete('https://kptyn.herokuapp.com/trips')
+	// 			.then(res => console.log(res.data));
+	//  		alert("Trip has been cancelled")
 	//  		})
 	// 	} catch (e) {
 	//  		console.log(`😱 Axios request failed: ${e}`);
 	// 	}
-	// 	axios.delete('http://127.0.0.1:8000/trips/')
-	// 	.then(res => console.log(res.data));
-	//  	alert("Trip has been cancelled")
-	// //onClick={deleteTrip(trips._id)} for the div
 	// 	};
 
 	const customers = ['Nawaf al sharqi', 'Bandar Al Balawy', 'Tariq Al Khamis', 'Yasser Jaber'];
