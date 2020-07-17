@@ -26,6 +26,7 @@ export default function LoginPage(props) {
 
 			if (data.status != 200) {
 				console.log('password incorrect');
+				alert('Wrong Password')
 				return false;
 			} else {
 				console.log('successfully logged in as :', data.message);
@@ -45,6 +46,7 @@ export default function LoginPage(props) {
 		>
 			<div className="Login-container">
 				<FloatingLogo />
+				<div className="middle realign"><span className="loader"></span></div>
 				<div className="middle">
 					<Link to="/Login">
 						<button className="rect1"></button>
