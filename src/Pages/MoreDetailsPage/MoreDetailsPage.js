@@ -7,7 +7,7 @@ import uuid from 'react-uuid';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
-export default function MoreDetailsPage() {
+export default function MoreDetailsPage(props) {
 
 	// // delete request using axios axios.delete(URL);
 	//  const deleteTrip = async (id) => {
@@ -22,7 +22,51 @@ export default function MoreDetailsPage() {
 	// 	}
 	// 	};
 
-	const customers = ['Nawaf al sharqi', 'Bandar Al Balawy', 'Tariq Al Khamis', 'Yasser Jaber'];
+
+
+
+   let customers=[];
+
+
+
+
+
+
+
+	const getTrips= ()=>{
+
+		let trips=[];
+		
+
+		axios({
+			method:'get',
+			url:"https://kptyn.herokuapp.com/trips/",
+				
+		})
+		.then((res)=>{trips=res.data})
+		.catch((err)=>{console.log(err)});
+
+
+
+
+
+	trips.map((trip)=>{
+
+		if(trip.driver===props.userPresence){
+			customers=trip.customer;
+			
+
+		}else;
+		
+		
+
+	})
+}
+
+
+
+
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}

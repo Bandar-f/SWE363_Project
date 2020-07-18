@@ -7,7 +7,7 @@ export default function Button(props) {
 		props.fireUser();
 	};
 	return (
-		<button onClick={() => fireEvent()} className="button">
+		<button onClick={() =>{ if(props.userAcc==='New') props.SignupUser(); else fireEvent()}} className="button">
 			{props.text}
 		</button>
 	);

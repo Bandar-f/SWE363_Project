@@ -67,6 +67,9 @@ function App() {
 	//is user customer or employee
 	const [userType, setUserType] = useState('');
 
+   //the object of your user
+	const[userPresence,setUserpresence]=useState({});
+
 	//Does user already have account or not
 	const [userAcc, setUserAcc] = useState('');
 
@@ -82,6 +85,8 @@ function App() {
 		else setUserAcc('New');
 	};
 
+
+  //why?
 	const [UN, setUN] = useState('');
 
 	const getUN = (Username) => {
@@ -162,7 +167,7 @@ function App() {
 						</Route>
 
 						<Route exact path="/History">
-							<History userType={userType} />
+							<History userPresence={userPresence} userType={userType} />
 						</Route>
 
 						<Route exact path="/dateAndTime">
@@ -186,15 +191,15 @@ function App() {
 						</Route>
 
 						<Route exact path="/secondLog">
-							<LoginPage userType={userType} userAcc={userAcc} UN={UN}/>
+							<LoginPage setUserpresence={setUserpresence} userType={userType} userAcc={userAcc} UN={UN}/>
 						</Route>
 
 						<Route exact path="/UpcomingTrips">
-							<UtPage />
+							<UtPage/>
 						</Route>
 
 						<Route exact path="/MoreDetails">
-							<MoreDetailsPage />
+							<MoreDetailsPage userPresence={userPresence} />
 						</Route>
 
 						<Route exact path="/ScheduleRide">

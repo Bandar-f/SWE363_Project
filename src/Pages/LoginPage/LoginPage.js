@@ -10,6 +10,23 @@ import axios from 'axios';
 export default function LoginPage(props) {
 	const [password, setPassword] = useState('');
 
+	const SignupUser =  ()=>{
+	
+
+		axios({
+			method:'post',
+			url:"https://kptyn.herokuapp.com/users/",
+			data:{
+				username: props.UN,
+				password: password,
+			}
+
+		})
+		.then((res)=>{props.setUserpresence(res.data)})
+		.catch((err)=>{console.log(err)});
+
+	}
+
 	const stateHandel = (e) => {
 		const _password = e.target.value;
 		setPassword((password) => _password);
@@ -26,10 +43,13 @@ export default function LoginPage(props) {
 
 			if (data.status != 200) {
 				console.log('password incorrect');
+				console.log(data);
 				alert('Wrong Password')
 				return false;
 			} else {
 				console.log('successfully logged in as :', data.message);
+				props.setUserpresence(data);
+
 				return true;
 			}
 		} catch (e) {
@@ -60,7 +80,7 @@ export default function LoginPage(props) {
 				<div className="button-container">
 					<Link to={props.userType === 'Customer' ? '/RequestRide' : '/UpcomingTrips'}>
 						<span className="Login-Button">
-							<Button text={'Login'} fireUser={authenticateUser} />
+							<Button text={'Login'} userAcc={props.userAcc} fireUser={authenticateUser} SignupUser={SignupUser} />
 						</span>
 					</Link>
 				</div>
