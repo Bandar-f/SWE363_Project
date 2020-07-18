@@ -5,3 +5,27 @@
 .button-container {
 	margin-left: 1em;
 }
+
+.Login-container {
+	background-color: rgba(0,0,0,0.8);
+	padding-bottom:40vh;
+	transition: all 0.5s ease;
+}
+
+.loader {
+	border: 10px solid transparent;
+	border-radius: 50%;
+	border-top: 10px solid #2b578a;
+	width: 100px;
+	height: 100px;
+	animation: spin 1s linear infinite;
+	position: absolute;
+	margin: auto;
+	top: 50px;
+	z-index:10;
+  }
+
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }

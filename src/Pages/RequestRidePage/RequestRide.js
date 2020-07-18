@@ -60,8 +60,7 @@ function RequestRide(props) {
 					) : (
 						<RadioImgBackground
 						   isSelected={()=>{setRadio(true)}}
-							url1="https://www.cheapestwaytoship.org/wp-content/gallery/package-shipping/small-package.jpg
-                "
+							url1="https://www.cheapestwaytoship.org/wp-content/gallery/package-shipping/small-package.jpg"
 							url2="https://images-na.ssl-images-amazon.com/images/I/81jGRJ%2BGmGL._AC_SL1500_.jpg"
 							Label1="Small package"
 							Label2="Large package"

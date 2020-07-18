@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React,{ Component } from 'react';
 import './dateNDriver.css';
 import '../RequestRidePage/requestRide.css';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
@@ -10,7 +10,6 @@ import WideButton from '../../components/WideButtonComponent/WideButton';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-//const titles = ['History', 'Pickup Details', 'Request ride'];
 
 class DateNDriver extends Component {
 	render() {

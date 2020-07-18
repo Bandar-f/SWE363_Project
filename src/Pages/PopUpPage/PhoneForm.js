@@ -1,6 +1,6 @@
 //credits for modal tutorial: K. Kaewsanmuang (2019) retrieved from https://blog.bitsrc.io/build-a-full-featured-modal-dialog-form-with-react-651dcef6c571
 
-import React from 'react';
+import React, { useState } from 'react';
 import Text from '../../components/TextComponent/Text'
 import './PopUp.css';
 
@@ -15,7 +15,7 @@ export const PhoneForm = ({ onSubmit }) => {
             type="tel"
             name="phone"
             className="phone"      
-            placeholder="(009/+9)XXXXXXXXX"
+            placeholder="05XXXXXXXX"
           />
           <button type="submit" className="btnSend">
           Send Password Reset Request

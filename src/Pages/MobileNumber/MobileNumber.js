@@ -27,26 +27,23 @@ const MobileNumber = (props) => {
 				// true if the user exists
 				//false if the user not exists
 				if (response.data.status != 200) {
+					document.getElementsByClassName("loader")[0].style.visibility = "hidden";
+					document.getElementsByClassName("Login-container")[0].style.backgroundColor = "transparent";
+					//document.getElementsByClassName("Login-container")[0].style.paddingBottom = "0";
 					props.userAcc(false);
-					return true;
 				} else {
+					document.getElementsByClassName("loader")[0].style.visibility = "hidden";
+					document.getElementsByClassName("Login-container")[0].style.backgroundColor = "transparent";
+					//document.getElementsByClassName("Login-container")[0].style.paddingBottom = "0";
 					props.userAcc(true);
-					const un = response.data.username;
+					const un = response.data.name;
 					props.UN(un);
+					props.num(phoneNumber);
 				}
 			} catch (e) {
 				console.log(`Axios request failed: ${e}`);
 			}
 		
-	};
-
-	const checkAcc = () => {
-		const checkBox = document.getElementById('testt');
-		if (checkBox.checked === true) {
-			props.userAcc(true);
-		} else {
-			props.userAcc(false);
-		}
 	};
 
 	return (
@@ -93,10 +90,6 @@ const MobileNumber = (props) => {
 										formHandler={formHandler}
 										isRadioClicked={isRadioClicked}
 									/>
-									<form>
-										<input name="testt" id="testt" type="checkbox" onClick={checkAcc} />
-										<label for="testt">hasAcc Test</label>
-									</form>
 								</div>
 							</div>
 						</div>
