@@ -34,7 +34,7 @@ const getAllRides = async (destination) => {
 		res = _.sortBy(res, 'date');
 		return res;
 	} catch (err) {
-		console.log(`Axios request failed at getAllRides: ${e}`);
+		console.log(`Axios request failed at getAllRides: ${err}`);
 	}
 };
 // Then using map on the CarAndPerson and passing each data from the array

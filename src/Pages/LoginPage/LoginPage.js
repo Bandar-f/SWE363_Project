@@ -21,7 +21,7 @@ export default function LoginPage(props) {
 			method:'post',
 			url:"https://kptyn.herokuapp.com/users",
 			data:{
-				personName: name,
+				username: name,
 				password: password,
 				phoneNumber: props.num,
 			}
@@ -42,7 +42,7 @@ export default function LoginPage(props) {
 		
 		try {
 			const response = await axios.post('https://kptyn.herokuapp.com/login', {
-				phoneNumber: props.num,
+				username: props.UN,
 				password: password,
 			});
 			const data = response.data;
@@ -50,7 +50,8 @@ export default function LoginPage(props) {
 			if (data.status != 200) {
 				console.log('password incorrect');
 				console.log(data);
-				alert('Wrong Password')
+				console.log(props.UN);
+				alert('Incorrect credentials');
 				return false;
 			} else {
 				console.log('successfully logged in as :', data.message);

@@ -94,6 +94,7 @@ export default function MoreDetailsPage(props) {
 					<WideButton buttonTitle="Ride Complete" />
 				</Link>
 				</div>
+				<br/>
 				<div onClick={(trId) => deleteTrip(trId)}>
 				<Link to="/UpcomingTrips">
 					<WideButton buttonTitle="Cancel Ride" />

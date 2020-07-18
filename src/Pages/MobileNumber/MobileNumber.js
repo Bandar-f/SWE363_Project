@@ -37,7 +37,7 @@ const MobileNumber = (props) => {
 					document.getElementsByClassName("Login-container")[0].style.backgroundColor = "transparent";
 					//document.getElementsByClassName("Login-container")[0].style.paddingBottom = "0";
 					props.userAcc(true);
-					const un = response.data.name;
+					const un = response.data.username;
 					props.UN(un);
 					props.num(userNumber);
 				}
