@@ -181,7 +181,7 @@ function App() {
 						</Route>
 
 						<Route exact path="/PickupDetails">
-							<PickUpDetails deliverOrPool={deliverOrPool} />
+							<PickUpDetails setUserpresence={userPresence} deliverOrPool={deliverOrPool} />
 						</Route>
 
 						<Route exact path="/RequestRide">

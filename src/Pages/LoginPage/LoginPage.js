@@ -7,6 +7,12 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
+	let customer= false;
+	let driver=false;
+	let admin=false;
+
+
+
 export default function LoginPage(props) {
 	const [password, setPassword] = useState('');
 	const [name, setName] = useState('');
@@ -16,7 +22,14 @@ export default function LoginPage(props) {
 	};
 
 	const SignupUser =  ()=>{
-
+		if(props.userType === 'Customer') {
+			customer=true;
+			alert("I'm here")
+		} else if(props.userType === 'Worker') {
+			driver=true;
+		} else {
+			admin=false;
+		}
 		axios({
 			method:'post',
 			url:"https://kptyn.herokuapp.com/users",
@@ -24,6 +37,9 @@ export default function LoginPage(props) {
 				username: name,
 				password: password,
 				phoneNumber: props.num,
+				isCustomer: customer,
+				isDriver: driver,
+				isAdmin: admin,
 			}
 
 		})

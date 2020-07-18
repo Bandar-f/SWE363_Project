@@ -7,10 +7,23 @@ import Text from '../../components/TextComponent/Text';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
+import axios from 'axios';
 
 export default function PickUpDetailsPage(props) {
-	function CallingD() {
-		window.location.href = 'tel:0581131070';
+	let removeFromTrip = [];
+	const CallingD = async (id) => {
+		const response = await axios.get(`https://kptyn.herokuapp.com/users/${id}`); 
+		const data = response.data.user;
+		const userNumber = data.phoneNumber;
+		window.location.href = `tel:${userNumber}`;
+	}
+	const Cancel = async (trId, uid) => {
+		const response = await axios.get(`https://kptyn.herokuapp.com/trips/5f1219d29b148f0017b7269a`); 
+		const data = response.data.trip;
+		data.customer.map(customerMatch => (
+			removeFromTrip = customerMatch
+		))
+		alert(removeFromTrip[1])
 	}
 	return (
 		<motion.div
@@ -28,7 +41,7 @@ export default function PickUpDetailsPage(props) {
 				</div>
 				<CarComponent />
 				<div className="middle">
-					<button className="buttonT">Cancel</button>
+					<button className="buttonT" onClick={Cancel}>Cancel</button>
 					<button className="buttonT" onClick={CallingD}>
 						Call
 					</button>
