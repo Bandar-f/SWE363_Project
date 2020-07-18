@@ -67,6 +67,9 @@ function App() {
 	//is user customer or employee
 	const [userType, setUserType] = useState('');
 
+   //the object of your user
+	const[userPresence,setUserpresence]=useState({});
+
 	//Does user already have account or not
 	const [userAcc, setUserAcc] = useState('');
 
@@ -82,10 +85,18 @@ function App() {
 		else setUserAcc('New');
 	};
 
+
+  //why? to pass username to the login page
 	const [UN, setUN] = useState('');
 
 	const getUN = (Username) => {
 		setUN(Username);
+	};
+
+	const [num, setNum] = useState('');
+
+	const getNum = (phoneNum) => {
+		setUN(phoneNum);
 	};
 
 	//to update nav bar header
@@ -162,7 +173,7 @@ function App() {
 						</Route>
 
 						<Route exact path="/History">
-							<History userType={userType} />
+							<History userPresence={userPresence} userType={userType} />
 						</Route>
 
 						<Route exact path="/dateAndTime">
@@ -182,19 +193,19 @@ function App() {
 						</Route>
 
 						<Route exact path="/Login">
-							<MobileNumber UserOrWorker={getUserType} userAcc={getUserAcc} UN={getUN} />
+							<MobileNumber UserOrWorker={getUserType} userAcc={getUserAcc} UN={getUN} num={getNum}/>
 						</Route>
 
 						<Route exact path="/secondLog">
-							<LoginPage userType={userType} userAcc={userAcc} UN={UN}/>
+							<LoginPage setUserpresence={setUserpresence} userType={userType} userAcc={userAcc} UN={UN} num={num}/>
 						</Route>
 
 						<Route exact path="/UpcomingTrips">
-							<UtPage />
+							<UtPage/>
 						</Route>
 
 						<Route exact path="/MoreDetails">
-							<MoreDetailsPage />
+							<MoreDetailsPage userPresence={userPresence} />
 						</Route>
 
 						<Route exact path="/ScheduleRide">

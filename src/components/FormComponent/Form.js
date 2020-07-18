@@ -7,10 +7,15 @@ import { Container } from '../../Pages/PopUpPage/Container';
 export default function Form(props) {
 	const tT = 'Forgot my password';
 
-	//________________Email reset link here_____________Tariq____________
+	//________________Email reset link here
 	const onSubmit = (event) => {
 		event.preventDefault(event);
-		alert('Reset link has been sent to ' + event.target.phone.value);
+		const ph = event.target.phone.value;
+		const format = /^(?:05|\5)\d{9}$/;
+		if((ph.match(format)))
+		alert("Reset link has been sent to "+ph);
+		else 
+		alert("Invalid format: please check your input");
 	};
 
 	const formHandel = (e) => {

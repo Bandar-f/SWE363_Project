@@ -36,22 +36,14 @@ const MobileNumber = (props) => {
 					document.getElementsByClassName("Login-container")[0].style.backgroundColor = "transparent";
 					//document.getElementsByClassName("Login-container")[0].style.paddingBottom = "0";
 					props.userAcc(true);
-					const un = response.data.username;
+					const un = response.data.name;
 					props.UN(un);
+					props.num(phoneNumber);
 				}
 			} catch (e) {
 				console.log(`Axios request failed: ${e}`);
 			}
 		
-	};
-
-	const checkAcc = () => {
-		const checkBox = document.getElementById('testt');
-		if (checkBox.checked === true) {
-			props.userAcc(true);
-		} else {
-			props.userAcc(false);
-		}
 	};
 
 	return (

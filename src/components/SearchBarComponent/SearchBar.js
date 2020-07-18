@@ -18,32 +18,30 @@ export default class searchBar extends Component {
 						size="40"
 						placeholder="search for driver"
 						onChange={this.handleSearch.bind(this)}
-					/>
-					<div className="button-admin-container">
-						<button id="admin-searchButton" type="submit">
-							Search
-						</button>
-					</div>
+						className="realign"
+					/><button id="admin-searchButton" type="submit">
+					Search
+					</button>
 				</form>
 
 				<div className="Result-container">
 					<h3 className="result-header">Drivers</h3>
 					<p className="driver-admin">
 						Driver: Yaser
-						<button className="band-button">X</button>
+						<button className="band-button">Ban</button>
 					</p>
 					<p className="driver-admin">
 						{' '}
 						Driver: Nawaf
-						<button className="band-button">X</button>
+						<button className="band-button">Ban</button>
 					</p>
 					<p className="driver-admin">
 						Driver: bandar
-						<button className="band-button">X</button>
+						<button className="band-button">Ban</button>
 					</p>
 					<p className="driver-admin">
 						Driver: tariq2020
-						<button className="band-button">X</button>
+						<button className="band-button">Ban</button>
 					</p>
 				</div>
 			</div>

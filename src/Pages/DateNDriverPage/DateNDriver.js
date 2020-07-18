@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React,{ Component } from 'react';
 import './dateNDriver.css';
 import '../RequestRidePage/requestRide.css';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
@@ -12,7 +12,6 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 import _ from 'underscore';
 
-//const titles = ['History', 'Pickup Details', 'Request ride'];
 
 const getAllRides = async (destination) => {
 	try {

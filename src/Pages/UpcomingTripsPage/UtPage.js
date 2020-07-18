@@ -19,9 +19,9 @@ function UtPage() {
 				console.log('no');
 				alert('nope')
 			} else {
-				console.log('yes');
-				alert(response);
-			response.map(currenttrip => (
+				console.log(response.data[0].location);
+				alert(response.data[0].location);
+			response.data.map(currenttrip => (
 				<Ut trip={currenttrip}/>
 			))
 			}
@@ -31,9 +31,6 @@ function UtPage() {
 		}
 	};
 		
-	const tripList = () => {
-
-	}
 	
 	return (
 		<motion.div

@@ -1,8 +1,8 @@
 .admin-header {
 	margin-bottom: 20px;
 }
-@media (min-width: 970px) {
+
 	.admin-page-container {
-		margin-left: 200px;
+		text-align: center;
 	}
-}
+

@@ -6,26 +6,66 @@ import './moreDetailsPage.css';
 import uuid from 'react-uuid';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-export default function MoreDetailsPage() {
+export default function MoreDetailsPage(props) {
 
 	// // delete request using axios axios.delete(URL);
-	//  const deleteTrip = async () => {
+	//  const deleteTrip = async (id) => {
 	//  	try {
-	// 		axios.get(' http://127.0.0.1:8000/trips/deleteTrip')
-	// 		.then(response => {
-	// 			this.setState({ trips: response.data })
-	//  		})
+	// 			axios.delete('https://kptyn.herokuapp.com/trips/'.id)
+	// 			.then(res => console.log(res.data));
+	//  		alert("Trip has been cancelled")
 	// 	} catch (e) {
 	//  		console.log(`😱 Axios request failed: ${e}`);
 	// 	}
-	// 	axios.delete('http://127.0.0.1:8000/trips/')
-	// 	.then(res => console.log(res.data));
-	//  	alert("Trip has been cancelled")
-	// //onClick={deleteTrip(trips._id)} for the div
 	// 	};
 
-	const customers = ['Nawaf al sharqi', 'Bandar Al Balawy', 'Tariq Al Khamis', 'Yasser Jaber'];
+
+
+
+   let customers=[];
+
+
+
+
+
+
+
+	const getTrips= ()=>{
+
+		let trips=[];
+		
+
+		axios({
+			method:'get',
+			url:"https://kptyn.herokuapp.com/trips/",
+				
+		})
+		.then((res)=>{trips=res.data; console.log(res.data);})
+		.catch((err)=>{console.log(err)});
+
+
+
+
+
+	trips.map((trip)=>{
+
+		if(trip.driver===props.userPresence){
+			customers=trip.customer[0];
+			
+
+		}else;
+		
+		
+
+	})
+}
+
+
+
+
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -34,7 +74,7 @@ export default function MoreDetailsPage() {
 			transition={{ duration: 2 }}
 		>
 			<FloatingLogo />
-			<h1 className="tag-info">Customers</h1>
+			<h1 className="tag-info" onClick={getTrips}>Customers</h1>
 			<div className="info-container">
 				{customers.map((customer) => (
 					<p key={uuid()}>
@@ -42,9 +82,16 @@ export default function MoreDetailsPage() {
 					</p>
 				))}
 				<p className="wide-button-span">
-				<div /*onClick={deleteTrip()}*/>
+				<div /*onClick={completeRide(props.id)}*/>
+				<Link to="/UpcomingTrips">
+					<WideButton buttonTitle="Ride Complete" />
+				</Link>
+				</div>
+				<div /*onClick={deleteTrip(props.id)}*/>
+				<Link to="/UpcomingTrips">
 					<WideButton buttonTitle="Cancel Ride" />
-					</div>
+				</Link>
+				</div>
 				</p>
 			</div>
 		</motion.div>
