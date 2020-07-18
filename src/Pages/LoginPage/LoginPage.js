@@ -11,7 +11,14 @@ export default function LoginPage(props) {
 	const [password, setPassword] = useState('');
 
 	const SignupUser =  ()=>{
-	
+	// try {
+	// 	const response = await axios.post('https://kptyn.herokuapp.com/users', {
+	// 		phoneNumber: userNumber,
+	// 	});
+	// }	
+	// catch (e) {
+	// 	console.log('request failed ', e.message);
+	// }
 
 		axios({
 			method:'post',
@@ -19,6 +26,7 @@ export default function LoginPage(props) {
 			data:{
 				username: props.UN,
 				password: password,
+				phoneNumber: props.num,
 			}
 
 		})
@@ -80,7 +88,7 @@ export default function LoginPage(props) {
 				<div className="button-container">
 					<Link to={props.userType === 'Customer' ? '/RequestRide' : '/UpcomingTrips'}>
 						<span className="Login-Button">
-							<Button text={'Login'} userAcc={props.userAcc} fireUser={authenticateUser} SignupUser={SignupUser} />
+						{props.userAcc === 'New' ? <Button text={'register'} userAcc={props.userAcc} SignupUser={SignupUser} />: <Button text={'Login'} userAcc={props.userAcc} fireUser={authenticateUser} />}
 						</span>
 					</Link>
 				</div>

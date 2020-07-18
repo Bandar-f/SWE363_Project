@@ -86,11 +86,17 @@ function App() {
 	};
 
 
-  //why?
+  //why? to pass username to the login page
 	const [UN, setUN] = useState('');
 
 	const getUN = (Username) => {
 		setUN(Username);
+	};
+
+	const [num, setNum] = useState('');
+
+	const getNum = (phoneNum) => {
+		setUN(phoneNum);
 	};
 
 	//to update nav bar header
@@ -187,11 +193,11 @@ function App() {
 						</Route>
 
 						<Route exact path="/Login">
-							<MobileNumber UserOrWorker={getUserType} userAcc={getUserAcc} UN={getUN} />
+							<MobileNumber UserOrWorker={getUserType} userAcc={getUserAcc} UN={getUN} num={getNum}/>
 						</Route>
 
 						<Route exact path="/secondLog">
-							<LoginPage setUserpresence={setUserpresence} userType={userType} userAcc={userAcc} UN={UN}/>
+							<LoginPage setUserpresence={setUserpresence} userType={userType} userAcc={userAcc} UN={UN} num={num}/>
 						</Route>
 
 						<Route exact path="/UpcomingTrips">
