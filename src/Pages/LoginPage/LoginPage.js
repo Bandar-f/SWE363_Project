@@ -24,7 +24,6 @@ export default function LoginPage(props) {
 	const SignupUser =  ()=>{
 		if(props.userType === 'Customer') {
 			customer=true;
-			alert("I'm here")
 		} else if(props.userType === 'Worker') {
 			driver=true;
 		} else {
@@ -40,6 +39,8 @@ export default function LoginPage(props) {
 				isCustomer: customer,
 				isDriver: driver,
 				isAdmin: admin,
+				totalRating: 0,
+				numOfRated: 0
 			}
 
 		})
@@ -103,7 +104,7 @@ export default function LoginPage(props) {
 				<div className="button-container">
 					<Link to={props.userType === 'Customer' ? '/RequestRide' : '/UpcomingTrips'}>
 						<span className="Login-Button">
-						{props.userAcc === 'New' ? <Button text={'register'} userAcc={props.userAcc} SignupUser={SignupUser} />: <Button text={'Login'} userAcc={props.userAcc} fireUser={authenticateUser} />}
+						{props.userAcc === 'New' ? <Button text={'register'} userAcc={props.userAcc} SignupUser={SignupUser} /> : <Button text={'Login'} userAcc={props.userAcc} fireUser={authenticateUser} />}
 						</span>
 					</Link>
 				</div>

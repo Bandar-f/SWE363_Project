@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './UtPage.css';
 import Ut from '../../components/UpcomingTripsComponent/Ut';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
@@ -9,10 +9,12 @@ import axios from 'axios';
 
 function UtPage() {
 
+	useEffect(()=>{getTrips()});
+
 	let trips = [];
 	const getTrips = async () => {
 		try {
-			const response = await axios.get('https://kptyn.herokuapp.com/trips');
+			const response = await axios.get(`https://kptyn.herokuapp.com/trips`);
 			console.log('response data:', response.data);
 	
 			if (response.status != 200) {
