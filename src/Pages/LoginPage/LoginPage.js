@@ -17,9 +17,10 @@ export default function LoginPage(props) {
 	const authenticateUser = async () => {
 		//before we authenticate the user we graph the username by the userPhone number from the prev
 		//response
+		
 		try {
 			const response = await axios.post('https://kptyn.herokuapp.com/login', {
-				username: props.UN,
+				PhoneNumber: props.UN,
 				password: password,
 			});
 			const data = response.data;
