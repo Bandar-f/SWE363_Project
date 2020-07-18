@@ -31,6 +31,7 @@ const MobileNumber = (props) => {
 					document.getElementsByClassName("Login-container")[0].style.backgroundColor = "transparent";
 					//document.getElementsByClassName("Login-container")[0].style.paddingBottom = "0";
 					props.userAcc(false);
+					props.num(userNumber);
 				} else {
 					document.getElementsByClassName("loader")[0].style.visibility = "hidden";
 					document.getElementsByClassName("Login-container")[0].style.backgroundColor = "transparent";
@@ -38,7 +39,7 @@ const MobileNumber = (props) => {
 					props.userAcc(true);
 					const un = response.data.name;
 					props.UN(un);
-					props.num(phoneNumber);
+					props.num(userNumber);
 				}
 			} catch (e) {
 				console.log(`Axios request failed: ${e}`);

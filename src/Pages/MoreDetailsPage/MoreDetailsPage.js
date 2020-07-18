@@ -10,25 +10,32 @@ import { Link } from 'react-router-dom';
 
 export default function MoreDetailsPage(props) {
 
-	// // delete request using axios axios.delete(URL);
-	//  const deleteTrip = async (id) => {
-	//  	try {
-	// 			axios.delete('https://kptyn.herokuapp.com/trips/'.id)
-	// 			.then(res => console.log(res.data));
-	//  		alert("Trip has been cancelled")
-	// 	} catch (e) {
-	//  		console.log(`😱 Axios request failed: ${e}`);
-	// 	}
-	// 	};
+	 // delete request using axios axios.delete(URL);
+	 const deleteTrip = async (id) => {
+	 	try {
+			const response = await axios.delete(`https://kptyn.herokuapp.com/trips/${id}`)
+				.then(res => console.log(res.data));
+	 			alert("Trip has been cancelled")
+	 	} catch (e) {
+	 		console.log(`😱 Axios request failed: ${e}`);
+	 	}
+		};
 
+	const completeRide = async (id) => {
+		try {
+			const response = await axios.put(`https://kptyn.herokuapp.com/trips/${id}`, {
+			isComplete: true,
+			})
+		   .then(res => console.log(res.data));
+			alert("Trip has been completed")
+	} catch (e) {
+		console.log(`😱 Axios request failed: ${e}`);
+	}
+	};
 
-
-
-   let customers=[];
-
-
-
-
+	
+	let trId = '';
+	let customers=[];
 
 
 
@@ -52,8 +59,8 @@ export default function MoreDetailsPage(props) {
 	trips.map((trip)=>{
 
 		if(trip.driver===props.userPresence){
-			customers=trip.customer[0];
-			
+			customers=trip.customer;
+			trId=trip._id;
 
 		}else;
 		
@@ -74,7 +81,7 @@ export default function MoreDetailsPage(props) {
 			transition={{ duration: 2 }}
 		>
 			<FloatingLogo />
-			<h1 className="tag-info" onClick={getTrips}>Customers</h1>
+			<h1 className="tag-info">Customers</h1>
 			<div className="info-container">
 				{customers.map((customer) => (
 					<p key={uuid()}>
@@ -82,12 +89,12 @@ export default function MoreDetailsPage(props) {
 					</p>
 				))}
 				<p className="wide-button-span">
-				<div /*onClick={completeRide(props.id)}*/>
+				<div onClick={(trId) => completeRide(trId)}>
 				<Link to="/UpcomingTrips">
 					<WideButton buttonTitle="Ride Complete" />
 				</Link>
 				</div>
-				<div /*onClick={deleteTrip(props.id)}*/>
+				<div onClick={(trId) => deleteTrip(trId)}>
 				<Link to="/UpcomingTrips">
 					<WideButton buttonTitle="Cancel Ride" />
 				</Link>

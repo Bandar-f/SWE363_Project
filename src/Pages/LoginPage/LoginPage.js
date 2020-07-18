@@ -9,29 +9,25 @@ import axios from 'axios';
 
 export default function LoginPage(props) {
 	const [password, setPassword] = useState('');
+	const [name, setName] = useState('');
+
+	const getName = (Username) => {
+		setName(Username);
+	};
 
 	const SignupUser =  ()=>{
-	// try {
-	// 	const response = await axios.post('https://kptyn.herokuapp.com/users', {
-	// 		phoneNumber: userNumber,
-	// 	});
-	// }	
-	// catch (e) {
-	// 	console.log('request failed ', e.message);
-	// }
-	
 
 		axios({
 			method:'post',
-			url:"https://kptyn.herokuapp.com/users/",
+			url:"https://kptyn.herokuapp.com/users",
 			data:{
-				name: props.UN,
+				personName: name,
 				password: password,
 				phoneNumber: props.num,
 			}
 
 		})
-		.then((res)=>{props.setUserpresence(res.data)})
+		.then((res)=>{props.setUserpresence(res.data); console.log(res)})
 		.catch((err)=>{console.log(err)});
 
 	}
@@ -46,7 +42,7 @@ export default function LoginPage(props) {
 		
 		try {
 			const response = await axios.post('https://kptyn.herokuapp.com/login', {
-				PhoneNumber: props.num,
+				phoneNumber: props.num,
 				password: password,
 			});
 			const data = response.data;
@@ -84,7 +80,7 @@ export default function LoginPage(props) {
 					<button className="rect1"></button>
 				</div>
 				<div className="from-container-login">
-					<Form userType={props.userType} userAcc={props.userAcc} stateHandel={stateHandel} />
+					<Form userType={props.userType} userAcc={props.userAcc} stateHandel={stateHandel} name={getName}/>
 				</div>
 
 				<div className="button-container">

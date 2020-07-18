@@ -9,20 +9,19 @@ import axios from 'axios';
 
 function UtPage() {
 
+	let trips = [];
 	const getTrips = async () => {
 		try {
 			const response = await axios.get('https://kptyn.herokuapp.com/trips');
-			//const data = response.data;
 			console.log('response data:', response.data);
 	
 			if (response.status != 200) {
 				console.log('no');
-				alert('nope')
+				alert('nope');
 			} else {
-				console.log(response.data[0].location);
-				alert(response.data[0].location);
+				alert("test");
 			response.data.map(currenttrip => (
-				<Ut trip={currenttrip}/>
+				trips = currenttrip
 			))
 			}
 		} catch (e) {
@@ -40,8 +39,10 @@ function UtPage() {
 			transition={{ duration: 2 }}
 		>
 			<FloatingLogo />
-			<div className="UTWB1" onClick={getTrips}>
-				{/* <Ut date="Today" destination="Riyadh" time="15:20" place="KFUPM Mall Parking" /> */}
+			<div className="UTWB1">
+				{trips.map(test => (
+				<Ut date={test.date} destination={test.location} time={test.location} />
+				))}
 				<Link to="/MoreDetails">
 					<WideButton buttonTitle="More Details" />
 				</Link>

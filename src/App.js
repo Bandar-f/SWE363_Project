@@ -96,7 +96,7 @@ function App() {
 	const [num, setNum] = useState('');
 
 	const getNum = (phoneNum) => {
-		setUN(phoneNum);
+		setNum(phoneNum);
 	};
 
 	//to update nav bar header

@@ -12,6 +12,10 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 import _ from 'underscore';
 
+let driverSelection = false;
+const dsToTrue = () => {
+	driverSelection = true;
+}
 
 const getAllRides = async (destination) => {
 	try {
@@ -70,12 +74,12 @@ class DateNDriver extends Component {
 					</div>
 				</section>
 				<div className="goUPP">
-					<div id="cnd">
+					<div id="cnd" onClick={dsToTrue}>
 						<CarAndPerson />
 					</div>
 				</div>
 				<section class="middle">
-					<Link to="/PickupDetails">
+					<Link to={driverSelection?"/PickupDetails":"/dateAndTime"}>
 						{' '}
 						<WideButton buttonTitle="Next" />{' '}
 					</Link>
