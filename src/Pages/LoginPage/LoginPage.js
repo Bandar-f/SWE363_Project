@@ -68,12 +68,11 @@ export default function LoginPage(props) {
 				console.log('password incorrect');
 				console.log(data);
 				console.log(props.UN);
-				alert('Incorrect credentials');
+				alert('Incorrect Password');
 				return false;
 			} else {
-				console.log('successfully logged in as :', data.message);
+				console.log(data.message);
 				props.setUserpresence(data);
-
 				return true;
 			}
 		} catch (e) {

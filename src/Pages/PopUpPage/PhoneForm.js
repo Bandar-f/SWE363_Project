@@ -1,6 +1,6 @@
 //credits for modal tutorial: K. Kaewsanmuang (2019) retrieved from https://blog.bitsrc.io/build-a-full-featured-modal-dialog-form-with-react-651dcef6c571
 
-import React, { useState } from 'react';
+import React from 'react';
 import Text from '../../components/TextComponent/Text'
 import './PopUp.css';
 

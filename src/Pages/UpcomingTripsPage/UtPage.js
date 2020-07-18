@@ -19,12 +19,12 @@ function UtPage() {
 	
 			if (response.status != 200) {
 				console.log('no');
-				alert('nope');
+				alert('could not load');
 			} else {
-				alert("test");
 			response.data.map(currenttrip => (
-				trips = currenttrip
+				trips.push(currenttrip)
 			))
+			console.log(trips[0])
 			}
 		} catch (e) {
 			console.log('request failed ', e.message);

@@ -21,7 +21,6 @@ const updateRating = async (id) => {
 			totalRating: newRating,
 			numberOfRated: numRated,
 		});
-		alert(numRated)
 		alert("Rating has been submitted successfully")
 } catch (e) {
 	console.log(`😱 Axios request failed: ${e}`);

@@ -12,18 +12,29 @@ import axios from 'axios';
 export default function PickUpDetailsPage(props) {
 	let removeFromTrip = [];
 	const CallingD = async (id) => {
+		try {
 		const response = await axios.get(`https://kptyn.herokuapp.com/users/${id}`); 
 		const data = response.data.user;
 		const userNumber = data.phoneNumber;
 		window.location.href = `tel:${userNumber}`;
+		} catch (e) {
+			console.log(`😱 Axios request failed: ${e}`);
+		}
 	}
-	const Cancel = async (trId, uid) => {
-		const response = await axios.get(`https://kptyn.herokuapp.com/trips/5f1219d29b148f0017b7269a`); 
+	const Cancel = async (id) => {
+		console.log(props.userPresence._id)
+		try {
+		const response = await axios.get(`https://kptyn.herokuapp.com/trips/${id}`); 
 		const data = response.data.trip;
 		data.customer.map(customerMatch => (
-			removeFromTrip = customerMatch
+			( props.userPresence != customerMatch ? removeFromTrip.push(customerMatch):'' )
 		))
-		alert(removeFromTrip[1])
+		await axios.put(`https://kptyn.herokuapp.com/trips/${id}`, {
+			customer: removeFromTrip,
+		}); 
+		} catch (e) {
+			console.log(`😱 Axios request failed: ${e}`);
+		}
 	}
 	return (
 		<motion.div
