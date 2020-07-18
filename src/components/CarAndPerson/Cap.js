@@ -2,6 +2,7 @@ import React from 'react';
 import PersonWithRating from '../PersonWithRatingComponent/PersonWithRating';
 import './cap.css';
 const cap = (props) => {
+	// Expecting to receive an array of drivers object
 	return (
 		<div className="cap-container">
 			<button className="invisiButton"></button>

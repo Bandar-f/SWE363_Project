@@ -9,9 +9,32 @@ import CarAndPerson from '../../components/CarAndPerson/Cap';
 import WideButton from '../../components/WideButtonComponent/WideButton';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import axios from 'axios';
+import _ from 'underscore';
 
 //const titles = ['History', 'Pickup Details', 'Request ride'];
 
+const getAllRides = async (destination) => {
+	try {
+		// getting alll trips satisfying location
+		let res = await axios.post('https://kptyn.herokuapp.com/trips/getTripByLocation', {
+			location: destination,
+		});
+		// filtering the results to get only dates on and before the selected date
+		res.filter(
+			(res) =>
+				res.date <= Document.getElementById('datePickerCustom').value &&
+				res.time <= Document.getElementById('timePickerCustom').value
+		);
+		// first sorting by time, then by date
+		res = _.sortBy(res, 'time');
+		res = _.sortBy(res, 'date');
+		return res;
+	} catch (err) {
+		console.log(`Axios request failed at getAllRides: ${e}`);
+	}
+};
+// Then using map on the CarAndPerson and passing each data from the array
 class DateNDriver extends Component {
 	render() {
 		return (
@@ -22,10 +45,12 @@ class DateNDriver extends Component {
 				transition={{ duration: 2 }}
 			>
 				<FloatingLogo />
-			<div className="middle">
-			<Link to="/RequestRide"><button className="rect1"></button></Link>
-			<button className="rect1"></button>
-			</div>
+				<div className="middle">
+					<Link to="/RequestRide">
+						<button className="rect1"></button>
+					</Link>
+					<button className="rect1"></button>
+				</div>
 				<section className="middle">
 					<div className="realign">
 						<Text text="Select pickup date" />
