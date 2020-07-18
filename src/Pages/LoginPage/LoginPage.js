@@ -40,7 +40,7 @@ export default function LoginPage(props) {
 				isDriver: driver,
 				isAdmin: admin,
 				totalRating: 0,
-				numOfRated: 0
+				numberOfRated: 0
 			}
 
 		})
