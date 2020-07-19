@@ -18,38 +18,25 @@ const dsToTrue = () => {
 }
 
 const getAllRides = async (destination) => {
-	let trips = [];
 	try {
 		// getting alll trips satisfying location
-		let res = await axios.get('https://kptyn.herokuapp.com/trips/');
+		const res = await axios.post('https://kptyn.herokuapp.com/trips/getTripByLocation', {
+			location: destination,
+		});
 		// filtering the results to get only dates on and before the selected date
-		// res.filter(
-		// 	(res) =>
-		// 		res.date <= window.$dateValue &&
-		// 		res.time <= window.$timeValue
-		// );
+		res.filter(
+			(res) =>
+				res.date <= window.$dateValue &&
+				res.time <= window.$timeValue
+		);
 		// first sorting by time, then by date
-		res.data = _.sortBy(res, 'time');
-		res.data = _.sortBy(res, 'date');
-		let Date = window.$dateValue;
-		let Time = window.$timeValue;
-		let destination = window.$cityValue;
-		console.log(destination)
-		console.log(res.data)
-		res.data.forEach((trip => {
-			trips.push(trip)
-		}))
-		console.log(destination)
-		return res.data;
+		res = _.sortBy(res, 'time');
+		res = _.sortBy(res, 'date');
+		return res;
 	} catch (err) {
 		console.log(`Axios request failed at getAllRides: ${err}`);
 	}
 };
-
-const showList = (e) => {
-	
-	window.$timeValue = e.target.value;
-}
 // Then using map on the CarAndPerson and passing each data from the array
 class DateNDriver extends Component {
 	render() {
@@ -80,7 +67,6 @@ class DateNDriver extends Component {
 					</div>
 					<div className="goUPP">
 						<TimePicker />
-						<h1 onClick={getAllRides}>test</h1>
 					</div>
 					<br />
 					<div className="realign" id="sdr">
