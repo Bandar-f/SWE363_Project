@@ -24,7 +24,7 @@ const Sidemenu = (props) => {
 			currentRoute !== '/Login' ? (
 				<div className={props.isOpened ? 'sidemenu' : 'hidden-sidemenu'}>
 					<header>
-						<Personal name="Bandar Albalawi" rating="4.5" />
+						<Personal name={props.userPresence.name} rating={props.userPresence.totalRating} />
 					</header>
 
 					<ul>

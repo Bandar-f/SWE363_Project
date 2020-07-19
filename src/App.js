@@ -109,6 +109,7 @@ function App() {
 				<Sidemenu
 					isAdmin={isAdmin}
 					isOpened={isOpened}
+					userPresence={userPresence}
 					sidemenuItemClicked={() => {
 						setIsOpened(false);
 					}}
@@ -118,6 +119,8 @@ function App() {
 				<Sidemenu
 					isAdmin={isAdmin}
 					isOpened={isOpened}
+					userPresence={userPresence}
+					
 					sidemenuItemClicked={() => {
 						setIsOpened(false);
 					}}
