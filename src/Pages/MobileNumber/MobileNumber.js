@@ -17,34 +17,35 @@ const MobileNumber = (props) => {
 		setPhoneNumber((phoneNumber) => updatedPhone);
 	};
 	const checkUserExisting = async (userNumber) => {
-		// is not empty do request 
-			try {
-				const response = await axios.post('https://kptyn.herokuapp.com/users/getUserByPhone', {
-					phoneNumber: userNumber,
-				});
-				console.log('response data:', response);
-				// checking the status of the response
-				// true if the user exists
-				//false if the user not exists
-				if (response.data.status != 200) {
-					document.getElementsByClassName("loader")[0].style.visibility = "hidden";
-					document.getElementsByClassName("Login-container")[0].style.backgroundColor = "transparent";
-					//document.getElementsByClassName("Login-container")[0].style.paddingBottom = "0";
-					props.userAcc(false);
-					props.num(userNumber);
-				} else {
-					document.getElementsByClassName("loader")[0].style.visibility = "hidden";
-					document.getElementsByClassName("Login-container")[0].style.backgroundColor = "transparent";
-					//document.getElementsByClassName("Login-container")[0].style.paddingBottom = "0";
-					props.userAcc(true);
-					const un = response.data.username;
-					props.UN(un);
-					props.num(userNumber);
-				}
-			} catch (e) {
-				console.log(`Axios request failed: ${e}`);
+		// is not empty do request
+		try {
+			const response = await axios.post('https://kptyn.herokuapp.com/users/getUserByPhone', {
+				phoneNumber: userNumber,
+			});
+			console.log('response data:', response);
+			// checking the status of the response
+			// true if the user exists
+			//false if the user not exists
+			if (response.data.status != 200) {
+				document.getElementsByClassName('loader')[0].style.visibility = 'hidden';
+				document.getElementsByClassName('Login-container')[0].style.backgroundColor = 'transparent';
+				//document.getElementsByClassName("Login-container")[0].style.paddingBottom = "0";
+				props.userAcc(false);
+				props.num(userNumber);
+				const un = `n${userNumber}`;
+				props.UN(un);
+			} else {
+				document.getElementsByClassName('loader')[0].style.visibility = 'hidden';
+				document.getElementsByClassName('Login-container')[0].style.backgroundColor = 'transparent';
+				//document.getElementsByClassName("Login-container")[0].style.paddingBottom = "0";
+				props.userAcc(true);
+				const un = response.data.username;
+				props.UN(un);
+				props.num(userNumber);
 			}
-		
+		} catch (e) {
+			console.log(`Axios request failed: ${e}`);
+		}
 	};
 
 	return (

@@ -3,7 +3,7 @@ import './login.css';
 import Form from '../../components/FormComponent/Form';
 import Button from '../../components/ButtonComponent/Button';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
-import { Redirect,Link } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
@@ -14,13 +14,15 @@ let admin = false;
 export default function LoginPage(props) {
 	const [password, setPassword] = useState('');
 	const [name, setName] = useState('');
-	const[isLogged,setLogged]=useState(false);
+	const [isLogged, setLogged] = useState(false);
 
 	const getName = (Username) => {
 		setName(Username);
 	};
 
 	const SignupUser = () => {
+		// we need to update the state of username and password
+
 		if (props.userType === 'Customer') {
 			customer = true;
 		} else if (props.userType === 'Worker') {
@@ -46,6 +48,7 @@ export default function LoginPage(props) {
 				props.setUserpresence(res.data.user);
 				console.log(res);
 			})
+			.then(() => authenticateUser())
 			.catch((err) => {
 				console.log(err);
 			});
@@ -112,16 +115,18 @@ export default function LoginPage(props) {
 				</div>
 
 				<div className="button-container">
-					
-						<span className="Login-Button">
-							{props.userAcc === 'New' ? (
-								<Button text={'register'} userAcc={props.userAcc} SignupUser={SignupUser} />
-							) : (
-								<Button text={'Login'} userAcc={props.userAcc} fireUser={authenticateUser} />
-							)}
-						</span>
-						{isLogged?  <Redirect to={props.userType === 'Customer' ? '/RequestRide' : '/UpcomingTrips'} /> :""}
-				
+					<span className="Login-Button">
+						{props.userAcc === 'New' ? (
+							<Button text={'register'} userAcc={props.userAcc} SignupUser={SignupUser} />
+						) : (
+							<Button text={'Login'} userAcc={props.userAcc} fireUser={authenticateUser} />
+						)}
+					</span>
+					{isLogged ? (
+						<Redirect to={props.userType === 'Customer' ? '/RequestRide' : '/UpcomingTrips'} />
+					) : (
+						''
+					)}
 				</div>
 				<br />
 			</div>
