@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Component } from 'react';
 import './UtPage.css';
 import Ut from '../../components/UpcomingTripsComponent/Ut';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
@@ -7,40 +7,31 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
-function UtPage() {
+class UtPage extends Component {
+		constructor(props) {
+			super(props);
+			this.state = { trips: [] }
+		}
 
-	useEffect(()=>{getTrips()});
+	componentDidMount() {
 
-	let trips = [];
-	const getTrips = async () => {
-		try {
-			const response = await axios.get(`https://kptyn.herokuapp.com/trips`);
-			console.log('response data:', response.data);
-	
-			if (response.status !== 200) {
-				console.log('no');
-				alert('could not load');
-			} else {
-			response.data.map(currenttrip => (
-				trips.push(currenttrip)
-			));
-			return tripList();
-			}
-		} catch (e) {
+			axios.get(`https://kptyn.herokuapp.com/trips`)
+			.then(response => {
+				this.setState({ trips: response.data });
+				console.log(response.data)
+
+			}) .catch ((e) =>{
 			console.log('request failed ', e.message);
 			alert('fail');
-		}
-	};
-
-	const tripList = () => {
-		console.log("I am here "+trips[0])
-		trips.forEach(async tr => {
-			return <Ut trip={tr}/>
 		})
 	};
-		
-	const [isLoaded, setLoaded] = useState(false);
 
+	tripList() {
+		this.state.trips.map(currenttrip =>{
+			return <Ut trip={currenttrip}/>
+		})
+	};
+	render(){
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -50,7 +41,7 @@ function UtPage() {
 		>
 			<FloatingLogo />
 			<div className="UTWB1">
-				{ tripList() }
+				{ this.tripList() }
 				<Link to="/MoreDetails">
 					<WideButton buttonTitle="More Details" />
 				</Link>
@@ -64,5 +55,6 @@ function UtPage() {
 			</div>
 		</motion.div>
 	);
+}
 }
 export default UtPage;

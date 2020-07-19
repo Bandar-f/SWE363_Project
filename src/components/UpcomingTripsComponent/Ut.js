@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './Ut.css';
 import Text from '../TextComponent/Text';
-class Ut extends Component {
-	render() {
+function Ut() {
 		return (
 			<div className="texts">
 				{/* <Text text={this.props.date} />
@@ -23,7 +22,6 @@ class Ut extends Component {
 				<Text text="At: KFUPM Mall Parking" />
 			</div>
 		);
-	}
 }
 
 export default Ut;

@@ -55,16 +55,16 @@ const ScheduleRide = (props) => {
 						<option value="" disabled selected >
 							Select Destination
 						</option>
-						<option value="Dhahran">Dhahran</option>
-						<option value="Khobar">Khobar</option>
-						<option value="Dammam">Dammam</option>
-						<option value="Qatif">Qatif</option>
-						<option value="Jubail">Jubail</option>
-						<option value="Alahasaa">Alahasaa</option>
-						<option value="Riyadh">Riyadh</option>
-						<option value="Qasseem">Qasseem</option>
-						<option value="Hafoof">Hafoof</option>
-						<option value="Albaqiq">Albaqiq</option>
+						<option value="dhahran">Dhahran</option>
+						<option value="khobar">Khobar</option>
+						<option value="dammam">Dammam</option>
+						<option value="qatif">Qatif</option>
+						<option value="jubail">Jubail</option>
+						<option value="alahasaa">Alahasaa</option>
+						<option value="riyadh">Riyadh</option>
+						<option value="qasseem">Qasseem</option>
+						<option value="hafoof">Hafoof</option>
+						<option value="albaqiq">Albaqiq</option>
 					</select>
 				</div>
 				<div className="Date">
