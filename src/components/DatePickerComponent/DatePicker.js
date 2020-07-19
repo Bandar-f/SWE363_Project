@@ -11,9 +11,10 @@ export default function DatePicker() {
 		const x = document.getElementById("datePickerCustom").min = currentDate;
 		return x;
 	}
-	const getDate = () => {
+	const getDate = (e) => {
 		const x = document.getElementById("datePickerCustom").value;
 		const y = document.getElementById("timePickerCustom").disabled=false;
+		window.$dateValue = e.target.value;
 	  }
 	return (
 		<div className="picker-container">

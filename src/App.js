@@ -209,7 +209,7 @@ function App() {
 						</Route>
 
 						<Route exact path="/ScheduleRide">
-							<ScheduleRide />
+							<ScheduleRide userPresence={userPresence}/>
 						</Route>
 
 						<Route exact path="/ShipmentTrack">

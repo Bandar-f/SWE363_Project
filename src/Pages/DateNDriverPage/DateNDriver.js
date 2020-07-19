@@ -16,21 +16,21 @@ import _ from 'underscore';
 const getAllRides = async (destination) => {
 	try {
 		// getting alll trips satisfying location
-		let res = await axios.post('https://kptyn.herokuapp.com/trips/getTripByLocation', {
+		const res = await axios.post('https://kptyn.herokuapp.com/trips/getTripByLocation', {
 			location: destination,
 		});
 		// filtering the results to get only dates on and before the selected date
 		res.filter(
 			(res) =>
-				res.date <= Document.getElementById('datePickerCustom').value &&
-				res.time <= Document.getElementById('timePickerCustom').value
+				res.date <= window.$dateValue &&
+				res.time <= window.$timeValue
 		);
 		// first sorting by time, then by date
 		res = _.sortBy(res, 'time');
 		res = _.sortBy(res, 'date');
 		return res;
 	} catch (err) {
-		console.log(`Axios request failed at getAllRides: ${e}`);
+		console.log(`Axios request failed at getAllRides: ${err}`);
 	}
 };
 // Then using map on the CarAndPerson and passing each data from the array
