@@ -38,10 +38,12 @@ export default function PickUpDetailsPage(props) {
 		}
 	};
 	const getDriverById = async (id) => {
-		try{
+		try {
+			const response = await axios.get(`https://kptyn.herokuapp.com/trips/${id}`);
 
-		}catch(e){
-			
+			if (response.data.status === 200) return response.data;
+		} catch (e) {
+			console.log('axios request fails ', e);
 		}
 	};
 	return (
