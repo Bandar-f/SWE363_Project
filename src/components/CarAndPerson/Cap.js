@@ -7,7 +7,7 @@ const cap = (props) => {
 		<div className="cap-container">
 			<button className="invisiButton"></button>
 			<div className="person-info">
-				<PersonWithRating />
+				<PersonWithRating name={props.name} rating={props.totalRating}/>
 				<br />
 				<div className="car">
 					{props.userType !== 'Worker' ?						
@@ -25,7 +25,7 @@ const cap = (props) => {
 
 					<div className="text-under">
 						<p className="car-info">Honda Civic Type R</p>
-						<p className="car-info">05/20/2020</p>
+						<p className="car-info">{props.date}</p>
 					</div>
 				</div>
 			</div>

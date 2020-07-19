@@ -10,8 +10,8 @@ function PersonWithRating(props) {
 				alt="personal pic"
 			/>
 			<div className="text">
-				<p>Bandar albalawi</p>
-				<p>4.5/5</p>
+				<p>{props.name}</p>
+				<p>{props.rating}/5</p>
 			</div>
 		</div>
 	);

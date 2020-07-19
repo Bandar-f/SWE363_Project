@@ -57,7 +57,7 @@ export default function PickUpDetailsPage(props) {
 				<FloatingLogo />
 				<div className="middle"></div>
 				<div className="personal-withRating-wrapper">
-					<PersonWithRating name={'nawaf al sharqi'} rating={5} />
+				<PersonWithRating name={props.userPresence.name} rating={props.userPresence.totalRating} />
 				</div>
 				<CarComponent />
 				<div className="middle">
@@ -69,15 +69,6 @@ export default function PickUpDetailsPage(props) {
 					</button>
 				</div>
 				<hr />
-
-				<div className="updates-container">
-					<div className="middle">
-						<div className="realign">
-							<Text text="Tracking:" />
-						</div>
-					</div>
-					<PackageTrack deliverOrPool={props.deliverOrPool} />
-				</div>
 			</div>
 		</motion.div>
 	);
