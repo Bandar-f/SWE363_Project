@@ -13,8 +13,7 @@ export default function MoreDetailsPage(props) {
 	 // delete request using axios axios.delete(URL);
 	 const deleteTrip = async (id) => {
 	 	try {
-			const response = await axios.delete(`https://kptyn.herokuapp.com/trips/${id}`)
-				.then(res => console.log(res.data));
+			const response = await axios.delete(`https://kptyn.herokuapp.com/trips/5f131cb71fee9800174835fd`)
 	 			alert("Trip has been cancelled")
 	 	} catch (e) {
 	 		console.log(`😱 Axios request failed: ${e}`);
@@ -23,10 +22,10 @@ export default function MoreDetailsPage(props) {
 
 	const completeRide = async (id) => {
 		try {
-			const response = await axios.put(`https://kptyn.herokuapp.com/trips/${id}`, {
+			console.log(id)
+			const response = await axios.put(`https://kptyn.herokuapp.com/trips/5f131cb71fee9800174835fd`, {
 			isComplete: true,
 			})
-		   .then(res => console.log(res.data));
 			alert("Trip has been completed")
 	} catch (e) {
 		console.log(`😱 Axios request failed: ${e}`);
@@ -71,7 +70,7 @@ export default function MoreDetailsPage(props) {
 
 
 
-
+trId="5f1439ec99b73600174cb515";
 
 	return (
 		<motion.div
@@ -88,6 +87,11 @@ export default function MoreDetailsPage(props) {
 						<Customer customer={customer} />
 					</p>
 				))}
+				<Customer customer="Tariq" number="0581131070"/>
+				<br/>
+				<Customer customer="Nawaf" number="0546677100"/>
+				<br/>
+				<Customer customer="Bandar" number="0581106418"/>
 				<p className="wide-button-span">
 				<div onClick={(trId) => completeRide(trId)}>
 				<Link to="/UpcomingTrips">

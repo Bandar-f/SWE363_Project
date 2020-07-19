@@ -158,7 +158,7 @@ function App() {
 						</Route>
 
 						<Route exact path="/dateAndTime">
-							<DateNDriver userPresence={userPresence} />
+							<DateNDriver userPresence={userPresence}/>
 						</Route>
 
 						<Route exact path="/PickupDetails">

@@ -13,7 +13,7 @@ export default function PickUpDetailsPage(props) {
 	let removeFromTrip = [];
 	const CallingD = async (id) => {
 		try {
-			const response = await axios.get(`https://kptyn.herokuapp.com/users/${id}`);
+			const response = await axios.get(`https://kptyn.herokuapp.com/users/5f131cb71fee9800174835fd`);
 			const data = response.data.user;
 			const userNumber = data.phoneNumber;
 			window.location.href = `tel:${userNumber}`;
@@ -23,14 +23,14 @@ export default function PickUpDetailsPage(props) {
 	};
 	const Cancel = async (id) => {
 		try {
-			const response = await axios.get(`https://kptyn.herokuapp.com/trips/${id}`);
+			const response = await axios.get(`https://kptyn.herokuapp.com/trips/5f1219d29b148f0017b7269a`);
 			const data = response.data.trip.customer;
 			data.map((customerMatch) =>
 				props.userPresence.id !== customerMatch || customerMatch._id !== props.userPresence.id
 					? removeFromTrip.push(customerMatch)
 					: ''
 			);
-			await axios.put(`https://kptyn.herokuapp.com/trips/${id}`, {
+			await axios.put(`https://kptyn.herokuapp.com/trips/5f1219d29b148f0017b7269a`, {
 				customer: removeFromTrip,
 			});
 		} catch (e) {

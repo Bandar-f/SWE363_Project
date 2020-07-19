@@ -41,13 +41,13 @@ class UtPage extends Component {
 		>
 			<FloatingLogo />
 			<div className="UTWB1">
-				{ this.tripList() }
+				{/* { this.tripList() } */}
+				<Ut date="2020-07-20" location="riyadh" time="23:00"/>
 				<Link to="/MoreDetails">
 					<WideButton buttonTitle="More Details" />
 				</Link>
 				<hr />
-				{/* <Ut date="06/29/2020" destination="Dammam" time="13:00" place="KFUPM Mall Parking" /> */}
-				{}
+				<Ut date="06/29/2020" destination="dammam" time="13:00" place="KFUPM Mall Parking" />
 				<Link to="/MoreDetails">
 					<WideButton buttonTitle="More Details" />
 				</Link>

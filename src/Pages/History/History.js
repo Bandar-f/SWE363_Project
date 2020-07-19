@@ -71,7 +71,7 @@ const History = (props) => {
 			transition={{ duration: 2 }}
 		>
 			<Link to="/rating">
-				{output.map(()=><Cap userType={props.userType}/>)}
+			<Cap userType={props.userType} name={props.userPresence.name} date="2020-07-20" rating="4"/>
 			</Link>
 		</motion.div>
 	);

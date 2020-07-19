@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Ut.css';
 import Text from '../TextComponent/Text';
-function Ut() {
+function Ut(props) {
 		return (
 			<div className="texts">
 				{/* <Text text={this.props.date} />
@@ -13,11 +13,11 @@ function Ut() {
 				<Text text={`At: ${this.props.place}`} /> */}
 
 				<br />
-				<Text text={`Date: ${this.props.trip}`} />
+				<Text text={`Date: ${props.date}`} />
 				<br />
-				<Text text={`Destination: ${this.props.trip}`} />
+				<Text text={`Destination: ${props.location}`} />
 				<br />
-				<Text text={`Pickup Time: ${this.props.trip}`} />
+				<Text text={`Pickup Time: ${props.time}`} />
 				<br />
 				<Text text="At: KFUPM Mall Parking" />
 			</div>

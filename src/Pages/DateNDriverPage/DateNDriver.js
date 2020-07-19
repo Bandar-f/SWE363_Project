@@ -12,12 +12,23 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 import _ from 'underscore';
 
-let driverSelection = false;
-const dsToTrue = () => {
-	driverSelection = true;
+
+// Then using map on the CarAndPerson and passing each data from the array
+class DateNDriver extends Component {
+driverSelection = false;
+addCustomerIntoTrip = async (customer, trId) => {
+	try {
+		this.driverSelection = true;
+		const response = await axios.put(`https://kptyn.herokuapp.com/trips/5f1219d29b148f0017b7269a`, {
+			customer: customer.push(customer),
+		});
+		alert("trip scheduled successfully")
+	} catch (e) {
+		console.log(`network failed ${e}`);
+	}
 };
 
-const getAllRides = async (destination) => {
+getAllRides = async (destination) => {
 	try {
 		// getting all trips satisfying location
 		const res = await axios.post('https://kptyn.herokuapp.com/trips/getTripByLocation', {
@@ -37,8 +48,9 @@ const getAllRides = async (destination) => {
 		console.log(`Axios request failed at getAllRides: ${err}`);
 	}
 };
-// Then using map on the CarAndPerson and passing each data from the array
-class DateNDriver extends Component {
+	constructor(props){
+		super(props)
+	}
 	render() {
 		const trips = window.$globalList;
 		const customer = this.props.userPresence;
@@ -91,14 +103,14 @@ class DateNDriver extends Component {
 					</div>
 				</section>
 				<div className="goUPP">
-					<div id="cnd" onClick={dsToTrue}>
-						<CarAndPerson />
+					<div id="cnd" onClick={this.addCustomerIntoTrip("5f138feddc31aa001727db70", "5f1219d29b148f0017b7269a")}>
+						<CarAndPerson name="test33driver" date="2020-07-20" rating="4"/>
 					</div>
 				</div>
 				<section className="middle">
 					<Link
-						to={driverSelection ? '/PickupDetails' : '/dateAndTime'}
-						onClick={() => addCustomerIntoTrip(customer._customer, trips[0])}
+						to={this.driverSelection ? '/PickupDetails' : '/dateAndTime'}
+						onClick={() => this.addCustomerIntoTrip(customer._customer, trips[0])}
 					>
 						{' '}
 						<WideButton buttonTitle="Next" />{' '}
