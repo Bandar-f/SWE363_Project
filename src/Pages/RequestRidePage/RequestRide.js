@@ -14,7 +14,7 @@ function RequestRide(props) {
 	//check if the tier button is choosen
 	const [radioClicked, setRadio] = useState(false);
 	const [trips, setTrips] = useState([]);
-	let list = [];
+	let tripList = [];
 
 	const handleTripState = (data) => {
 		setTrips((prev) => data);
@@ -37,9 +37,10 @@ function RequestRide(props) {
 			});
 
 			handleTripState(res.data);
-			console.log(trips);
-			list = [...res.data];
-			console.log('list is ', list);
+
+			tripList = [...res.data];
+			window.$globalList = tripList;
+			console.log('list is ', tripList);
 		} catch (e) {
 			console.log('network Failed', e);
 		}
@@ -113,7 +114,7 @@ function RequestRide(props) {
 						/>
 					)}
 					<br />
-					<Link to={Selected && radioClicked ? '/dateAndTime' : '/RequestRide'} trips={list}>
+					<Link to={Selected && radioClicked ? '/dateAndTime' : '/RequestRide'} trips={tripList}>
 						{' '}
 						<WideButton buttonTitle="Next" />{' '}
 					</Link>

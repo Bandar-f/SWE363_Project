@@ -16,15 +16,6 @@ let driverSelection = false;
 const dsToTrue = () => {
 	driverSelection = true;
 };
-const addCustomerIntoTrip = async (customer, trip) => {
-	try {
-		const response = await axios.put(`https://kptyn.herokuapp.com/trips/${trip.id}`, {
-			customer: trip.customer.push(customer),
-		});
-	} catch (e) {
-		console.log(`network failed ${e}`);
-	}
-};
 
 const getAllRides = async (destination) => {
 	try {
@@ -49,6 +40,23 @@ const getAllRides = async (destination) => {
 // Then using map on the CarAndPerson and passing each data from the array
 class DateNDriver extends Component {
 	render() {
+		const trips = window.$globalList;
+		const customer = this.props.userPresence;
+		console.log(trips[0]);
+
+		const addCustomerIntoTrip = async (customer, trip) => {
+			console.log('hi there', customer);
+			try {
+				console.log(trip.customer);
+				const response = await axios.put(`https://kptyn.herokuapp.com/trips/${trip._id}`, {
+					customer: [...trip.customer, customer],
+				});
+				console.log(response);
+			} catch (e) {
+				console.log(`network failed ${e}`);
+			}
+		};
+
 		return (
 			<motion.div
 				initial={{ opacity: 0 }}
@@ -88,7 +96,10 @@ class DateNDriver extends Component {
 					</div>
 				</div>
 				<section className="middle">
-					<Link to={driverSelection ? '/PickupDetails' : '/dateAndTime'}>
+					<Link
+						to={driverSelection ? '/PickupDetails' : '/dateAndTime'}
+						onClick={() => addCustomerIntoTrip(customer._customer, trips[0])}
+					>
 						{' '}
 						<WideButton buttonTitle="Next" />{' '}
 					</Link>

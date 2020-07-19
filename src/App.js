@@ -17,11 +17,7 @@ import ScheduleRide from './Pages/ScheduleRide/ScheduleRide';
 import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import AdminPage from './Pages/AdminPage/AdminPage';
 
-
-
 //history should contains the package information
-
-
 
 //react router
 /*
@@ -45,7 +41,7 @@ function App() {
 	//Sidemenu choices
 	const costumerTitles = ['History', 'Pickup Details', 'Request Ride'];
 	const workerTitles = ['History', 'Schedule Ride', 'Upcoming Trips'];
-	const workerPackageTitles=["History","Shipment Track"]
+	const workerPackageTitles = ['History', 'Shipment Track'];
 
 	//to get the currentRoute
 	let currentRoute = useLocation().pathname;
@@ -67,8 +63,8 @@ function App() {
 	//is user customer or employee
 	const [userType, setUserType] = useState('');
 
-   //the object of your user
-	const[userPresence,setUserpresence]=useState({});
+	//the object of your user
+	const [userPresence, setUserpresence] = useState({});
 
 	//Does user already have account or not
 	const [userAcc, setUserAcc] = useState('');
@@ -85,8 +81,7 @@ function App() {
 		else setUserAcc('New');
 	};
 
-
-  //why? to pass username to the login page
+	//why? to pass username to the login page
 	const [UN, setUN] = useState('');
 
 	const getUN = (Username) => {
@@ -101,48 +96,34 @@ function App() {
 
 	//to update nav bar header
 
-
-
-
-
-
-
-
-
-
-
-
-
-	 //to know if the user is admin
-	 const [isAdmin,setAdmin]=useState(false);
+	//to know if the user is admin
+	const [isAdmin, setAdmin] = useState(false);
 
 	return (
 		<div className="App">
-			<NavBar deliverOrPool={deliverOrPool} userType={userType}  clicked={sidemenuClicked} />
+			<NavBar deliverOrPool={deliverOrPool} userType={userType} clicked={sidemenuClicked} />
 
 			<BackButton />
-       
-				 {deliverOrPool==="Deliver"?
-			<Sidemenu
-			isAdmin={isAdmin}
-				isOpened={isOpened}
-				sidemenuItemClicked={() => {
-					setIsOpened(false);
-				}}
-				titles={userType === 'Customer' ? costumerTitles : workerTitles}
-			/>:	<Sidemenu
-			isAdmin={isAdmin}
-			isOpened={isOpened}
-			sidemenuItemClicked={() => {
-				setIsOpened(false);
-			}}
-			titles={userType === 'Customer' ? costumerTitles : workerPackageTitles}
-		/>
 
-
-
-			}
-			
+			{deliverOrPool === 'Deliver' ? (
+				<Sidemenu
+					isAdmin={isAdmin}
+					isOpened={isOpened}
+					sidemenuItemClicked={() => {
+						setIsOpened(false);
+					}}
+					titles={userType === 'Customer' ? costumerTitles : workerTitles}
+				/>
+			) : (
+				<Sidemenu
+					isAdmin={isAdmin}
+					isOpened={isOpened}
+					sidemenuItemClicked={() => {
+						setIsOpened(false);
+					}}
+					titles={userType === 'Customer' ? costumerTitles : workerPackageTitles}
+				/>
+			)}
 
 			<div
 				onClick={() => {
@@ -177,7 +158,7 @@ function App() {
 						</Route>
 
 						<Route exact path="/dateAndTime">
-							<DateNDriver/>
+							<DateNDriver userPresence={userPresence} />
 						</Route>
 
 						<Route exact path="/PickupDetails">
@@ -193,15 +174,26 @@ function App() {
 						</Route>
 
 						<Route exact path="/Login">
-							<MobileNumber UserOrWorker={getUserType} userAcc={getUserAcc} UN={getUN} num={getNum}/>
+							<MobileNumber
+								UserOrWorker={getUserType}
+								userAcc={getUserAcc}
+								UN={getUN}
+								num={getNum}
+							/>
 						</Route>
 
 						<Route exact path="/secondLog">
-							<LoginPage setUserpresence={setUserpresence} userType={userType} userAcc={userAcc} UN={UN} num={num}/>
+							<LoginPage
+								setUserpresence={setUserpresence}
+								userType={userType}
+								userAcc={userAcc}
+								UN={UN}
+								num={num}
+							/>
 						</Route>
 
 						<Route exact path="/UpcomingTrips">
-							<UtPage/>
+							<UtPage />
 						</Route>
 
 						<Route exact path="/MoreDetails">
@@ -209,11 +201,11 @@ function App() {
 						</Route>
 
 						<Route exact path="/ScheduleRide">
-							<ScheduleRide userPresence={userPresence}/>
+							<ScheduleRide userPresence={userPresence} />
 						</Route>
 
 						<Route exact path="/ShipmentTrack">
-							<PackageTrackPage deliverOrPool={deliverOrPool}/>
+							<PackageTrackPage deliverOrPool={deliverOrPool} />
 						</Route>
 
 						<Route exact path="/register">
