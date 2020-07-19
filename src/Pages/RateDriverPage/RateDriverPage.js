@@ -5,11 +5,33 @@ import { FaStar } from 'react-icons/fa';
 import Text from '../../components/TextComponent/Text';
 import { motion } from 'framer-motion';
 import WideButton from '../../components/WideButtonComponent/WideButton';
+import axios from 'axios';
+
+let rate = 0;
+const updateRating = async (id) => {
+	try {
+		let response = await axios.get(`https://kptyn.herokuapp.com/users/${id}`);
+		let data = response.data.user;
+		let totRating = data.totalRating;
+		let numRated = data.numberOfRated;
+		let newRating = totRating*numRated+rate;
+		++numRated;
+		newRating /= numRated;
+		await axios.put(`https://kptyn.herokuapp.com/users/${id}`, {
+			totalRating: newRating,
+			numberOfRated: numRated,
+		});
+		alert("Rating has been submitted successfully")
+} catch (e) {
+	console.log(`😱 Axios request failed: ${e}`);
+}
+}
 
 function RateDriverPage(props) {
 	const starLabels = ['Terrible 😠', 'Bad 😓', 'Good 😒', 'Excellent 😃', 'Spactacular 😎'];
 	const [rating, setRating] = useState(null);
 	const [hover, setHover] = useState(null);
+	rate=rating;
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -48,7 +70,9 @@ function RateDriverPage(props) {
 				</div>
 				<textarea className="Complain" placeholder="Tell us about your ride ..."></textarea>
 				<br />
-				<WideButton buttonTitle="Submit" />
+				<div onClick={(id) => updateRating(id)}>
+				<WideButton buttonTitle="Submit"/>
+				</div>
 				<br />
 			</div>
 		</motion.div>

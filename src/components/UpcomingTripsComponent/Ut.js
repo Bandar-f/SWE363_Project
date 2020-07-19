@@ -6,21 +6,21 @@ class Ut extends Component {
 		return (
 			<div className="texts">
 				{/* <Text text={this.props.date} />
-				<br /> */}
-				<Text text={`Destination: ${this.props.location}`} />
-				<br />
-				{/* <Text text={`Pickup Time: ${this.props.time}`} />
-				<br />
-				<Text text={`At: ${this.props.place}`} /> */}
-
-				{/* <br />
-				<Text text={this.props.date} />
 				<br />
 				<Text text={`Destination: ${this.props.location}`} />
 				<br />
 				<Text text={`Pickup Time: ${this.props.time}`} />
 				<br />
 				<Text text={`At: ${this.props.place}`} /> */}
+
+				<br />
+				<Text text={this.props.date} />
+				<br />
+				<Text text={`Destination: ${this.props.location}`} />
+				<br />
+				<Text text={`Pickup Time: ${this.props.time}`} />
+				<br />
+				{/* <Text text={`At: ${this.props.place}`} /> */}
 			</div>
 		);
 	}

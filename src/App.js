@@ -96,7 +96,7 @@ function App() {
 	const [num, setNum] = useState('');
 
 	const getNum = (phoneNum) => {
-		setUN(phoneNum);
+		setNum(phoneNum);
 	};
 
 	//to update nav bar header
@@ -181,7 +181,7 @@ function App() {
 						</Route>
 
 						<Route exact path="/PickupDetails">
-							<PickUpDetails deliverOrPool={deliverOrPool} />
+							<PickUpDetails userPresence={userPresence} deliverOrPool={deliverOrPool} />
 						</Route>
 
 						<Route exact path="/RequestRide">

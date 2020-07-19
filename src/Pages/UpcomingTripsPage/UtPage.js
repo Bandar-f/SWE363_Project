@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './UtPage.css';
 import Ut from '../../components/UpcomingTripsComponent/Ut';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
@@ -9,21 +9,22 @@ import axios from 'axios';
 
 function UtPage() {
 
+	useEffect(()=>{getTrips()});
+
+	let trips = [];
 	const getTrips = async () => {
 		try {
-			const response = await axios.get('https://kptyn.herokuapp.com/trips');
-			//const data = response.data;
+			const response = await axios.get(`https://kptyn.herokuapp.com/trips`);
 			console.log('response data:', response.data);
 	
 			if (response.status != 200) {
 				console.log('no');
-				alert('nope')
+				alert('could not load');
 			} else {
-				console.log(response.data[0].location);
-				alert(response.data[0].location);
 			response.data.map(currenttrip => (
-				<Ut trip={currenttrip}/>
+				trips.push(currenttrip)
 			))
+			console.log(trips[0])
 			}
 		} catch (e) {
 			console.log('request failed ', e.message);
@@ -40,8 +41,10 @@ function UtPage() {
 			transition={{ duration: 2 }}
 		>
 			<FloatingLogo />
-			<div className="UTWB1" onClick={getTrips}>
-				{/* <Ut date="Today" destination="Riyadh" time="15:20" place="KFUPM Mall Parking" /> */}
+			<div className="UTWB1">
+				{trips.map(test => (
+				<Ut date={test.date} destination={test.location} time={test.location} />
+				))}
 				<Link to="/MoreDetails">
 					<WideButton buttonTitle="More Details" />
 				</Link>

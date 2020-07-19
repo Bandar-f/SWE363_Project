@@ -22,13 +22,17 @@ export default function Form(props) {
 		props.stateHandel(e);
 	};
 
+	const saveName = () => {
+		props.name(document.getElementById("hisName").value);
+	}
+
 	return (
 		<div className="formContainer">
 			<form>
 				<div className="leftAlign">
 					{props.userAcc === 'New' ? <Text text="Please enter your name:" /> : ''}
 				</div>
-				{props.userAcc === 'New' ? <input type="text" placeholder="Ex.: John Doe" /> : ''}
+				{props.userAcc === 'New' ? <input onChange={saveName} type="text" id="hisName" placeholder="Ex.: John Doe" /> : ''}
 				<br></br>
 				<div className="leftAlign">
 					{props.userType !== 'Customer' && props.userAcc === 'New' ? (
