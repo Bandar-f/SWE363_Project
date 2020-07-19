@@ -2,13 +2,26 @@ import React from 'react';
 import Personal from '../personalinfo/Personal';
 import './Sidemenu.css';
 import { Link, useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 const Sidemenu = (props) => {
 	let currentRoute = useLocation().pathname;
-	
+
+	const logOut = async () => {
+		try {
+			const response = await axios('https://kptyn.herokuapp.com/logout');
+			console.log(response);
+		} catch (e) {
+			console.log(`network failure ${e}`);
+		}
+	};
+
 	return (
 		<div>
-			{currentRoute !== '/' &&currentRoute !== '/secondLog' && currentRoute !== '/welcomePage' && currentRoute !== '/Login' ? (
+			{currentRoute !== '/' &&
+			currentRoute !== '/secondLog' &&
+			currentRoute !== '/welcomePage' &&
+			currentRoute !== '/Login' ? (
 				<div className={props.isOpened ? 'sidemenu' : 'hidden-sidemenu'}>
 					<header>
 						<Personal name="Bandar Albalawi" rating="4.5" />
@@ -27,14 +40,24 @@ const Sidemenu = (props) => {
 								</li>
 							</Link>
 						))}
-						
-						{props.isAdmin? <Link to="/admin"><li onClick={() => {
+
+						{props.isAdmin ? (
+							<Link to="/admin">
+								<li
+									onClick={() => {
 										props.sidemenuItemClicked();
 									}}
-									className="side-menu-items">Admin</li></Link>:""}
+									className="side-menu-items"
+								>
+									Admin
+								</li>
+							</Link>
+						) : (
+							''
+						)}
 					</ul>
 
-					<Link to="/Login">
+					<Link to="/Login" onClick={() => logOut()}>
 						{' '}
 						<p className="logout">
 							Logout{' '}

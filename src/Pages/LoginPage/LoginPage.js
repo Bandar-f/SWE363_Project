@@ -7,11 +7,9 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
-	let customer= false;
-	let driver=false;
-	let admin=false;
-
-
+let customer = false;
+let driver = false;
+let admin = false;
 
 export default function LoginPage(props) {
 	const [password, setPassword] = useState('');
@@ -21,33 +19,36 @@ export default function LoginPage(props) {
 		setName(Username);
 	};
 
-	const SignupUser =  ()=>{
-		if(props.userType === 'Customer') {
-			customer=true;
-		} else if(props.userType === 'Worker') {
-			driver=true;
+	const SignupUser = () => {
+		if (props.userType === 'Customer') {
+			customer = true;
+		} else if (props.userType === 'Worker') {
+			driver = true;
 		} else {
-			admin=false;
+			admin = false;
 		}
 		axios({
-			method:'post',
-			url:"https://kptyn.herokuapp.com/users",
-			data:{
-				username: name,
+			method: 'post',
+			url: 'https://kptyn.herokuapp.com/users',
+			data: {
+				name: name,
 				password: password,
 				phoneNumber: props.num,
 				isCustomer: customer,
 				isDriver: driver,
 				isAdmin: admin,
 				totalRating: 0,
-				numberOfRated: 0
-			}
-
+				numberOfRated: 0,
+			},
 		})
-		.then((res)=>{props.setUserpresence(res.data); console.log(res)})
-		.catch((err)=>{console.log(err)});
-
-	}
+			.then((res) => {
+				props.setUserpresence(res.data);
+				console.log(res);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	};
 
 	const stateHandel = (e) => {
 		const _password = e.target.value;
@@ -56,7 +57,7 @@ export default function LoginPage(props) {
 	const authenticateUser = async () => {
 		//before we authenticate the user we graph the username by the userPhone number from the prev
 		//response
-		
+
 		try {
 			const response = await axios.post('https://kptyn.herokuapp.com/login', {
 				username: props.UN,
@@ -89,7 +90,9 @@ export default function LoginPage(props) {
 		>
 			<div className="Login-container">
 				<FloatingLogo />
-				<div className="middle realign"><span className="loader"></span></div>
+				<div className="middle realign">
+					<span className="loader"></span>
+				</div>
 				<div className="middle">
 					<Link to="/Login">
 						<button className="rect1"></button>
@@ -97,13 +100,22 @@ export default function LoginPage(props) {
 					<button className="rect1"></button>
 				</div>
 				<div className="from-container-login">
-					<Form userType={props.userType} userAcc={props.userAcc} stateHandel={stateHandel} name={getName}/>
+					<Form
+						userType={props.userType}
+						userAcc={props.userAcc}
+						stateHandel={stateHandel}
+						name={getName}
+					/>
 				</div>
 
 				<div className="button-container">
 					<Link to={props.userType === 'Customer' ? '/RequestRide' : '/UpcomingTrips'}>
 						<span className="Login-Button">
-						{props.userAcc === 'New' ? <Button text={'register'} userAcc={props.userAcc} SignupUser={SignupUser} /> : <Button text={'Login'} userAcc={props.userAcc} fireUser={authenticateUser} />}
+							{props.userAcc === 'New' ? (
+								<Button text={'register'} userAcc={props.userAcc} SignupUser={SignupUser} />
+							) : (
+								<Button text={'Login'} userAcc={props.userAcc} fireUser={authenticateUser} />
+							)}
 						</span>
 					</Link>
 				</div>
