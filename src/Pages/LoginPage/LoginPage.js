@@ -3,7 +3,7 @@ import './login.css';
 import Form from '../../components/FormComponent/Form';
 import Button from '../../components/ButtonComponent/Button';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
-import { Link } from 'react-router-dom';
+import { Redirect,Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
@@ -14,6 +14,7 @@ let admin = false;
 export default function LoginPage(props) {
 	const [password, setPassword] = useState('');
 	const [name, setName] = useState('');
+	const[isLogged,setLogged]=useState(false);
 
 	const getName = (Username) => {
 		setName(Username);
@@ -74,6 +75,8 @@ export default function LoginPage(props) {
 			} else {
 				console.log(data.message);
 				props.setUserpresence(data);
+				setLogged(true);
+
 				return true;
 			}
 		} catch (e) {
@@ -109,7 +112,7 @@ export default function LoginPage(props) {
 				</div>
 
 				<div className="button-container">
-					<Link to={props.userType === 'Customer' ? '/RequestRide' : '/UpcomingTrips'}>
+					
 						<span className="Login-Button">
 							{props.userAcc === 'New' ? (
 								<Button text={'register'} userAcc={props.userAcc} SignupUser={SignupUser} />
@@ -117,7 +120,8 @@ export default function LoginPage(props) {
 								<Button text={'Login'} userAcc={props.userAcc} fireUser={authenticateUser} />
 							)}
 						</span>
-					</Link>
+						{isLogged?  <Redirect to={props.userType === 'Customer' ? '/RequestRide' : '/UpcomingTrips'} /> :""}
+				
 				</div>
 				<br />
 			</div>
