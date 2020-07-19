@@ -28,6 +28,7 @@ const ScheduleRide = (props) => {
 				passengerAmount: Amount,
 				driver: props.userPresence,
 			}) 
+			alert("ride scheduled successfully");
 			
 		} catch (err) {
 			console.error('Posting trips data failed ', err.message);

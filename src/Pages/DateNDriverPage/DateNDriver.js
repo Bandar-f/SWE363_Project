@@ -18,20 +18,20 @@ const dsToTrue = () => {
 }
 
 const getAllRides = async (destination) => {
+	let trips = [];
 	try {
 		// getting alll trips satisfying location
-		const res = await axios.post('https://kptyn.herokuapp.com/trips/getTripByLocation', {
-			location: destination,
-		});
+		let res = await axios.get('https://kptyn.herokuapp.com/trips/');
 		// filtering the results to get only dates on and before the selected date
-		res.filter(
-			(res) =>
-				res.date <= window.$dateValue &&
-				res.time <= window.$timeValue
-		);
+		// res.filter(
+		// 	(res) =>
+		// 		res.date <= window.$dateValue &&
+		// 		res.time <= window.$timeValue
+		// );
 		// first sorting by time, then by date
-		res = _.sortBy(res, 'time');
-		res = _.sortBy(res, 'date');
+		// res.data = _.sortBy(res, 'time');
+		res.data = _.sortBy(res, 'date');
+		console.log(window.$dateValue)
 		return res;
 	} catch (err) {
 		console.log(`Axios request failed at getAllRides: ${err}`);
@@ -67,6 +67,7 @@ class DateNDriver extends Component {
 					</div>
 					<div className="goUPP">
 						<TimePicker />
+						<h1 onClick={getAllRides}>test</h1>
 					</div>
 					<br />
 					<div className="realign" id="sdr">
@@ -78,7 +79,7 @@ class DateNDriver extends Component {
 						<CarAndPerson />
 					</div>
 				</div>
-				<section class="middle">
+				<section className="middle">
 					<Link to={driverSelection?"/PickupDetails":"/dateAndTime"}>
 						{' '}
 						<WideButton buttonTitle="Next" />{' '}

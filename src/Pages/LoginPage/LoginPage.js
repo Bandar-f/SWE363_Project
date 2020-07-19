@@ -51,6 +51,7 @@ export default function LoginPage(props) {
 			.then(() => authenticateUser())
 			.catch((err) => {
 				console.log(err);
+				alert("User already exists");
 			});
 	};
 
