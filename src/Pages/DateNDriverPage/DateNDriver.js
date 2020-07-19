@@ -1,4 +1,4 @@
-import React,{ Component } from 'react';
+import React, { Component } from 'react';
 import './dateNDriver.css';
 import '../RequestRidePage/requestRide.css';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
@@ -15,24 +15,33 @@ import _ from 'underscore';
 let driverSelection = false;
 const dsToTrue = () => {
 	driverSelection = true;
-}
+};
+const addCustomerIntoTrip = async (customer, trip) => {
+	try {
+		const response = await axios.put(`https://kptyn.herokuapp.com/trips/${trip.id}`, {
+			customer: trip.customer.push(customer),
+		});
+	} catch (e) {
+		console.log(`network failed ${e}`);
+	}
+};
 
 const getAllRides = async (destination) => {
 	try {
-		// getting alll trips satisfying location
+		// getting all trips satisfying location
 		const res = await axios.post('https://kptyn.herokuapp.com/trips/getTripByLocation', {
 			location: destination,
 		});
+		console.log(res.data);
 		// filtering the results to get only dates on and before the selected date
-		res.filter(
-			(res) =>
-				res.date <= window.$dateValue &&
-				res.time <= window.$timeValue
+		const cities = res.data.filter(
+			(res) => res.date <= window.$dateValue && res.time <= window.$timeValue
 		);
 		// first sorting by time, then by date
-		res = _.sortBy(res, 'time');
-		res = _.sortBy(res, 'date');
-		return res;
+		cities = _.sortBy(cities, 'time');
+		cities = _.sortBy(cities, 'date');
+		console.log(cities);
+		return cities;
 	} catch (err) {
 		console.log(`Axios request failed at getAllRides: ${err}`);
 	}
@@ -79,7 +88,7 @@ class DateNDriver extends Component {
 					</div>
 				</div>
 				<section className="middle">
-					<Link to={driverSelection?"/PickupDetails":"/dateAndTime"}>
+					<Link to={driverSelection ? '/PickupDetails' : '/dateAndTime'}>
 						{' '}
 						<WideButton buttonTitle="Next" />{' '}
 					</Link>
