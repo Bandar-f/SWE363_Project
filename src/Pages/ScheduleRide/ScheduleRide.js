@@ -10,10 +10,9 @@ import WideButton from '../../components/WideButtonComponent/WideButton';
 import axios from 'axios';
 
 const ScheduleRide = (props) => {
-
 	const getRideInfoAndSave = async () => {
 		// get destination from the drop down menu
-		const Destination = window.$DestinationValue
+		const Destination = window.$DestinationValue;
 		// get pickup date and time from the date selector
 		const Date = window.$dateValue;
 		const Time = window.$timeValue;
@@ -26,10 +25,10 @@ const ScheduleRide = (props) => {
 				time: Time,
 				date: Date,
 				passengerAmount: Amount,
-				driver: props.userPresence,
-			}) 
-			alert("ride scheduled successfully");
-			
+				driver: props.userPresence._driver,
+			});
+			alert('ride scheduled successfully');
+			console.log(response);
 		} catch (err) {
 			console.error('Posting trips data failed ', err.message);
 		}
@@ -37,7 +36,7 @@ const ScheduleRide = (props) => {
 	const stateHandle = (e) => {
 		window.$DestinationValue = e.target.value;
 	};
-	
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -52,7 +51,7 @@ const ScheduleRide = (props) => {
 				</div>
 				<div>
 					<select name="destination" id="rideRoute2" onChange={stateHandle}>
-						<option value="" disabled selected >
+						<option value="" disabled selected>
 							Select Destination
 						</option>
 						<option value="dhahran">Dhahran</option>
@@ -90,12 +89,10 @@ const ScheduleRide = (props) => {
 					<DropDownAmount />
 				</div>
 				<div onClick={getRideInfoAndSave}>
-				<WideButton buttonTitle="Schedule Ride" />
+					<WideButton buttonTitle="Schedule Ride" />
 				</div>
-				
 			</div>
 		</motion.div>
-		
 	);
 };
 
