@@ -13,29 +13,39 @@ export default function PickUpDetailsPage(props) {
 	let removeFromTrip = [];
 	const CallingD = async (id) => {
 		try {
-		const response = await axios.get(`https://kptyn.herokuapp.com/users/${id}`); 
-		const data = response.data.user;
-		const userNumber = data.phoneNumber;
-		window.location.href = `tel:${userNumber}`;
+			const response = await axios.get(`https://kptyn.herokuapp.com/users/${id}`);
+			const data = response.data.user;
+			const userNumber = data.phoneNumber;
+			window.location.href = `tel:${userNumber}`;
 		} catch (e) {
 			console.log(`😱 Axios request failed: ${e}`);
 		}
-	}
+	};
 	const Cancel = async (id) => {
-		console.log(props.userPresence._id)
 		try {
-		const response = await axios.get(`https://kptyn.herokuapp.com/trips/${id}`); 
-		const data = response.data.trip;
-		data.customer.map(customerMatch => (
-			( props.userPresence != customerMatch ? removeFromTrip.push(customerMatch):'' )
-		))
-		await axios.put(`https://kptyn.herokuapp.com/trips/${id}`, {
-			customer: removeFromTrip,
-		}); 
+			const response = await axios.get(`https://kptyn.herokuapp.com/trips/${id}`);
+			const data = response.data.trip.customer;
+			data.map((customerMatch) =>
+				props.userPresence.id !== customerMatch || customerMatch._id !== props.userPresence.id
+					? removeFromTrip.push(customerMatch)
+					: ''
+			);
+			await axios.put(`https://kptyn.herokuapp.com/trips/${id}`, {
+				customer: removeFromTrip,
+			});
 		} catch (e) {
 			console.log(`😱 Axios request failed: ${e}`);
 		}
-	}
+	};
+	const getDriverById = async (id) => {
+		try {
+			const response = await axios.get(`https://kptyn.herokuapp.com/trips/${id}`);
+
+			if (response.data.status === 200) return response.data;
+		} catch (e) {
+			console.log('axios request fails ', e);
+		}
+	};
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -45,14 +55,15 @@ export default function PickUpDetailsPage(props) {
 		>
 			<div className="pickup-container">
 				<FloatingLogo />
-                <div className="middle">
-			    </div>
+				<div className="middle"></div>
 				<div className="personal-withRating-wrapper">
 					<PersonWithRating name={'nawaf al sharqi'} rating={5} />
 				</div>
 				<CarComponent />
 				<div className="middle">
-					<button className="buttonT" onClick={Cancel}>Cancel</button>
+					<button className="buttonT" onClick={Cancel}>
+						Cancel
+					</button>
 					<button className="buttonT" onClick={CallingD}>
 						Call
 					</button>
@@ -60,13 +71,13 @@ export default function PickUpDetailsPage(props) {
 				<hr />
 
 				<div className="updates-container">
-                    <div className="middle">
-                        <div className="realign">
-                            <Text text="Tracking:"/>
-                        </div>
-                    </div>
+					<div className="middle">
+						<div className="realign">
+							<Text text="Tracking:" />
+						</div>
+					</div>
 					<PackageTrack deliverOrPool={props.deliverOrPool} />
-                </div>
+				</div>
 			</div>
 		</motion.div>
 	);

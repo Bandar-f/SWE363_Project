@@ -4,8 +4,8 @@ import './timePicker.css';
  export default function TimePicker() {
 	 
 	const showList = (e) => {
-		document.getElementById("cnd").style.display = "block";
-		document.getElementById("sdr").style.display = "block";
+		// document.getElementById("cnd").style.display = "block";
+		// document.getElementById("sdr").style.display = "block";
 		window.$timeValue = e.target.value;
 	}
 	return (
