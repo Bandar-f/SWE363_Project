@@ -13,14 +13,13 @@ import axios from 'axios';
 import _ from 'underscore';
 
 let driverSelection = false;
-const dsToTrue = () => {
-	driverSelection = true;
-};
-const addCustomerIntoTrip = async (customer, trip) => {
+const addCustomerIntoTrip = async (customer, trId) => {
 	try {
-		const response = await axios.put(`https://kptyn.herokuapp.com/trips/${trip.id}`, {
-			customer: trip.customer.push(customer),
+		driverSelection = true;
+		const response = await axios.put(`https://kptyn.herokuapp.com/trips/${trId}`, {
+			customer: customer.push(customer),
 		});
+		alert("trip scheduled successfully")
 	} catch (e) {
 		console.log(`network failed ${e}`);
 	}
@@ -48,6 +47,9 @@ const getAllRides = async (destination) => {
 };
 // Then using map on the CarAndPerson and passing each data from the array
 class DateNDriver extends Component {
+	constructor(props){
+		super(props)
+	}
 	render() {
 		return (
 			<motion.div
@@ -83,8 +85,8 @@ class DateNDriver extends Component {
 					</div>
 				</section>
 				<div className="goUPP">
-					<div id="cnd" onClick={dsToTrue}>
-						<CarAndPerson />
+					<div id="cnd" onClick={addCustomerIntoTrip("5f138feddc31aa001727db70", "5f1219d29b148f0017b7269a")}>
+						<CarAndPerson name="test33driver" date="2020-07-20" rating="4"/>
 					</div>
 				</div>
 				<section className="middle">
