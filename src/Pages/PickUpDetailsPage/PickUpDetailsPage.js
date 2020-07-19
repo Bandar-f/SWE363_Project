@@ -26,7 +26,7 @@ export default function PickUpDetailsPage(props) {
 		const response = await axios.get(`https://kptyn.herokuapp.com/trips/${id}`); 
 		const data = response.data.trip.customer;
 		data.map(customerMatch => (
-			( props.userPresence.id !== customerMatch ? removeFromTrip.push(customerMatch):'' )
+			( props.userPresence.id !== customerMatch || customerMatch._id !== props.userPresence.id ? removeFromTrip.push(customerMatch):'' )
 		))
 		await axios.put(`https://kptyn.herokuapp.com/trips/${id}`, {
 			customer: removeFromTrip,

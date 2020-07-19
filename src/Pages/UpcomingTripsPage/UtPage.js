@@ -24,7 +24,7 @@ function UtPage() {
 			response.data.map(currenttrip => (
 				trips.push(currenttrip)
 			));
-			
+			return tripList();
 			}
 		} catch (e) {
 			console.log('request failed ', e.message);
@@ -50,7 +50,7 @@ function UtPage() {
 		>
 			<FloatingLogo />
 			<div className="UTWB1">
-				{ tripList }
+				{ tripList() }
 				<Link to="/MoreDetails">
 					<WideButton buttonTitle="More Details" />
 				</Link>

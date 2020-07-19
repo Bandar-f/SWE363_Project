@@ -12,6 +12,10 @@ function RequestRide(props) {
 	const [Selected,setSelected]=useState(false);
 	//check if the tier button is choosen
 	const[radioClicked,setRadio]=useState(false);
+
+	const stateHandle = (e) => {
+		window.$cityValue = e.target.value;
+	}
 	
 	return (
 		<motion.div
@@ -30,7 +34,7 @@ function RequestRide(props) {
 					<Text text={props.deliverOrPool === 'Deliver' ? 'Where to...' : 'Where to ship...'} />
 				</div>
 				<div>
-					<select onInput={()=>{setSelected(true)}} name="destination" id="rideRoute">
+					<select onInput={()=>{setSelected(true)}} name="destination" id="rideRoute" onChange={stateHandle}>
 						<option value="" disabled selected>Select Destination</option>
 						<option value="dhr">Dhahran</option>
 						<option value="kbr">Khobar</option>

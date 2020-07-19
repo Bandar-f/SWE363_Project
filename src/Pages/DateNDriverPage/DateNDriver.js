@@ -29,14 +29,27 @@ const getAllRides = async (destination) => {
 		// 		res.time <= window.$timeValue
 		// );
 		// first sorting by time, then by date
-		// res.data = _.sortBy(res, 'time');
+		res.data = _.sortBy(res, 'time');
 		res.data = _.sortBy(res, 'date');
-		console.log(window.$dateValue)
-		return res;
+		let Date = window.$dateValue;
+		let Time = window.$timeValue;
+		let destination = window.$cityValue;
+		console.log(destination)
+		console.log(res.data)
+		res.data.forEach((trip => {
+			trips.push(trip)
+		}))
+		console.log(destination)
+		return res.data;
 	} catch (err) {
 		console.log(`Axios request failed at getAllRides: ${err}`);
 	}
 };
+
+const showList = (e) => {
+	
+	window.$timeValue = e.target.value;
+}
 // Then using map on the CarAndPerson and passing each data from the array
 class DateNDriver extends Component {
 	render() {
