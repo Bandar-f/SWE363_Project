@@ -22,16 +22,15 @@ export default function PickUpDetailsPage(props) {
 		}
 	}
 	const Cancel = async (id) => {
-		console.log(props.userPresence._id)
 		try {
 		const response = await axios.get(`https://kptyn.herokuapp.com/trips/${id}`); 
-		const data = response.data.trip;
-		data.customer.map(customerMatch => (
-			( props.userPresence != customerMatch ? removeFromTrip.push(customerMatch):'' )
+		const data = response.data.trip.customer;
+		data.map(customerMatch => (
+			( props.userPresence.id !== customerMatch ? removeFromTrip.push(customerMatch):'' )
 		))
 		await axios.put(`https://kptyn.herokuapp.com/trips/${id}`, {
 			customer: removeFromTrip,
-		}); 
+		});
 		} catch (e) {
 			console.log(`😱 Axios request failed: ${e}`);
 		}

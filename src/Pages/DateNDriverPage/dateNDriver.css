@@ -2,12 +2,12 @@
 	position: relative;
 	margin-top: 20px;
 	transition: all 0.5s ease;
-	display: none;
+	/* display: none; */
 	margin-bottom: 20px;
 }
-#sdr {
+/* #sdr {
 	display: none;
-}
+} */
 .goUPP {
 	position: relative;
 	top: -40px;

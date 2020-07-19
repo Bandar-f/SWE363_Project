@@ -14,13 +14,13 @@ class Ut extends Component {
 				<Text text={`At: ${this.props.place}`} /> */}
 
 				<br />
-				<Text text={this.props.date} />
+				<Text text={`Date: ${this.props.trip}`} />
 				<br />
-				<Text text={`Destination: ${this.props.location}`} />
+				<Text text={`Destination: ${this.props.trip}`} />
 				<br />
-				<Text text={`Pickup Time: ${this.props.time}`} />
+				<Text text={`Pickup Time: ${this.props.trip}`} />
 				<br />
-				{/* <Text text={`At: ${this.props.place}`} /> */}
+				<Text text="At: KFUPM Mall Parking" />
 			</div>
 		);
 	}
