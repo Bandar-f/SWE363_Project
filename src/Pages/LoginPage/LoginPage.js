@@ -43,7 +43,7 @@ export default function LoginPage(props) {
 			},
 		})
 			.then((res) => {
-				props.setUserpresence(res.data);
+				props.setUserpresence(res.data.user);
 				console.log(res);
 			})
 			.catch((err) => {
@@ -73,8 +73,8 @@ export default function LoginPage(props) {
 				alert('Incorrect Password');
 				return false;
 			} else {
-				console.log(data.message);
-				props.setUserpresence(data);
+				console.log(data);
+				props.setUserpresence(data.user);
 				setLogged(true);
 
 				return true;
