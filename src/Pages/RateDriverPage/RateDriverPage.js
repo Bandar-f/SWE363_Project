@@ -10,14 +10,14 @@ import axios from 'axios';
 let rate = 0;
 const updateRating = async (id) => {
 	try {
-		let response = await axios.get(`https://kptyn.herokuapp.com/users/5f131cb71fee9800174835fd`);
+		let response = await axios.get(`https://kptyn.herokuapp.com/users/5f1552e5012ad00017339b07`);
 		let data = response.data.user;
 		let totRating = data.totalRating;
 		let numRated = data.numberOfRated;
 		let newRating = totRating*numRated+rate;
 		++numRated;
 		newRating /= numRated;
-		await axios.put(`https://kptyn.herokuapp.com/users/5f131cb71fee9800174835fd`, {
+		await axios.put(`https://kptyn.herokuapp.com/users/5f1552e5012ad00017339b07`, {
 			totalRating: newRating,
 			numberOfRated: numRated,
 		});
