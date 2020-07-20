@@ -16,17 +16,9 @@ import _ from 'underscore';
 // Then using map on the CarAndPerson and passing each data from the array
 class DateNDriver extends Component {
 driverSelection = false;
-addCustomerIntoTrip = async (customer, trId) => {
-	try {
-		this.driverSelection = true;
-		const response = await axios.put(`https://kptyn.herokuapp.com/trips/5f1219d29b148f0017b7269a`, {
-			customer: customer.push(customer),
-		});
-		alert("trip scheduled successfully")
-	} catch (e) {
-		console.log(`network failed ${e}`);
-	}
-};
+state = {
+	isLoading: true
+}
 
 getAllRides = async (destination) => {
 	try {
@@ -54,8 +46,10 @@ getAllRides = async (destination) => {
 	render() {
 		const trips = window.$globalList;
 		const customer = this.props.userPresence;
+		const { isLoading } = this.state;
 
 		const addCustomerIntoTrip = async (customer, trip) => {
+			this.driverSelection = true;
 			console.log('hi there', customer);
 			try {
 				console.log(trip.customer);
@@ -102,7 +96,7 @@ getAllRides = async (destination) => {
 					</div>
 				</section>
 				<div className="goUPP">
-					<div id="cnd" onClick={this.addCustomerIntoTrip("5f138feddc31aa001727db70", "5f1219d29b148f0017b7269a")}>
+					<div id="cnd" onClick={addCustomerIntoTrip.bind(null ,customer, trips)}>
 						<CarAndPerson name="test33driver" date="2020-07-20" rating="4"/>
 					</div>
 				</div>

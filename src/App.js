@@ -93,7 +93,6 @@ function App() {
 	const getNum = (phoneNum) => {
 		setNum(phoneNum);
 	};
-
 	//to update nav bar header
 
 	//to know if the user is admin
@@ -196,11 +195,11 @@ function App() {
 						</Route>
 
 						<Route exact path="/UpcomingTrips">
-							<UtPage />
+							<UtPage/>
 						</Route>
 
 						<Route exact path="/MoreDetails">
-							<MoreDetailsPage userPresence={userPresence} />
+							<MoreDetailsPage userPresence={userPresence}/>
 						</Route>
 
 						<Route exact path="/ScheduleRide">

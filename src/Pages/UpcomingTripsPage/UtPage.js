@@ -2,36 +2,38 @@ import React, { useEffect, useState, Component } from 'react';
 import './UtPage.css';
 import Ut from '../../components/UpcomingTripsComponent/Ut';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
-import WideButton from '../../components/WideButtonComponent/WideButton';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
 class UtPage extends Component {
-		constructor(props) {
-			super(props);
-			this.state = { trips: [] }
-		}
+	constructor(props){
+		super(props);
+	}
+	
+	state = { 
+		trips: [],
+		isLoading: true }
 
 	componentDidMount() {
-
-			axios.get(`https://kptyn.herokuapp.com/trips`)
-			.then(response => {
-				this.setState({ trips: response.data });
-				console.log(response.data)
-
-			}) .catch ((e) =>{
-			console.log('request failed ', e.message);
-			alert('fail');
-		})
+		this.getTrips();
 	};
 
-	tripList() {
-		this.state.trips.map(currenttrip =>{
-			return <Ut trip={currenttrip}/>
-		})
-	};
+	getTrips() {
+		axios.get(`https://kptyn.herokuapp.com/trips`)
+		.then(response => {
+			this.setState({ 
+				trips: response.data,
+				isLoading: false, 
+			});
+			console.log(response.data)
+		}) .catch ((e) =>{
+		console.log('request failed ', e.message);
+		alert('fail');
+		this.setState({ isLoading: false })
+	})
+	}
 	render(){
+		const { isLoading, trips } = this.state;
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -41,16 +43,11 @@ class UtPage extends Component {
 		>
 			<FloatingLogo />
 			<div className="UTWB1">
-				{/* { this.tripList() } */}
-				<Ut date="2020-07-20" location="riyadh" time="23:00"/>
-				<Link to="/MoreDetails">
-					<WideButton buttonTitle="More Details" />
-				</Link>
-				<hr />
-				<Ut date="06/29/2020" destination="dammam" time="13:00" place="KFUPM Mall Parking" />
-				<Link to="/MoreDetails">
-					<WideButton buttonTitle="More Details" />
-				</Link>
+
+				{!isLoading ? ( trips.map(currenttrip =>{
+									return <Ut trip={currenttrip}/>
+								}) ) : <h1>Loading...</h1>}
+
 				<br />
 			</div>
 		</motion.div>

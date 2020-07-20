@@ -4,6 +4,7 @@ import { motion, usePresence } from 'framer-motion';
 import FloatingLogo from '../../components/FloatingLogoComponent/FloatingLogo';
 import Text from '../../components/TextComponent/Text';
 import DatePicker from '../../components/DatePickerComponent/DatePicker';
+import { Link } from 'react-router-dom';
 import TimePicker from '../../components/TimePickerComponent/TimePicker';
 import DropDownAmount from '../../components/DropDownAmountComponent/DropDownAmount';
 import WideButton from '../../components/WideButtonComponent/WideButton';
@@ -89,7 +90,9 @@ const ScheduleRide = (props) => {
 					<DropDownAmount />
 				</div>
 				<div onClick={getRideInfoAndSave}>
+					<Link to="/UpcomingTrips">
 					<WideButton buttonTitle="Schedule Ride" />
+					</Link>
 				</div>
 			</div>
 		</motion.div>

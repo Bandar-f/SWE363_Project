@@ -1,60 +1,35 @@
-import React, { useEffect } from 'react';
+import React, { Component } from 'react';
 import Cap from '../../components/CarAndPerson/Cap';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const History = (props) => {
+class History extends Component {
 
-
-
-	useEffect(()=>{getTrips()});
-	let output=[];
-
-
-
-	const getTrips= ()=>{
-
-		let trips=[];
+	constructor(props){
+		super(props);
+	}
+		state = { 
+		trips: [],
+		isLoading: true }
+	
+	componentDidMount(){
+			this.getTrips();
+		};
 		
-
-
+	getTrips(){
 		axios({
 			method:'get',
 			url:"https://kptyn.herokuapp.com/trips/",
-				
 		})
-		.then((res)=>{trips=res.data})
-		.catch((err)=>{console.log(err)});
-
-
-
-
-
-
-
-
-
-         //with each trip look for the user inside customer
-	trips.map((trip)=>{
-		
-		//second map to look inside the customer array within trip
-		trip.customer.map((customer)=>{if(customer===props.userPresence)
-			output.push(trip);
+		.then((res)=>{
+		this.setState({
+			trips: res.data,
+			isLoading: false
 		})
-
-
 	})
-
-
-
-
-
-
-
-
-
-
+		.catch((err)=>{console.log(err)
+	});
 
 	}
 
@@ -62,7 +37,8 @@ const History = (props) => {
 
 
 
-
+	render(){
+		const { isLoading, trips } = this.state;
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -71,10 +47,15 @@ const History = (props) => {
 			transition={{ duration: 2 }}
 		>
 			<Link to="/rating">
-			<Cap userType={props.userType} name={props.userPresence.name} date="2020-07-20" rating="4"/>
+			{!isLoading ? ( 
+						trips.map((trip)=>{
+						return <Cap name={trip.customer.name} date={trip.date} rating={trip.customer.totalRating}/>
+						})) : <h1>Loading...</h1>
+			}
 			</Link>
 		</motion.div>
 	);
+}
 };
 
 export default History;
