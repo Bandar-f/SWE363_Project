@@ -54,7 +54,6 @@ getAllRides = async (destination) => {
 	render() {
 		const trips = window.$globalList;
 		const customer = this.props.userPresence;
-		console.log(trips[0]);
 
 		const addCustomerIntoTrip = async (customer, trip) => {
 			console.log('hi there', customer);
@@ -110,7 +109,7 @@ getAllRides = async (destination) => {
 				<section className="middle">
 					<Link
 						to={this.driverSelection ? '/PickupDetails' : '/dateAndTime'}
-						onClick={() => this.addCustomerIntoTrip(customer._customer, trips[0])}
+						onClick={() => this.addCustomerIntoTrip(customer._customer)}
 					>
 						{' '}
 						<WideButton buttonTitle="Next" />{' '}
