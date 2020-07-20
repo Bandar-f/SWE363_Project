@@ -28,7 +28,7 @@ export default function LoginPage(props) {
 		} else if (props.userType === 'Worker') {
 			driver = true;
 		} else {
-			admin = false;
+			admin = true;
 		}
 		axios({
 			method: 'post',
