@@ -20,6 +20,10 @@ state = {
 	isLoading: true
 }
 
+componentDidMount() {
+	this.getAllRides();
+}
+
 getAllRides = async (destination) => {
 	try {
 		// getting all trips satisfying location
@@ -35,6 +39,7 @@ getAllRides = async (destination) => {
 		cities = _.sortBy(cities, 'time');
 		cities = _.sortBy(cities, 'date');
 		console.log(cities);
+		this.setState({ isLoading: false })
 		return cities;
 	} catch (err) {
 		console.log(`Axios request failed at getAllRides: ${err}`);
@@ -96,9 +101,11 @@ getAllRides = async (destination) => {
 					</div>
 				</section>
 				<div className="goUPP">
-					<div id="cnd" onClick={addCustomerIntoTrip.bind(null ,customer, trips)}>
-						<CarAndPerson name="test33driver" date="2020-07-20" rating="4"/>
+				{!isLoading ? ( trips.map(currenttrip => 
+					<div id="cnd" onClick={()=>addCustomerIntoTrip(customer, currenttrip)}>
+					 <CarAndPerson name={currenttrip.driver.name} date={currenttrip.date} rating={currenttrip.driver.totalRating}/>
 					</div>
+				) ) : <h1>Loading...</h1>}
 				</div>
 				<section className="middle">
 					<Link

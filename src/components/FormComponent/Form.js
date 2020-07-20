@@ -52,6 +52,8 @@ export default function Form(props) {
 				</div>
 				<input onChange={(e) => formHandel(e)} type="password" placeholder="Password" />
 			</form>
+			{props.userAcc === 'New' ? <p>Please enter a password that is at least 8 characters long</p>: ''}
+			<br/>
 			{props.userAcc === 'New' ? '' : <Container tT={tT} onSubmit={onSubmit} />}
 		</div>
 	);

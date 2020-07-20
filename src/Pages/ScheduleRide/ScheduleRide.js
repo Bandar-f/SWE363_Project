@@ -84,7 +84,7 @@ const ScheduleRide = (props) => {
 					</div>
 				</div>
 				<div className="Amnt">
-					<Text text="Passenger amount" />
+					<Text text="Number of Seats" />
 				</div>
 				<div className="DD">
 					<DropDownAmount />

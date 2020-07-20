@@ -46,7 +46,7 @@ class UtPage extends Component {
 
 				{!isLoading ? ( trips.map(currenttrip =>{
 									return <Ut trip={currenttrip}/>
-								}) ) : <h1>Loading...</h1>}
+				}) ) : <h1>Loading...</h1>}
 
 				<br />
 			</div>
