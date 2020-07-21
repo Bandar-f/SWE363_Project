@@ -16,6 +16,7 @@ import MobileNumber from './Pages/MobileNumber/MobileNumber';
 import ScheduleRide from './Pages/ScheduleRide/ScheduleRide';
 import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import AdminPage from './Pages/AdminPage/AdminPage';
+import Comments from './Pages/CommentsPage/Comments';
 
 //history should contains the package information
 
@@ -196,6 +197,10 @@ function App() {
 
 						<Route exact path="/UpcomingTrips">
 							<UtPage/>
+						</Route>
+
+						<Route exact path="/TripUpdates">
+							<Comments/>
 						</Route>
 
 						<Route exact path="/MoreDetails">
