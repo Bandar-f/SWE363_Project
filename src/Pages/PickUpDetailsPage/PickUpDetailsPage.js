@@ -47,7 +47,7 @@ import { isEmpty } from 'underscore';
 			}) : await axios.put(`https://kptyn.herokuapp.com/trips/${id}`, {
 			customer: [''],
 			}) )
-			alert("ride cancelled successfully")
+			alert("Your ride has been cancelled successfully")
 		} catch (e) {
 			console.log(`😱 Axios request failed: ${e}`);
 		}
@@ -86,9 +86,11 @@ import { isEmpty } from 'underscore';
 				</div>
 				<CarComponent />
 				<div className="middle">
+					<Link to="/RequestRide">
 					<button className="buttonT" onClick={this.Cancel.bind(null, currenttrip._id)}>
 						Cancel
 					</button>
+					</Link>
 					<button className="buttonT" onClick={this.CallingD.bind(null, currenttrip.driver._id)}>
 						Call
 					</button>

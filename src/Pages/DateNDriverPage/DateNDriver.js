@@ -82,6 +82,7 @@ class DateNDriver extends Component {
 						customer: customer.id,
 					}
 				);
+				alert("Trip has been scheduled successfully")
 				console.log(response);
 			} catch (e) {
 				console.log(`network failed ${e}`);
@@ -119,7 +120,7 @@ class DateNDriver extends Component {
 				<div className="goUPP">
 					{!isLoading ? (
 						avaliableTrips.map((currenttrip) => (
-							<Link to={this.driverSelection ? '/PickupDetails' : '/dateAndTime'}>
+							<Link to='/PickupDetails'>
 								<div id="cnd" onClick={() => addCustomerIntoTrip(customer, currenttrip)}>
 									<CarAndPerson
 										name={currenttrip.driver.name}
