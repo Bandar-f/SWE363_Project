@@ -4,18 +4,42 @@ import Text from '../../components/TextComponent/Text';
 import WideButton from '../../components/WideButtonComponent/WideButton';
 import axios from 'axios';
 
-class Comments extends Component {
-	render() {
-		return (
-			<div className="middle">
-				<textarea className="com" placeholder="Send trip updates to customers"></textarea>
-				<br />
-				<br />
-				<WideButton buttonTitle="Send" />
+const Comments = () => {
+	const [text, setText] = useState('');
+	const trip = { id: '5f16276a3bb214001793a9f1' };
 
-				<br />
+	const handleTextArea = (e) => {
+		setText(e.target.value);
+	};
+	const postComment = async (trip, comment) => {
+		try {
+			const response = await axios.post(
+				`https://kptyn.herokuapp.com/trips/${trip.id}/statusUpdates`,
+				{
+					statusUpdates: comment,
+				}
+			);
+			console.log(response);
+		} catch (e) {
+			console.log(`error ${e}`);
+		}
+	};
+
+	return (
+		<div className="middle">
+			<textarea
+				className="com"
+				placeholder="Send trip updates to customers"
+				onChange={(e) => handleTextArea(e)}
+			></textarea>
+			<br />
+			<br />
+			<div onClick={() => postComment(trip, text)}>
+				<WideButton buttonTitle="Send" />
 			</div>
-		);
-	}
-}
+
+			<br />
+		</div>
+	);
+};
 export default Comments;
