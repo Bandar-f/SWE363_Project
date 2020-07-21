@@ -1,5 +1,7 @@
 .admin-header {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+	position: relative;
+	top: 25px;
 }
 
 	.admin-page-container {

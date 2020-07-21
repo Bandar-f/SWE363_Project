@@ -47,6 +47,7 @@ export default function LoginPage(props) {
 			.then((res) => {
 				props.setUserpresence(res.data.user);
 				console.log(res);
+				alert("account successfully created")
 			})
 			.then(() => authenticateUser())
 			.catch((err) => {

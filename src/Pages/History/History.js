@@ -47,11 +47,18 @@ class History extends Component {
 			transition={{ duration: 2 }}
 		>
 			<Link to="/rating">
-			{!isLoading ? ( 
-						trips.map((trip)=>{
-						return <Cap name={trip.customer.name} date={trip.date} rating={trip.customer.totalRating}/>
-						})) : <h1>Loading...</h1>
-			}
+			{this.props.userType=='Customer'? (!isLoading ? ( 
+						trips.map((trip)=>
+					<div  onClick={function(){window.$ratedTrip = trip}}>
+				 	<Cap name={trip.driver.name} date={trip.date} rating={trip.customer.totalRating}/>
+					 </div>
+						)) : <h1>Loading...</h1>
+			) : (!isLoading ? ( 
+				trips.map((trip)=>
+					<div onClick={function(){window.$ratedTrip = trip}}>
+					<Cap name={trip.customer.name} date={trip.date} rating={trip.customer.totalRating}/>
+					</div>
+				)) : <h1>Loading...</h1>)}
 			</Link>
 		</motion.div>
 	);

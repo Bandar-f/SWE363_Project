@@ -10,14 +10,14 @@ import axios from 'axios';
 let rate = 0;
 const updateRating = async (id) => {
 	try {
-		let response = await axios.get(`https://kptyn.herokuapp.com/users/5f14403499b73600174cb51d`);
+		let response = await axios.get(`https://kptyn.herokuapp.com/users/${id}`);
 		let data = response.data.user;
 		let totRating = data.totalRating;
 		let numRated = data.numberOfRated;
 		let newRating = totRating*numRated+rate;
 		++numRated;
 		newRating /= numRated;
-		await axios.put(`https://kptyn.herokuapp.com/users/5f14403499b73600174cb51d`, {
+		await axios.put(`https://kptyn.herokuapp.com/users/${id}`, {
 			totalRating: newRating,
 			numberOfRated: numRated,
 		});
@@ -70,7 +70,7 @@ function RateDriverPage(props) {
 				</div>
 				<textarea className="Complain" placeholder="Tell us about your ride ..."></textarea>
 				<br />
-				<div onClick={(id) => updateRating(id)}>
+				<div onClick={() => updateRating(window.$ratedTrip.driver.user)}>
 				<WideButton buttonTitle="Submit"/>
 				</div>
 				<br />
