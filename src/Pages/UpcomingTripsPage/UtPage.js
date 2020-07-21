@@ -26,6 +26,7 @@ class UtPage extends Component {
 				isLoading: false, 
 			});
 			console.log(response.data)
+			console.log(this.props.userPresence)
 		}) .catch ((e) =>{
 		console.log('request failed ', e.message);
 		alert('fail');
@@ -44,9 +45,10 @@ class UtPage extends Component {
 			<FloatingLogo />
 			<div className="UTWB1">
 
-				{!isLoading ? ( trips.map(currenttrip =>{
-									return <Ut trip={currenttrip}/>
-				}) ) : <h1>Loading...</h1>}
+				{!isLoading ? (trips.map(currenttrip =>
+					(this.props.userPresence.id == currenttrip.driver._id && currenttrip.isComplete==false ?
+									<Ut trip={currenttrip}/> : '')
+				) ) : <h1>Loading...</h1>}
 
 				<br />
 			</div>

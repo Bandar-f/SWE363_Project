@@ -197,7 +197,7 @@ function App() {
 						</Route>
 
 						<Route exact path="/UpcomingTrips">
-							<UtPage/>
+							<UtPage userPresence={userPresence}/>
 						</Route>
 
 						<Route exact path="/TripUpdates">

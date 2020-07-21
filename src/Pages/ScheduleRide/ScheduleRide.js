@@ -29,7 +29,6 @@ const ScheduleRide = (props) => {
 				driver: props.userPresence.id,
 			});
 			alert('ride scheduled successfully');
-			window.location.reload();
 			console.log(response);
 		} catch (err) {
 			console.error('Posting trips data failed ', err.message);
