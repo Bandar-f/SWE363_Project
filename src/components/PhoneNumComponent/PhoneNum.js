@@ -8,7 +8,7 @@ const PhoneNum = (props) => {
 		props.formHandler(e);
 	};
 	const disableBtn = () => {
-		const format = /^(?:05|5)\d{8}$/;
+		const format = /^05\d{8}$/;
 		const toCompare = document.getElementById("phone").value;
 		if (toCompare.match(format)){
 			setIsDisabled(true);
@@ -41,7 +41,7 @@ const PhoneNum = (props) => {
 				type="tel"
 				id="phone"
 				name="phone"
-				placeholder="5XXXXXXXX"
+				placeholder="05XXXXXXXX"
 				disabled={!props.isRadioClicked}
 				pattern="[0-9]{10}"
 				onChange={(e) => handelForm(e)}
@@ -52,7 +52,7 @@ const PhoneNum = (props) => {
 					<i className="fas fa-arrow-right"></i>
 				</button>
 			</Link>
-			<p id="warntxt">*please enter in the format 05XXXXXXXX or 5XXXXXXXX</p>
+			<p id="warntxt">*please enter in the format 05XXXXXXXX</p>
 		</div>
 	);
 };
