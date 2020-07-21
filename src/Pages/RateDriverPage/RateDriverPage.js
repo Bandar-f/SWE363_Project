@@ -39,7 +39,7 @@ function RateDriverPage(props) {
 			exit={{ opacity: 0 }}
 			transition={{ duration: 2 }}
 		>
-			<Cap userType={props.userType}/>
+			<Cap userType={props.userType} name={window.$ratedTrip.name} totalRating={window.$ratedTrip.totalRating}/>
 			<div className="middle">
 				<p className="RatingText">
 					<div className="realign">
@@ -70,7 +70,7 @@ function RateDriverPage(props) {
 				</div>
 				<textarea className="Complain" placeholder="Tell us about your ride ..."></textarea>
 				<br />
-				<div onClick={() => updateRating(window.$ratedTrip.driver.user)}>
+				<div onClick={() => updateRating(window.$ratedTrip._id)}>
 				<WideButton buttonTitle="Submit"/>
 				</div>
 				<br />

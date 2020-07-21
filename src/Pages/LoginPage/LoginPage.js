@@ -47,6 +47,18 @@ export default function LoginPage(props) {
 			.then((res) => {
 				props.setUserpresence(res.data.user);
 				console.log(res);
+				axios({
+					method: 'put',
+					url: `https://kptyn.herokuapp.com/users/${res.data.id}`,
+					data: {
+						totalRating: 0,
+						numberOfRated: 0
+					},
+				})
+				.catch((e) => {
+					console.log(e);
+					alert("adding rating failed");
+				});
 				alert("account successfully created")
 			})
 			.then(() => authenticateUser())
