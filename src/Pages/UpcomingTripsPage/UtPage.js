@@ -12,7 +12,8 @@ class UtPage extends Component {
 	
 	state = { 
 		trips: [],
-		isLoading: true }
+		isLoading: true 
+	}
 
 	componentDidMount() {
 		this.getTrips();
