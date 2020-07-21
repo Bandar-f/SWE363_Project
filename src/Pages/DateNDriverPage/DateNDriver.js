@@ -165,20 +165,20 @@ state = {
 				</section>
 				<div className="goUPP">
 				{!isLoading ? 
-				  avaliableTrips.map(currenttrip => 
-					<div id="cnd" onClick={()=>addCustomerIntoTrip(customer, currenttrip)}>
-					 <CarAndPerson name={currenttrip.driver.name} date={currenttrip.date} rating={currenttrip.driver.totalRating}/>
-					</div>	)  
-				: <h1>Loading...</h1>}
-				</div>
-				<section className="middle">
-					<Link
+				  avaliableTrips.map(currenttrip => <Link
 						to={this.driverSelection ? '/PickupDetails' : '/dateAndTime'}
 						
 					>
+					<div id="cnd" onClick={()=>addCustomerIntoTrip(customer, currenttrip)}>
+					 <CarAndPerson name={currenttrip.driver.name} date={currenttrip.date} rating={currenttrip.driver.totalRating}/>
+					</div> </Link>	)  
+				: <h1>Loading...</h1>}
+				</div>
+				<section className="middle">
+					
 						{' '}
-						<WideButton search={search} buttonTitle={!isLoading?"Next":"Search"} />{' '}
-					</Link>
+						<WideButton search={search} buttonTitle="Search" />{' '}
+					
 
 					<br />
 				</section>
