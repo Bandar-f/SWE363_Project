@@ -51,15 +51,15 @@ class History extends Component {
 						trips.map((trip)=>
 						trip.customer.map((cust)=>
 						(this.props.userPresence.username == cust.username && trip.isComplete==true ?
-					<div  onClick={function(){window.$ratedTrip = trip.driver._id}}>
-				 	<Cap name={trip.driver.name} date={trip.date} rating={trip.driver.totalRating}/>
+					<div  onClick={function(){window.$ratedTrip = trip.driver}}>
+				 	<Cap name={trip.driver.name} date={trip.date} totalRating={trip.driver.totalRating}/>
 					 </div>: '' ))
 						)) : <h1>Loading...</h1>
 			) : (!isLoading ? ( 
 				trips.map((trip)=>
 				(this.props.userPresence.id == trip.driver._id  && trip.isComplete==true ?
 					trip.customer.map((cust)=>
-					<div onClick={function(){window.$ratedTrip = cust._id}}>
+					<div onClick={function(){window.$ratedTrip = cust}}>
 					<Cap name={cust.name} date={trip.date} rating={cust.totalRating}/>
 					</div>) : '' )
 				)) : <h1>Loading...</h1>)}
