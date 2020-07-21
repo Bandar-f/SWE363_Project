@@ -41,8 +41,8 @@ import PackageTrackPage from './Pages/PackageTrackPage/PackageTrackPage';
 function App() {
 	//Sidemenu choices
 	const costumerTitles = ['History', 'Pickup Details', 'Request Ride'];
-	const workerTitles = ['History', 'Schedule Ride', 'Upcoming Trips'];
-	const workerPackageTitles = ['History', 'Shipment Track'];
+	const workerTitles = ['History', 'Schedule Ride', 'Upcoming Trips','Trip Updates'];
+	const workerPackageTitles = ['History', 'Shipment Track','Trip Updates'];
 
 	//to get the currentRoute
 	let currentRoute = useLocation().pathname;

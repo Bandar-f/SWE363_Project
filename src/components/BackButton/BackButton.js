@@ -17,7 +17,7 @@ const BackButton = () => {
 			currentRoute !== '/UpcomingTrips' &&
 			currentRoute !== '/History' &&
 			currentRoute !== '/secondLog' &&
-			currentRoute !== '/tripUpdates'? (
+			currentRoute !== '/TripUpdates'? (
 				<div
 					onClick={() => {
 						History.goBack();
