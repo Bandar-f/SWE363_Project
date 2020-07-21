@@ -15,7 +15,7 @@ const ScheduleRide = (props) => {
 		// get destination from the drop down menu
 		const Destination = window.$DestinationValue;
 		// get pickup date and time from the date selector
-		const Date = window.$dateValue;
+		const date = window.$dateValue;
 		const Time = window.$timeValue;
 		// get passenger amount
 		const Amount = window.$amountValue;
@@ -24,11 +24,12 @@ const ScheduleRide = (props) => {
 			const response = await axios.post('https://kptyn.herokuapp.com/trips', {
 				location: Destination,
 				time: Time,
-				date: Date,
+				date: date,
 				passengerAmount: Amount,
-				driver: props.userPresence._driver,
+				driver: props.userPresence.id,
 			});
 			alert('ride scheduled successfully');
+			window.location.reload();
 			console.log(response);
 		} catch (err) {
 			console.error('Posting trips data failed ', err.message);

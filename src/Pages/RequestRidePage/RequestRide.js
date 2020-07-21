@@ -17,7 +17,7 @@ function RequestRide(props) {
 	let tripList = [];
 
 	const handleTripState = (data) => {
-		setTrips((prev) => data);
+		setTrips(data);
 		console.log('trips inside handle trips', trips);
 	};
 	const stateHandle = async (e) => {
@@ -29,10 +29,11 @@ function RequestRide(props) {
 
 	const fetchTrips = async (location) => {
 		//handling the state
+		console.log(location);
 
 		try {
 			// getting all trips satisfying location
-			const res = await axios.post('https://kptyn.herokuapp.com/trips/getTripByLocation', {
+			const res = await axios.post('https://kptyn.herokuapp.com/trips/getTripByLocation',{
 				location: location,
 			});
 

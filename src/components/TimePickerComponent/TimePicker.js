@@ -10,7 +10,7 @@ import './timePicker.css';
 	}
 	return (
 		<div className="picker-container">
-			<input id="timePickerCustom" type="time" disabled={true} onChange={showList}/>
+			<input id="timePickerCustom" type="time" disabled={true} onChange={showList} />
 		</div>
 	);
 }

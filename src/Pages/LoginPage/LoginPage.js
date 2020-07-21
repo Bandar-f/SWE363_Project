@@ -79,6 +79,8 @@ export default function LoginPage(props) {
 			} else {
 				console.log(data);
 				props.setUserpresence(data.user);
+				if(data.user.isAdmin)
+				props.setAdmin(true);
 				setLogged(true);
 
 				return true;

@@ -191,6 +191,7 @@ function App() {
 								userAcc={userAcc}
 								UN={UN}
 								num={num}
+								setAdmin={setAdmin}
 							/>
 						</Route>
 
