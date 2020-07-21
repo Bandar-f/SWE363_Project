@@ -39,7 +39,7 @@ function RateDriverPage(props) {
 			exit={{ opacity: 0 }}
 			transition={{ duration: 2 }}
 		>
-			<Cap userType={props.userType} name={window.$ratedTrip.name} totalRating={window.$ratedTrip.totalRating}/>
+			<Cap userType={props.userType} date="" name={window.$ratedTrip.name} rating={window.$ratedTrip.totalRating}/>
 			<div className="middle">
 				<p className="RatingText">
 					<div className="realign">
