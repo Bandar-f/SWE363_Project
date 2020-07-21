@@ -22,6 +22,10 @@ export default function LoginPage(props) {
 
 	const SignupUser = () => {
 		// we need to update the state of username and password
+		if (password.length < 8) {
+			alert('password must be of length 8 chars or more');
+			return;
+		}
 
 		if (props.userType === 'Customer') {
 			customer = true;
@@ -41,7 +45,7 @@ export default function LoginPage(props) {
 				isDriver: driver,
 				isAdmin: admin,
 				totalRating: 0,
-				numberOfRated: 0
+				numberOfRated: 0,
 			},
 		})
 			.then((res) => {
@@ -52,19 +56,18 @@ export default function LoginPage(props) {
 					url: `https://kptyn.herokuapp.com/users/${res.data.id}`,
 					data: {
 						totalRating: 0,
-						numberOfRated: 0
+						numberOfRated: 0,
 					},
-				})
-				.catch((e) => {
+				}).catch((e) => {
 					console.log(e);
-					alert("adding rating failed");
+					alert('adding rating failed');
 				});
-				alert("account successfully created")
+				alert('account successfully created');
 			})
 			.then(() => authenticateUser())
 			.catch((err) => {
 				console.log(err);
-				alert("User already exists");
+				alert('User already exists');
 			});
 	};
 
@@ -92,8 +95,7 @@ export default function LoginPage(props) {
 			} else {
 				console.log(data);
 				props.setUserpresence(data.user);
-				if(data.user.isAdmin)
-				props.setAdmin(true);
+				if (data.user.isAdmin) props.setAdmin(true);
 				setLogged(true);
 
 				return true;
