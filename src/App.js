@@ -96,7 +96,7 @@ function App() {
 	//to update nav bar header
 
 	//to know if the user is admin
-	const [isAdmin, setAdmin] = useState(false);
+	const [isAdmin, setAdmin] = useState(true);
 
 	return (
 		<div className="App">

@@ -1,3 +1,20 @@
+.searchbar-container{
+	margin-top: 40px;
+}
+
+.whiteBor{
+	border-bottom:  1px solid;
+	width: 42rem;
+	text-align: start;
+	padding-bottom: 7px ;
+}
+
+.whiteBord{
+	width: 42rem;
+	text-align: start;
+	padding-bottom: 7px ;
+}
+
 #admin-searchButton {
 	width: 80px;
 	height: 2rem;
@@ -5,7 +22,7 @@
 	border-radius: 3px;
 	color: #eee;
 	border-style: hidden;
-	border-radius: 0 10px 10px 0;
+	border-radius: 10px 0px 10px 0px;
 	position: relative;
 	bottom:23px;
 	right: 40px;
@@ -27,6 +44,7 @@
 }
 .driver-admin {
 	margin-top: 10px;
+	text-indent: 23%;
 }
 .Result-container {
 	width: 22rem;
@@ -40,8 +58,9 @@
 }
 .band-button {
 	width: 50px;
-	position: fixed;
-	right: 30%;
+	position: absolute;
+	right: -90%;
+	margin-top: -25px;
 	height: 25px;
 	background-color: #2b578a;
 	border-radius: 3px;
@@ -54,9 +73,33 @@
 	cursor: pointer;
 }
 
+
 .band-button:hover {
 	background-color: red;
 	color: #eee;
+} 
+
+.ShowAll-button{
+	width: 80px;
+	height: 2rem;
+	background-color: #2b578a;
+	border-radius: 3px;
+	color: #eee;
+	border-style: hidden;
+	border-radius: 10px 0px 10px 0px;
+	position: absolute;
+	bottom:385px;
+	right: 0px;
+	left: 760px;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+.ShowAll-button:hover {
+	background-color: #eee;
+	color: #2b578a;
 } 
 
 @media screen and (max-width: 2400px) {
