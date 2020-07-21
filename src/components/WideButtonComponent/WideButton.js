@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './wideButton.css';
 
 class WideButton extends Component {
+	
 	render() {
 		return (
 			<div className="button-container">
