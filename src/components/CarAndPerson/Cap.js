@@ -25,7 +25,7 @@ const cap = (props) => {
 
 					<div className="text-under">
 						<p className="car-info">Honda Civic Type R</p>
-						<p className="car-info">{props.date}</p>
+						<p className="car-info">{props.date.toString().substring(0,10)}</p>
 					</div>
 				</div>
 			</div>
