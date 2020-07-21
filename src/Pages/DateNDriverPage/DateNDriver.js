@@ -70,8 +70,49 @@ state = {
 
 	render() {
 		const trips = window.$globalList;
-		const setDate=(date)=>{
-			this.setState({date:date});
+		const search=()=>{
+			
+     console.log("for some reason i am not working");
+			
+		 let output=[];
+
+
+			window.$globalList.map((trip,index)=>{
+
+          
+				
+				 const thisTripDate=trip.date.substring(0,10);
+
+				if(window.$dateValue===thisTripDate)
+				     output.push(trip);
+				
+
+
+
+
+
+				if(index<window.$globalList.length){
+
+					this.setState({isLoading:false,
+					  avaliableTrips:output
+					
+					 })}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			})
+			
 		
 		}
 		
@@ -111,30 +152,8 @@ state = {
 					<div className="realign">
 						<Text text="Select pickup date" />
 					</div>
-					<div className="goUPP" onInput={()=>{window.$globalList.map((trip,index)=>{
-
-						 
-						 console.log(trip.date+" this trip");
-
-						 console.log(this.state.date);
-												 
-						
-						
-						if(window.$dateValue===trip.date)
-						avaliableTrips.push(trip)
-
-					
-					if(index<window.$globalList.length){
-
-					this.setState({isLoading:false,
-						avaliableTrips:window.$globalList
-
-					})
-					
-				}
-					
-					})}}>
-						<DatePicker setDate={setDate} />
+					<div className="goUPP" >
+						<DatePicker />
 					</div>
 					<br />
 			
@@ -155,10 +174,10 @@ state = {
 				<section className="middle">
 					<Link
 						to={this.driverSelection ? '/PickupDetails' : '/dateAndTime'}
-						onClick={() => addCustomerIntoTrip(customer,trips[0])}
+						
 					>
 						{' '}
-						<WideButton buttonTitle="Next" />{' '}
+						<WideButton search={search} buttonTitle={!isLoading?"Next":"Search"} />{' '}
 					</Link>
 
 					<br />

@@ -5,7 +5,7 @@ class WideButton extends Component {
 	render() {
 		return (
 			<div className="button-container">
-				<button className="wide-button">{this.props.buttonTitle}</button>
+				<button onClick={this.props.search}className="wide-button">{this.props.buttonTitle}</button>
 			</div>
 		);
 	}
